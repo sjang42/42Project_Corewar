@@ -42,13 +42,9 @@ enum
 	LLDI,
 	LFORK,
 	AFF,
-	LABEL,
-	REG,
-	DIR,
-	IND,
 };
 
-
+#define T_INST					16
 
 t_strs		*strs_new(size_t size_mem);
 int			strs_addone(t_strs *strs, char *str);
@@ -60,4 +56,5 @@ void		ft_remove_overlap(char **str, char ch);
 int			ft_endian_ltob(void *src, size_t size);
 void		ft_destroy_strsplit(char **str);
 
-int			switch_instruction(char *str);
+int			switch_inst(char *str);
+int			switch_type(char *str);

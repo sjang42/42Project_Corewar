@@ -18,6 +18,8 @@ OBJECTS					=	file_to_strs.o\
 							asm_get_header.o\
 							add_libft.o\
 							asm_switch.o\
+							asm_switch_type.o\
+
 
 SRC						=	./
 ICL						=	./
@@ -44,6 +46,7 @@ t_strs.o				:	$(SRC)t_strs.c $(HEADERS)
 asm_get_header.o		:	$(SRC)asm_get_header.c $(HEADERS)
 add_libft.o				:	$(SRC)add_libft.c $(HEADERS)
 asm_switch.o			:	$(SRC)asm_switch.c $(HEADERS)
+asm_switch_type.o		:	$(SRC)asm_switch_type.c $(HEADERS)
 
 clean					:
 							$(RM) $(OBJECTS)
