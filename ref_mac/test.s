@@ -1,9 +1,9 @@
 #by zaz, it's not very good, but what did you expect, rainbowdash is way better
+dd
 #2013
-
-.name		"fluttershyfluttershyfluttershyfluttershyfluttershyfluttershyfluttershyfluttershyfluttershy"
-.comment	"oh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet t a scary projet a scary projet sssct"
-
+.name		"jex"
+.comment	"jex"
 start:
-	ld 4, r2
-	zjmp %0
+	lfork		%0
+	aff			r1
+	zjmp		%0
