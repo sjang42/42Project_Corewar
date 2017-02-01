@@ -74,3 +74,17 @@ typedef struct		header_s
   unsigned int		prog_size;
   char				comment[COMMENT_LENGTH + 1];
 }					header_t;
+
+typedef struct	s_op
+{
+	char	*mnemonic;
+	int		num_arg;
+	char	argument[MAX_ARGS_NUMBER];
+	char	opcode;
+	int		num_cycle;
+	char	*reference;
+	int		num_codebyte;
+	int		as_address;
+}				t_op;
+
+extern t_op    op_tab[17];

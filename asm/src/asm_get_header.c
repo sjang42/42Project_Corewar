@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "asm.h"
+#include <asm.h>
 
 int			get_grog_name(char prog_name[], t_strs *strs)
 {
@@ -65,7 +65,10 @@ header_t	*get_header(t_strs *strs)
 	header_t	*header;
 
 	header = (header_t*)malloc(sizeof(header_t));
+	ft_bzero(header->prog_name, PROG_NAME_LENGTH + 1);
+	ft_bzero(header->comment, COMMENT_LENGTH + 1);
 	header->magic = COREWAR_EXEC_MAGIC;
+	ft_endian_ltob(&(header->magic), 4);
 	get_grog_name(header->prog_name, strs);
 	get_comment(header->comment, strs);
 	return (header);

@@ -10,55 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "asm.h"
-
-static int	switch_inst_sub(char *str)
-{
-	int ret;
-
-	ret = 0;
-	if (!ft_strcmp(str, "xor"))
-		ret = XOR;
-	else if (!ft_strcmp(str, "zjmp"))
-		ret = ZJMP;
-	else if (!ft_strcmp(str, "ldi"))
-		ret = LDI;
-	else if (!ft_strcmp(str, "sti"))
-		ret = STI;
-	else if (!ft_strcmp(str, "fork"))
-		ret = FORK;
-	else if (!ft_strcmp(str, "lld"))
-		ret = LLD;
-	else if (!ft_strcmp(str, "lldi"))
-		ret = LLDI;
-	else if (!ft_strcmp(str, "lfork"))
-		ret = LFORK;
-	else if (!ft_strcmp(str, "aff"))
-		ret = AFF;
-	return (ret);
-}
+#include <asm.h>
 
 int		switch_inst(char *src)
 {
 	char	*str;
 	int		ret;
+	int		i;
 
-	ret = 0;
-	if (!ft_strcmp(str, "live"))
-		ret = LIVE;
-	else if (!ft_strcmp(str, "ld"))
-		ret = LD;
-	else if (!ft_strcmp(str, "st"))
-		ret = ST;
-	else if (!ft_strcmp(str, "add"))
-		ret = ADD;
-	else if (!ft_strcmp(str, "sub"))
-		ret = SUB;
-	else if (!ft_strcmp(str, "and"))
-		ret = AND;
-	else if (!ft_strcmp(str, "or"))
-		ret = OR;
-	else
-		ret = switch_inst_sub(str);
-	return (ret);
+	i = 0;
+	while (op_tab[i].mnemonic)
+	{
+		if (!ft_strcmp(op_tab[i].mnemonic, src))
+			return (i + 1);
+		i++;
+	}
+	return (0);
 }

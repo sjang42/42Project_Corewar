@@ -10,19 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "op.h"
-
-typedef struct	s_op
-{
-	char	*mnemonic;
-	int		num_arg;
-	char	argument[MAX_ARGS_NUMBER];
-	int		opcode;
-	int		num_cycle;
-	char	*reference;
-	int		num_codebyte;
-	int		as_address;
-}				t_op;
+#include <op.h>
 
 t_op    op_tab[17] =
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "asm.h"
+#include <asm_t_strs.h>
 
 t_strs		*strs_new(size_t size_mem)
 {
