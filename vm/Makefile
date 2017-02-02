@@ -5,39 +5,29 @@
 #                                                     +:+ +:+         +:+      #
 #    By: sjang <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/01/30 12:18:56 by sjang             #+#    #+#              #
-#    Updated: 2017/01/30 12:18:57 by sjang            ###   ########.fr        #
+#    Created: 2017/02/01 16:39:33 by sjang             #+#    #+#              #
+#    Updated: 2017/02/01 16:39:34 by sjang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-TARGET					=	../asm
+TARGET					=	a.out
 
-OBJECTS					=	op.o\
-							file_to_strs.o\
-							asm_t_strs.o\
-							asm_t_inst.o\
-							asm_t_label.o\
-							main.o\
-							asm_get_header.o\
-							add_libft.o\
-							asm_switch.o\
-							asm_switch_type.o\
-							asm_get_inst.o\
-							asm_get_label.o\
-							asm_asm.o\
-							asm_error.o\
+OBJECTS					=	main.o\
+							vm_print_memory.o\
+							vm_t_map.o\
 
 
 
 SRC						=	./src/
-OP						=	../op/
 ICL						=	./include/
 CC						=	gcc
 CFLAG					=	
 RM						=	/bin/rm -f
 
-HEADERS					=	$(ICL)asm.h $(OP)op.h
+HEADERS					=	$(ICL)vm_corewar.h $(OP)op.h
 LIBFT					=	-L../libft -lft
+
+OP						=	../op/
 
 .PHONY					:	clean fclean re
 
@@ -51,24 +41,15 @@ $(TARGET)				:	$(OBJECTS) $(HEADERS) ../libft/libft.a
 
 %.o						:	$(OP)%.c
 							$(CC) -c $(CFLAG) $< -I$(OP)
-op.o					:	$(OP)op.c $(HEADERS)
+
 main.o					:	$(SRC)main.c $(HEADERS)
-file_to_strs.o			:	$(SRC)file_to_strs.c $(HEADERS)
-asm_t_strs.o			:	$(SRC)asm_t_strs.c $(HEADERS)
-asm_t_inst.o			:	$(SRC)asm_t_inst.c $(HEADERS)
-asm_t_label.o			:	$(SRC)asm_t_label.c $(HEADERS)
-asm_get_header.o		:	$(SRC)asm_get_header.c $(HEADERS)
-add_libft.o				:	$(SRC)add_libft.c $(HEADERS)
-asm_switch.o			:	$(SRC)asm_switch.c $(HEADERS)
-asm_switch_type.o		:	$(SRC)asm_switch_type.c $(HEADERS)
-asm_get_inst.o	m		:	$(SRC)asm_get_inst.c $(HEADERS)
-asm_get_label.o	m		:	$(SRC)asm_get_label.c $(HEADERS)
-asm_asm.o	m			:	$(SRC)asm_asm.c $(HEADERS)
-asm_error.o	m			:	$(SRC)asm_error.c $(HEADERS)
+vm_print_memory.o		:	$(SRC)vm_print_memory.c $(HEADERS)
+vm_t_map.o				:	$(SRC)vm_t_map.c $(HEADERS)
 
 clean					:
 							$(RM) $(OBJECTS)
 fclean					:	clean
 							$(RM) $(TARGET)
 re						:	fclean all
+
 

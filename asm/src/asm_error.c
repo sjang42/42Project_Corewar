@@ -1,25 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   asm_error.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/28 17:42:01 by sjang             #+#    #+#             */
-/*   Updated: 2017/01/28 17:42:02 by sjang            ###   ########.fr       */
+/*   Created: 2017/02/01 15:31:00 by sjang             #+#    #+#             */
+/*   Updated: 2017/02/01 15:31:02 by sjang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <asm.h>
 
-int		main(int argc, char *argv[])
+void	show_usage(char *filename)
 {
-	int			fd;
-	int			fd2;
-	int			zero;
+	ft_putstr("Usage : ./");
+	ft_putstr(filename);
+	ft_putstr(" <sourcefile.s>\n");
+}
 
-	if (check_argv(argc, argv))
-		show_usage_exit(argv[0]);
-	ft_asm(argv[1]);
+void	show_usage_exit(char *filename)
+{
+	show_usage(filename);
+	exit(-1);
+}
+
+int		check_argv(int argc, char *argv[])
+{
+	char	*tmp;
+
+	if (argc != 2)
+	{
+		return (-1);
+	}
+	tmp = ft_strstr(argv[1], ".s");
+	if (!tmp ||
+		*(tmp + 2) != 0)
+	{
+		return (-1);
+	}
 	return (0);
 }

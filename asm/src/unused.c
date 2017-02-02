@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   unused.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/28 17:42:01 by sjang             #+#    #+#             */
-/*   Updated: 2017/01/28 17:42:02 by sjang            ###   ########.fr       */
+/*   Created: 2017/02/01 15:23:19 by sjang             #+#    #+#             */
+/*   Updated: 2017/02/01 15:23:20 by sjang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <asm.h>
-
-int		main(int argc, char *argv[])
+void	show_inst(t_inst *tinst)
 {
-	int			fd;
-	int			fd2;
-	int			zero;
+	int i;
 
-	if (check_argv(argc, argv))
-		show_usage_exit(argv[0]);
-	ft_asm(argv[1]);
-	return (0);
+	i = 0;
+	while (i < tinst->size_inst)
+	{
+		printf("%x ", (unsigned char)tinst->inst[i]);
+		i++;
+	}
 }

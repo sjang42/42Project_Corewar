@@ -63,6 +63,9 @@ t_strs		*file_to_strs(int fd)
 			adr_comment = ft_strchr(line, ';');
 			if (adr_comment)
 				*adr_comment = 0;
+			adr_comment = ft_strchr(line, COMMENT_CHAR);
+			if (adr_comment)
+				*adr_comment = 0;
 			trimed = ft_strtrim(line);
 			ft_remove_tabs(&trimed);
 			label_char = ft_devide_label(trimed, strs);

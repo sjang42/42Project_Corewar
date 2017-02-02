@@ -83,7 +83,7 @@ unsigned char			get_codebyte(char **arg)
 	return (ret);
 }
 
-void		put_one_arg(char *command, char *arg,
+void		put_one_arg(t_command tcommand, char *arg,
 						t_inst *tinst, t_label *tlabel)
 {
 	char	*mem;
@@ -93,40 +93,37 @@ void		put_one_arg(char *command, char *arg,
 	int		tmp;
 	int		idx;
 
-	num_byte = decide_num_byte(command, arg);
+	num_byte = decide_num_byte(tcommand.command, arg);
 	mem = (char*)malloc(sizeof(char) * num_byte);
 	ft_bzero(mem, num_byte);
 	type = switch_type(arg);
-	opcode = switch_inst(command);
+	opcode = switch_inst(tcommand.command);
 	if (type == T_REG)
 		mem[0] = (char)is_register(arg);
 	if (type == T_DIR)
 	{
-		if (is_direct(arg) == 1)
+		if (is_direct(arg) == 1)		//just number
 			tmp = ft_atoi(arg + 1);
-		else
+		else							//label
 		{
 			tmp = t_label_get_idx(tlabel, arg + 2);
 			if (tmp == -1)
 				ft_exit_error("3");
-			tmp = tmp - (tinst->size_inst + num_byte);
-			printf("tmp : %d\n", tmp);
+			tmp = tmp - tcommand.idx;
 		}
 		ft_memcpy(mem, &tmp, num_byte);
 		ft_endian_ltob(mem, num_byte);
-			printf("mem : %d\n", mem[0]);
-			printf("mem : %d\n", mem[1]);
 	}
 	if (type == T_IND)
 	{
-		if (is_indirect(arg) == 1)
+		if (is_indirect(arg) == 1)		//just number
 			tmp = ft_atoi(arg);
-		else
+		else							//label
 		{
 			tmp = t_label_get_idx(tlabel, arg + 1);
 			if (tmp == -1)
 				ft_exit_error("2");
-			tmp = tmp - (tinst->size_inst + num_byte);
+			tmp = tmp - tcommand.idx;
 		}
 		ft_memcpy(mem, (char*)&tmp + 2, 2);
 		ft_endian_ltob(mem, num_byte);
@@ -138,12 +135,15 @@ void		put_one_arg(char *command, char *arg,
 void		deal_command(char *command, char **arg,
 						t_inst *tinst, t_label *tlabel)
 {
-	int i;
-	char opcode;
-	char codebyte;
+	int			i;
+	char		opcode;
+	char		codebyte;
+	t_command	tcommand;
 
 	if (check_command(command, arg))
 		ft_exit_error("1");
+	tcommand.command = command;
+	tcommand.idx = tinst->size_inst;
 	opcode = (char)switch_inst(command);
 	t_inst_put(tinst, &opcode, 1);
 	if (op_tab[opcode - 1].num_codebyte)
@@ -154,7 +154,7 @@ void		deal_command(char *command, char **arg,
 	i = 0;
 	while (i < op_tab[opcode - 1].num_arg)
 	{
-		put_one_arg(command, arg[i], tinst, tlabel);
+		put_one_arg(tcommand, arg[i], tinst, tlabel);
 		i++;
 	}
 }
@@ -190,11 +190,7 @@ t_inst *get_inst(t_strs *strs, t_label *tlabel)
 			deal_command(first, arg, tinst, tlabel);
 		}
 		else
-		{
-			printf("%s\n", "here");
-			printf("%s\n", first);
 			ft_exit_error("4");
-		}
 		i++;
 	}
 	return (tinst);

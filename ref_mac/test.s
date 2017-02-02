@@ -1,9 +1,7 @@
-#by zaz, it's not very good, but what did you expect, rainbowdash is way better
-dd
-#2013
-.name		"jex"
-.comment	"jex"
-start:
-	lfork		%0
-	aff			r1
-	zjmp		%0
+.name "jex"
+.comment "Ha, Ha, Ha, stayiiiiin' aliiiiiiiiiive"
+
+ld	%1, r4
+ld	%0, r2
+ldi	%10, %10, r3
+zjmp %0

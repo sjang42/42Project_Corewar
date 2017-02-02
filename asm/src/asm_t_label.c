@@ -24,9 +24,6 @@ t_label		*t_label_new(int size)
 	return (tlabel);
 }
 
-#include <stdio.h>///
-
-
 int			t_label_isexist(t_label *tlabel, char const *src)
 {
 	int		i;
