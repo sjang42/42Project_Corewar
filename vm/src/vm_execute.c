@@ -12,11 +12,6 @@
 
 #include <vm_corewar.h>
 
-int		get_current_byte(t_map *tmap, int pc)
-{
-	return (tmap->map[pc % (MEM_SIZE)]);
-}
-
 int		is_opcode(char byte)
 {
 	if (byte >= 1 && byte <= 16)

@@ -36,4 +36,15 @@ int					t_map_put_chams(t_map *tmap, t_champion *tcham[], int num_cham);
 
 int					ft_endian_convert(void *src, size_t size);
 
+void				*get_data(t_map *tmap, int pc, size_t size);
+int					*get_bytecode(t_map *tmap, int pc_command, int num_arg);
+int					put_registry(char **registry, int idx, long long src);
+char 				get_current_byte(t_map *tmap, int pc);
+char				get_indirect_data(t_map *tmap, int pc_command, int idx);
+int					check_arg_byte(int opcode, int *arg_byte);
+
+int					deal_command(int opcode, t_map *tmap, t_champion *tcham);
+
+
+
 #endif
