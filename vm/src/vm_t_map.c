@@ -22,6 +22,7 @@ t_map	*t_map_new(int size)
 	tmap->map = (char*)malloc(sizeof(char) * size);
 	ft_bzero(tmap->map, size);
 	tmap->size_map = size;
+	tmap->num_cham = 0;
 	return (tmap);
 }
 
@@ -63,6 +64,7 @@ int		t_map_put_chams(t_map *tmap, t_champion **tcham, int num_cham)
 	int		where;
 
 	i = 0;
+	tmap->num_cham = num_cham;
 	while (i < num_cham)
 	{
 		where = ((MEM_SIZE) / num_cham * i);

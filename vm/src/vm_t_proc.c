@@ -22,6 +22,8 @@ t_proc			*t_proc_new(int pc, int carry, int num, char **registry)
 	tproc->pc = pc;
 	tproc->carry = carry;
 	tproc->registry = (char**)malloc(sizeof(char*) * REG_NUMBER);
+	tproc->on_command = 0;
+	tproc->wait_cycle= 0;
 	i = 0;
 	while (i < REG_NUMBER)
 	{

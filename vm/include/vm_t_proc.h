@@ -21,6 +21,8 @@ typedef struct	s_proc
 	int		pc;				//첫 프로세서는 시작 위치와 같이 초기화
 	int		carry;
 	char	**registry;		//첫 프로세서의 r1은 넘버와 같이 초기화
+	int		on_command;
+	int		wait_cycle;
 }				t_proc;
 
 //첫 프로세서에는 registry를 null로 주기

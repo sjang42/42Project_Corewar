@@ -25,6 +25,7 @@ typedef struct		s_map
 {
 	char	*map;
 	int		size_map;
+	int		num_cham;
 }					t_map;
 
 void				print_memory(const void *addr, size_t size);
