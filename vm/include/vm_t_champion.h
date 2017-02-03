@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vm_corewar.h                                       :+:      :+:    :+:   */
+/*   vm_t_champion.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/01 16:15:18 by sjang             #+#    #+#             */
-/*   Updated: 2017/02/01 16:15:20 by sjang            ###   ########.fr       */
+/*   Created: 2017/02/02 13:08:11 by sjang             #+#    #+#             */
+/*   Updated: 2017/02/02 13:08:12 by sjang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VM_COREWAR_H
-# define VM_COREWAR_H
+#ifndef VM_T_CHAMPION_H
+# define VM_T_CHAMPION_H
 
 # include <libft.h>
-# include <unistd.h>
-# include <stdio.h>
-# include <fcntl.h>
+# include <asm_t_inst.h>
 # include <vm_t_champion.h>
 # include <vm_t_proc.h>
 # include <op.h>
 
-typedef struct		s_map
+typedef struct	s_file
 {
-	char	*map;
-	int		size_map;
-}					t_map;
+	char	*fname;
+	int		fd;
+}				t_file;
 
-void				print_memory(const void *addr, size_t size);
-int 				t_map_put_all(t_map *tmap, int fd[], int size);
-t_map				*t_map_new(int size);
-int					t_map_put_chams(t_map *tmap, t_champion *tcham[], int num_cham);
+typedef struct	s_champion
+{
+	int			number;
+	t_file		tfile;
+	header_t	theader;
+	t_inst		tinst;
+	t_proc		tproc;
+}				t_champion;
 
-
-int					ft_endian_convert(void *src, size_t size);
+t_champion		*t_champion_new(char *fname, int num);
+void			t_champion_destroy(t_champion **tcham);
+void			ft_champion_destroy_exit(t_champion **tcham);
+void			t_champion_showinfo(t_champion *tcham);
 
 #endif

@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   asm_t_strs.h                                       :+:      :+:    :+:   */
+/*   vm_t_proc.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/31 15:27:28 by sjang             #+#    #+#             */
-/*   Updated: 2017/01/31 15:27:29 by sjang            ###   ########.fr       */
+/*   Created: 2017/02/02 15:24:15 by sjang             #+#    #+#             */
+/*   Updated: 2017/02/02 15:24:16 by sjang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ASM_T_STRS_H
-# define ASM_T_STRS_H
+#ifndef VM_T_PROC_H
+# define VM_T_PROC_H
 
+# include <op.h>
 # include <libft.h>
 
-typedef struct	s_strs
+typedef struct	s_proc
 {
-	char	**strarr;
-	int		size_mem;
-	int		size_strarr;
-}				t_strs;
+	int		pc;				//첫 프로세서는 시작 위치와 같이 초기화
+	int		carry;
+	char	**registry;		//첫 프로세서의 r1은 넘버와 같이 초기화
+}				t_proc;
 
-t_strs		*strs_new(size_t size_mem);
-int			strs_addone(t_strs *strs, char *str);
+//첫 프로세서에는 registry를 null로 주기
+t_proc			*t_proc_new(int pc, int carry, int num, char **registry);
+void			t_proc_destroy(t_proc tproc);
 
 #endif

@@ -29,16 +29,29 @@ int 	*fill_fds(int argc, char *argv[])
 	return (fd);
 }
 
-
 int		main(int argc, char *argv[])
 {
 	int 	i;
 	int		*fd;
 	t_map	*tmap;
+	t_champion **tcham;
 
-	i = 0;
 	fd = fill_fds(argc, argv);
 	tmap = t_map_new(MEM_SIZE);
-	t_map_put_all(tmap, fd, argc - 1);
-	print_memory(tmap->map, tmap->size_map);
+	tcham = (t_champion**)malloc(sizeof(t_champion*) * argc - 1);
+	i = 0;
+	while (i < argc - 1)
+	{
+		tcham[i] = t_champion_new(argv[i + 1], i + 1);
+		t_champion_showinfo(tcham[i]);
+		i++;
+	}
+	t_map_put_chams(tmap, tcham, argc - 1);
+	i = 0;
+	// while (i < argc - 1)
+	// {
+	// 	t_champion_showinfo(tcham[i]);
+	// 	i++;
+	// }
+	// print_memory(tmap->map, tmap->size_map);
 }

@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-TARGET					=	../asm
+TARGET					=	a.out
 
 OBJECTS					=	op.o\
 							file_to_strs.o\
@@ -36,7 +36,12 @@ CC						=	gcc
 CFLAG					=	
 RM						=	/bin/rm -f
 
-HEADERS					=	$(ICL)asm.h $(OP)op.h
+HEADERS					=	$(ICL)asm.h\
+							$(ICL)asm_t_inst.h\
+							$(ICL)asm_t_label.h\
+							$(ICL)asm_t_strs.h\
+							$(OP)op.h
+
 LIBFT					=	-L../libft -lft
 
 .PHONY					:	clean fclean re

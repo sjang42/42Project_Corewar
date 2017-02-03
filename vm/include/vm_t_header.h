@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_libft.c                                        :+:      :+:    :+:   */
+/*   vm_t_header.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/01 16:39:25 by sjang             #+#    #+#             */
-/*   Updated: 2017/02/01 16:39:26 by sjang            ###   ########.fr       */
+/*   Created: 2017/02/02 15:55:43 by sjang             #+#    #+#             */
+/*   Updated: 2017/02/02 15:55:45 by sjang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <vm_corewar.h>
+#ifndef VM_T_HEADER_H
+# define VM_T_HEADER_H
 
-int		ft_endian_convert(void *src, size_t size)
-{
-	size_t	i;
-	char	*src_cp;
-	char	tmp;
+# include <op.h>
+# include <libft.h>
 
-	src_cp = (char*)src;
-	i = 0;
-	while (i < size / 2)
-	{
-		tmp = src_cp[size - 1 - i];
-		src_cp[size - 1 - i] = src_cp[i];
-		src_cp[i] = tmp;
-		i++;
-	}
-	return (0);
-}
+int		vm_read_header(header_t *theader, int fd, char *str, int size_str);
+#endif
