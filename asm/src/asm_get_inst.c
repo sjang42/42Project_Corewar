@@ -57,7 +57,7 @@ int				decide_num_byte(char *command, char *arg)
 	return (0);
 }
 
-unsigned char			get_codebyte(char **arg)
+unsigned char		get_bytecode(char **arg)
 {
 	int i;
 	unsigned char ret;
@@ -68,11 +68,11 @@ unsigned char			get_codebyte(char **arg)
 	{
 		ret = ret << 2;
 		if (switch_type(arg[i]) == T_REG)
-			ret |= CODEBYTE_REG;
+			ret |= BYTECODE_REG;
 		if (switch_type(arg[i]) == T_DIR)
-			ret |= CODEBYTE_DIR;
+			ret |= BYTECODE_DIR;
 		if (switch_type(arg[i]) == T_IND)
-			ret |= CODEBYTE_IND;
+			ret |= BYTECODE_IND;
 		i++;
 	}
 	while (i < 4)
@@ -117,7 +117,10 @@ void		put_one_arg(t_command tcommand, char *arg,
 	if (type == T_IND)
 	{
 		if (is_indirect(arg) == 1)		//just number
+		{
 			tmp = ft_atoi(arg);
+			printf("tmp : %d\n", tmp);
+		}
 		else							//label
 		{
 			tmp = t_label_get_idx(tlabel, arg + 1);
@@ -125,11 +128,11 @@ void		put_one_arg(t_command tcommand, char *arg,
 				ft_exit_error("2");
 			tmp = tmp - tcommand.idx;
 		}
-		ft_memcpy(mem, (char*)&tmp + 2, 2);
+		ft_memcpy(mem, &tmp, 2);
 		ft_endian_ltob(mem, num_byte);
 	}
-	free(mem);
 	t_inst_put(tinst, mem, num_byte);
+	free(mem);
 }
 
 void		deal_command(char *command, char **arg,
@@ -137,7 +140,7 @@ void		deal_command(char *command, char **arg,
 {
 	int			i;
 	char		opcode;
-	char		codebyte;
+	char		bytecode;
 	t_command	tcommand;
 
 	if (check_command(command, arg))
@@ -146,10 +149,10 @@ void		deal_command(char *command, char **arg,
 	tcommand.idx = tinst->size_inst;
 	opcode = (char)switch_inst(command);
 	t_inst_put(tinst, &opcode, 1);
-	if (op_tab[opcode - 1].num_codebyte)
+	if (op_tab[opcode - 1].num_bytecode)
 	{
-		codebyte = get_codebyte(arg);
-		t_inst_put(tinst, &codebyte, 1);
+		bytecode = get_bytecode(arg);
+		t_inst_put(tinst, &bytecode, 1);
 	}
 	i = 0;
 	while (i < op_tab[opcode - 1].num_arg)
@@ -159,7 +162,7 @@ void		deal_command(char *command, char **arg,
 	}
 }
 
-t_inst *get_inst(t_strs *strs, t_label *tlabel)
+t_inst			*get_inst(t_strs *strs, t_label *tlabel)
 {
 	t_inst	*tinst;
 	int		i;
@@ -188,6 +191,7 @@ t_inst *get_inst(t_strs *strs, t_label *tlabel)
 				j++;
 			}
 			deal_command(first, arg, tinst, tlabel);
+			ft_destroy_strsplit(arg);
 		}
 		else
 			ft_exit_error("4");

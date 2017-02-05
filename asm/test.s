@@ -1,6 +1,9 @@
 .name "jex"
 .comment "Ha, Ha, Ha, stayiiiiin' aliiiiiiiiiive"
 
-sti	r1, %1, %1			;change live by the right value
-forks:#hi
-ld	%33, r6
+ld %:live, r5
+ld %-7, r1
+st r1, r5
+live:
+live %42
+ld -7, r4

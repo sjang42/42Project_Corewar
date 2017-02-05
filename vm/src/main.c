@@ -43,15 +43,29 @@ int		main(int argc, char *argv[])
 	while (i < argc - 1)
 	{
 		tcham[i] = t_champion_new(argv[i + 1], i + 1);
-		t_champion_showinfo(tcham[i]);
+		// t_champion_showinfo(tcham[i]);
 		i++;
 	}
 	t_map_put_chams(tmap, tcham, argc - 1);
-	i = 0;
-	// while (i < argc - 1)
-	// {
-	// 	t_champion_showinfo(tcham[i]);
-	// 	i++;
-	// }
 	// print_memory(tmap->map, tmap->size_map);
+	// printf("%s\n", "\n");
+	i = 0;
+	while (i < 30)
+	{
+		// if (tcham[0]->tproc[0].pc < 18)
+			// scanf("%d", &i);
+		// printf("pc : %d\n", tcham[0]->tproc[0].pc);
+		tcham[0]->tproc[0].pc =
+			(tcham[0]->tproc[0].pc
+			+ vm_execute_proc(tmap, &(tcham[0]->tproc[0])))
+			% MEM_SIZE;
+		i++;
+	}
+	ft_print_memory(tmap->map, tmap->size_map);
+	i = 0;
+	while (i < argc - 1)
+	{
+		t_champion_showinfo(tcham[i]);
+		i++;
+	}
 }

@@ -33,12 +33,43 @@ static int		get_fd_write(char *file_origin)
 }
 
 //실험용.. 실전에선 지우고 밑에 ft_asm함수 쓰길.
+// int				ft_asm(char *file)
+// {
+// 	int			fd_read;
+// 	int			fd_write;
+// 	t_process	process;
+// 	char 		ins[] = {20, 02, 0x68, 0x0c, 0x0c, 0x0c, 0x0c, 0x0c, 0x0c};
+
+// 	fd_read = open(file, O_RDONLY);
+
+// 	process.tstrs = file_to_strs(fd_read);
+// 	process.header = get_header(process.tstrs);
+// 	process.tlabel = get_label(process.tstrs);
+// 	process.tinst = get_inst(process.tstrs, process.tlabel);
+// 	process.zero = 0;
+
+// 	// process.header->prog_size = process.tinst->size_inst;
+// 	process.header->prog_size = sizeof(ins);//
+// 	ft_endian_ltob(&(process.header->prog_size), 4);
+// 	fd_write = get_fd_write(file);
+// 	write(fd_write, &(process.header->magic), 4);
+// 	write(fd_write, process.header->prog_name, PROG_NAME_LENGTH);
+// 	write(fd_write, &(process.zero), 4);
+// 	write(fd_write, &(process.header->prog_size), 4);
+
+// 	write(fd_write, process.header->comment, COMMENT_LENGTH);
+// 	write(fd_write, &(process.zero), 4);
+
+// 	write(fd_write, ins, sizeof(ins));
+// 	// write(fd_write, process.tinst->inst, process.tinst->size_inst);
+// 	return (0);
+// }
+
 int				ft_asm(char *file)
 {
 	int			fd_read;
 	int			fd_write;
 	t_process	process;
-	char 		ins[] = {20, 02, 0x68, 0x0c, 0x0c, 0x0c, 0x0c, 0x0c, 0x0c};
 
 	fd_read = open(file, O_RDONLY);
 
@@ -47,21 +78,20 @@ int				ft_asm(char *file)
 	process.tlabel = get_label(process.tstrs);
 	process.tinst = get_inst(process.tstrs, process.tlabel);
 	process.zero = 0;
-
-	// process.header->prog_size = process.tinst->size_inst;
-	process.header->prog_size = sizeof(ins);//
+	process.header->prog_size = process.tinst->size_inst;
 	ft_endian_ltob(&(process.header->prog_size), 4);
 	fd_write = get_fd_write(file);
+
+	// write(fd_write, process.tinst->inst, process.tinst->size_inst);
+	// ft_print_memory(process.tinst->inst, process.tinst->size_inst);
+
 	write(fd_write, &(process.header->magic), 4);
 	write(fd_write, process.header->prog_name, PROG_NAME_LENGTH);
 	write(fd_write, &(process.zero), 4);
 	write(fd_write, &(process.header->prog_size), 4);
-
 	write(fd_write, process.header->comment, COMMENT_LENGTH);
 	write(fd_write, &(process.zero), 4);
-
-	write(fd_write, ins, sizeof(ins));
-	// write(fd_write, process.tinst->inst, process.tinst->size_inst);
+	write(fd_write, process.tinst->inst, process.tinst->size_inst);
 	return (0);
 }
 
@@ -90,5 +120,3 @@ int				ft_asm(char *file)
 // 	write(fd_write, process.tinst->inst, process.tinst->size_inst);
 // 	return (0);
 // }
-
-

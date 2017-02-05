@@ -27,6 +27,6 @@ typedef struct	s_proc
 
 //첫 프로세서에는 registry를 null로 주기
 t_proc			*t_proc_new(int pc, int carry, int num, char **registry);
-void			t_proc_destroy(t_proc tproc);
+void			t_proc_destroy(t_proc *tproc);
 
 #endif

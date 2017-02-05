@@ -33,7 +33,7 @@ void		fill_command(char *command, char **arg, t_inst *tinst, t_label *tlabel)
 		ft_exit_error("1");
 	opcode = (char)switch_inst(command);
 	t_inst_put(tinst, &zero, 1);
-	if (op_tab[opcode - 1].num_codebyte)
+	if (op_tab[opcode - 1].num_bytecode)
 		t_inst_put(tinst, &zero, 1);
 	i = 0;
 	while (i < op_tab[opcode - 1].num_arg)

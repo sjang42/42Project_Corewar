@@ -68,7 +68,7 @@ int		t_map_put_chams(t_map *tmap, t_champion **tcham, int num_cham)
 	while (i < num_cham)
 	{
 		where = ((MEM_SIZE) / num_cham * i);
-		tcham[i]->tproc.pc = where;
+		tcham[i]->tproc[0].pc = where;
 		ft_memcpy(tmap->map + where,
 			((tcham[i])->tinst).inst,
 			((tcham[i])->theader).prog_size);
@@ -76,3 +76,35 @@ int		t_map_put_chams(t_map *tmap, t_champion **tcham, int num_cham)
 	}
 	return (0);
 }
+
+int		t_map_put_bytes(t_map *tmap, int where, void *bytes, int size)
+{
+	char	*to_put;
+	int		i;
+	
+	to_put = (char*)bytes;
+
+	i = 0;
+	while (i < size)
+	{
+		ft_memcpy(
+			tmap->map + ((where + i) % MEM_SIZE),
+			bytes + i,
+			1);
+		i++;
+	}
+	return (0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

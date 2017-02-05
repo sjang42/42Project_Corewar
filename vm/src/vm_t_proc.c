@@ -39,15 +39,16 @@ t_proc			*t_proc_new(int pc, int carry, int num, char **registry)
 	return (tproc);
 }
 
-void			t_proc_destroy(t_proc tproc)
+void			t_proc_destroy(t_proc *tproc)
 {
 	int i;
 
 	i = 0;
 	while (i < REG_NUMBER)
 	{
-		free(tproc.registry[i]);
+		free(tproc->registry[i]);
 		i++;
 	}
-	free(tproc.registry);
+	free(tproc->registry);
+	free(tproc);
 }

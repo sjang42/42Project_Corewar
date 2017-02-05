@@ -64,6 +64,12 @@ int						vm_read_header(header_t *theader, int fd,
 	get_comment(theader->comment, str);
 
 	if (size_str - (LENGTH_BEFORE_INST) != theader->prog_size)
+	{
+		printf("%d\n", size_str);
+		printf("%d\n", LENGTH_BEFORE_INST);
+		printf("%d\n", size_str - (LENGTH_BEFORE_INST));
+		printf("%d\n", theader->prog_size);
 		ft_exit_error("Size is wrong");
+	}
 	return (0);
 }

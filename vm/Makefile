@@ -12,13 +12,25 @@
 
 TARGET					=	a.out
 
-OBJECTS					=	main.o\
-							vm_print_memory.o\
+OBJECTS					=	op.o\
+							\
+							main.o\
+							\
 							vm_t_map.o\
 							\
 							vm_t_proc.o\
+							\
 							vm_t_champion.o\
 							vm_read_theader.o\
+							\
+							vm_deal_command.o\
+							vm_deal_command_sub1.o\
+							vm_deal_command_sub2.o\
+							\
+							vm_execute.o\
+							\
+							vm_t_arg.o\
+							vm_t_arg_sub.o\
 							\
 							add_libft.o
 
@@ -56,12 +68,22 @@ $(TARGET)				:	$(OBJECTS) $(HEADERS) ../libft/libft.a
 %.o						:	$(OP)%.c
 							$(CC) -c $(CFLAG) $< -I$(OP)
 
+op.o					:	$(OP)op.c $(HEADERS)
+
 main.o					:	$(SRC)main.c $(HEADERS)
-vm_print_memory.o		:	$(SRC)vm_print_memory.c $(HEADERS)
 vm_t_map.o				:	$(SRC)vm_t_map.c $(HEADERS)
 vm_t_proc.o				:	$(SRC)vm_t_proc.c $(HEADERS)
 vm_t_champion.o			:	$(SRC)vm_t_champion.c $(HEADERS)
 vm_read_theader.o		:	$(SRC)vm_read_theader.c $(HEADERS)
+
+vm_deal_command.o		:	$(SRC)vm_deal_command.c $(HEADERS)
+vm_deal_command_sub1.o	:	$(SRC)vm_deal_command_sub1.c $(HEADERS)
+vm_deal_command_sub2.o	:	$(SRC)vm_deal_command_sub2.c $(HEADERS)
+
+vm_execute.o			:	$(SRC)vm_execute.c $(HEADERS)
+
+vm_t_arg.o				:	$(SRC)vm_t_arg.c $(HEADERS)
+vm_t_arg_sub.o			:	$(SRC)vm_t_arg_sub.c $(HEADERS)
 
 add_libft.o				:	$(SRC)add_libft.c $(HEADERS)
 

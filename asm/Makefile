@@ -56,6 +56,7 @@ $(TARGET)				:	$(OBJECTS) $(HEADERS) ../libft/libft.a
 
 %.o						:	$(OP)%.c
 							$(CC) -c $(CFLAG) $< -I$(OP)
+							
 op.o					:	$(OP)op.c $(HEADERS)
 main.o					:	$(SRC)main.c $(HEADERS)
 file_to_strs.o			:	$(SRC)file_to_strs.c $(HEADERS)

@@ -41,9 +41,9 @@ typedef struct	s_process
 
 # define T_INST			16
 
-# define CODEBYTE_REG	0B01
-# define CODEBYTE_DIR	0B10
-# define CODEBYTE_IND	0B11
+# define BYTECODE_REG	0B01
+# define BYTECODE_DIR	0B10
+# define BYTECODE_IND	0B11
 
 t_strs			*file_to_strs(int fd);
 header_t		*get_header(t_strs *strs);

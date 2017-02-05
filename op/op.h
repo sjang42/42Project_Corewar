@@ -92,7 +92,7 @@ typedef struct	s_op
 	char	opcode;
 	int		num_cycle;
 	char	*reference;
-	int		num_codebyte;
+	int		num_bytecode;
 	int		as_address;
 }				t_op;
 

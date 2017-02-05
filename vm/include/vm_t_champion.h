@@ -31,7 +31,8 @@ typedef struct	s_champion
 	t_file		tfile;
 	header_t	theader;
 	t_inst		tinst;
-	t_proc		tproc;
+	t_proc		*tproc;
+	int			num_tproc;
 }				t_champion;
 
 t_champion		*t_champion_new(char *fname, int num);
