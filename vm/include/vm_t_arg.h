@@ -39,7 +39,7 @@ t_arg			*t_arg_new(t_map *tmap, int pc_command, int opcode);
 int				check_bytecode(int opcode, int *arg_byte);
 
 void			*read_data(t_map *tmap, int pc, size_t size);
-char 			read_current_byte(t_map *tmap, int pc);
+unsigned char 	read_current_byte(t_map *tmap, int pc);
 
 
 #endif

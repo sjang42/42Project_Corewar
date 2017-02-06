@@ -12,13 +12,7 @@
 
 #include <vm_corewar.h>
 
-int				read_registry(char **registry, int idx, void *dest)
-{
-	if (idx <= 0 || idx > REG_NUMBER)
-		return (-1);
-	ft_memcpy(dest, registry[idx], REG_SIZE);
-	return (0);
-}
+
 
 // int		deal_ld(t_map *tmap, int opcode, int pc_command, t_proc *tproc)
 // {

@@ -27,6 +27,14 @@ void	*read_data(t_map *tmap, int pc, size_t size)
 	return ((void*)ret);
 }
 
+int		read_registry(char **registry, int idx, void *dest)
+{
+	if (idx < 1 || idx > REG_NUMBER)
+		return (-1);
+	ft_memcpy(dest, registry[idx - 1], REG_SIZE);
+	return (0);
+}
+
 int		put_registry(char **registry, int idx, void *src)
 {
 	if (!registry || !*registry ||
@@ -36,12 +44,12 @@ int		put_registry(char **registry, int idx, void *src)
 	return (1);
 }
 
-char 	read_current_byte(t_map *tmap, int pc)
+unsigned char 	read_current_byte(t_map *tmap, int pc)
 {
 	return (tmap->map[pc % (MEM_SIZE)]);
 }
 
-char	read_indirect_data(t_map *tmap, int pc_command, int idx)
+unsigned char	read_indirect_data(t_map *tmap, int pc_command, int idx)
 {
 	return (read_current_byte(tmap, (pc_command + idx) % (MEM_SIZE)));
 }

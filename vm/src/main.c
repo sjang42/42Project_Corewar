@@ -32,6 +32,8 @@ int 	*fill_fds(int argc, char *argv[])
 int		main(int argc, char *argv[])
 {
 	int 	i;
+	int		j;
+	int		idx_cham;
 	int		*fd;
 	t_map	*tmap;
 	t_champion **tcham;
@@ -50,18 +52,25 @@ int		main(int argc, char *argv[])
 	// print_memory(tmap->map, tmap->size_map);
 	// printf("%s\n", "\n");
 	i = 0;
-	while (i < 30)
+	while (i < 100)
 	{
-		// if (tcham[0]->tproc[0].pc < 18)
-			// scanf("%d", &i);
-		// printf("pc : %d\n", tcham[0]->tproc[0].pc);
-		tcham[0]->tproc[0].pc =
-			(tcham[0]->tproc[0].pc
-			+ vm_execute_proc(tmap, &(tcham[0]->tproc[0])))
-			% MEM_SIZE;
+		idx_cham = 0;
+		while (idx_cham < argc - 1)
+		{
+			j = 0;
+			while (j < tcham[idx_cham]->num_tproc)
+			{
+				tcham[idx_cham]->tproc[j].pc =
+					(vm_execute_proc(tmap, tcham[idx_cham], j) +
+					tcham[idx_cham]->tproc[j].pc) %
+					MEM_SIZE;
+				j++;
+			}
+			idx_cham++;
+		}
 		i++;
 	}
-	ft_print_memory(tmap->map, tmap->size_map);
+	ft_print_memory(tmap->map, 64);
 	i = 0;
 	while (i < argc - 1)
 	{

@@ -117,10 +117,7 @@ void		put_one_arg(t_command tcommand, char *arg,
 	if (type == T_IND)
 	{
 		if (is_indirect(arg) == 1)		//just number
-		{
 			tmp = ft_atoi(arg);
-			printf("tmp : %d\n", tmp);
-		}
 		else							//label
 		{
 			tmp = t_label_get_idx(tlabel, arg + 1);
