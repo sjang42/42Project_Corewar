@@ -123,4 +123,6 @@ int		deal_fork(t_map *tmap, t_champion *tcham,
 int		deal_lfork(t_map *tmap, t_champion *tcham,
 					int idx_proc, int pc_command);
 
+int		count_bytecode_cycle(t_map *tmap, int opcode, int pc_command);
+
 #endif

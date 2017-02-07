@@ -16,13 +16,17 @@ int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc)
 {
 	t_arg			*targ;
 	t_type_arg		type_arg;
+	int				point;
 	int				ret;
 
+	ret = count_bytecode_cycle(tmap, OP_LD + 1, pc_command)
+				+ op_tab[OP_LD].num_bytecode
+				+ 1;
 	ft_bzero(&type_arg, sizeof(t_type_arg));
 	targ = t_arg_new(tmap, pc_command, OP_LD + 1);
 	if (targ == NULL)
-		return (5);//틀렸을 때 몇 개 반환하는지 보기
-	ret = 0;
+		return (ret);//틀렸을 때 몇 개 반환하는지 보기
+	point = 0;
 
 	/*
 	** get 1st arg
@@ -33,7 +37,7 @@ int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc)
 					(char*)(targ->arg),
 					DIR_SIZE);
 		ft_endian_convert(&(type_arg.val_dir[0]), DIR_SIZE);
-		ret += 4;
+		point += 4;
 	}
 	else						//TYPE_IND		//get : type_arg.val_ind[0]
 	{
@@ -42,30 +46,34 @@ int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc)
 		type_arg.val_ind[0] = (TYPE_IND)read_indirect_data(
 							tmap, pc_command,
 							type_arg.adr_ind[0] % IDX_MOD);
-		ret += 2;
+		point += 2;
 	}
 
 	/*
 	** get 2nd arg
 	*/
-	type_arg.adr_reg[3] = *((char*)targ->arg + ret);
+	type_arg.adr_reg[3] = *((char*)targ->arg + point);
 	type_arg.val_reg[3] = (targ->bytecode[0] == T_DIR) ?
 							type_arg.val_dir[0] :
 							type_arg.val_ind[0];
-	ret += 1;
+	point += 1;
 
 	/*
 	** process ld
 	*/
-	put_registry(tproc->registry,				//틀려도 괜찮음.
+	if (put_registry(tproc->registry,
 					type_arg.adr_reg[3],
-					&type_arg.val_reg[3]);
-
+					&type_arg.val_reg[3]))
+	{
+		t_arg_destroy(targ);
+		return (ret);
+	}
 	if (type_arg.val_reg[3] == 0)
 		tproc->carry = 1;
-
+	else
+		tproc->carry = 0;
 	t_arg_destroy(targ);
-	return (ret + 2);
+	return (ret);
 }
 
 

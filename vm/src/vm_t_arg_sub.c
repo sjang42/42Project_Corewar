@@ -88,6 +88,7 @@ static int	*read_bytecode(
 		ret[1] = bytecode % (0b1000000) / 0b10000;
 	if (num_arg >= 3)
 		ret[2] = bytecode % (0b10000) / 0b100;
+
 	i = 0;
 	while (i < num_arg)
 	{
@@ -124,22 +125,31 @@ int			*get_bytecode(t_map *tmap, int pc_command, int opcode)
 	return (bytecode);
 }
 
-int		check_bytecode(int opcode, int *arg_byte)
+int		check_bytecode(int opcode, int *bytecode)
 {
 	int i;
 
+	if (!bytecode)
+		return (-1);
 	i = 0;
 	while (i < op_tab[opcode - 1].num_arg)
 	{
-		if (!(arg_byte + i))
+		if (!(bytecode + i))
 			return (-1);
-		if ((arg_byte[i] & op_tab[opcode - 1].argument[i]) != arg_byte[i])
-		{
-			// printf("arg_byte[%d] : %d\n", i, arg_byte[i]);
-			// printf("opcode : %d\n", opcode);
+		if ((bytecode[i] & op_tab[opcode - 1].argument[i]) != bytecode[i])
 			return (-1);
-		}
 		i++;
 	}
 	return (0);
 }
+
+
+
+
+
+
+
+
+
+
+

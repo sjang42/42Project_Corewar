@@ -17,10 +17,14 @@ int		deal_lfork(t_map *tmap, t_champion *tcham,
 {
 	t_arg			*targ;
 	t_type_arg		type_arg;
+	int				ret;
 
+	ret = count_bytecode_cycle(tmap, OP_LFORK + 1, pc_command)
+				+ op_tab[OP_LFORK].num_bytecode
+				+ 1;
 	targ = t_arg_new(tmap, pc_command, OP_LFORK + 1);
 	if (targ == NULL)
-		return (5);//틀렸을 때 몇 개 반환하는지 보기
+		return (ret);//틀렸을 때 몇 개 반환하는지 보기
 
 	ft_memcpy(&(type_arg.adr_dir[0]),
 				(char*)(targ->arg),
@@ -30,5 +34,5 @@ int		deal_lfork(t_map *tmap, t_champion *tcham,
 	t_champion_add_proc(tcham, idx_proc, 
 						(pc_command + type_arg.adr_dir[0]) % MEM_SIZE);
 	t_arg_destroy(targ);
-	return (3);
+	return (ret);
 }

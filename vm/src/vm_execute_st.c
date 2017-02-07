@@ -21,26 +21,27 @@ int		deal_st(t_map *tmap, int pc_command, t_proc *tproc)
 	TYPE_IND	val_ind;
 	int			ret;
 
-	ret = 1;
+	ret = count_bytecode_cycle(tmap, OP_ST + 1, pc_command)
+				+ op_tab[OP_ST].num_bytecode
+				+ 1;
 	targ = t_arg_new(tmap, pc_command, OP_ST + 1);
 	if (targ == NULL)
-		return (5);
+		return (ret);
 	if (read_registry(tproc->registry, ((char*)(targ->arg))[0], &value_reg))
 	{
 		t_arg_destroy(targ);
-		return (5);//틀렸을 때 몇 개 반환하는지 보기
+		return (ret);//틀렸을 때 몇 개 반환하는지 보기
 	}
 	if (targ->bytecode[1] == T_REG)
 	{
 		if (read_registry(tproc->registry, ((char*)(targ->arg))[1], &address_reg))
 		{
 			t_arg_destroy(targ);
-			return (5);//틀렸을 때 몇 개 반환하는지 보기
+			return (ret);//틀렸을 때 몇 개 반환하는지 보기
 		}
 		t_map_put_bytes(tmap,
 			pc_command + (address_reg % IDX_MOD),
 			&(value_reg), REG_SIZE);
-		ret += 1;
 	}
 	else // T_IND
 	{
@@ -50,8 +51,7 @@ int		deal_st(t_map *tmap, int pc_command, t_proc *tproc)
 		t_map_put_bytes(tmap,
 			pc_command + (val_ind % IDX_MOD),
 			&(value_reg), REG_SIZE);
-		ret += 2;
 	}
 	t_arg_destroy(targ);
-	return (ret + 2);
+	return (ret);
 }

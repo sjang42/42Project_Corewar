@@ -19,11 +19,15 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 	int				where;
 	void			*tmp;
 	int				ret;
+	int				point;
 
+	ret = count_bytecode_cycle(tmap, OP_LLDI + 1, pc_command)
+				+ op_tab[OP_LLDI].num_bytecode
+				+ 1;
 	targ = t_arg_new(tmap, pc_command, OP_LLDI + 1);
 	if (targ == NULL)
-		return (5);
-	ret = 0;
+		return (ret);
+	point = 0;
 
 	/*
 	**	get 1st arg
@@ -36,10 +40,10 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 			&(type_arg.val_reg[0])))
 		{
 			t_arg_destroy(targ);
-			return (5);//틀렸을 때 몇 개 반환하는지 보기
+			return (ret);//틀렸을 때 몇 개 반환하는지 보기
 		}
 		type_arg.adr_reg[0] = ((char*)(targ->arg))[0];
-		ret += 1;
+		point += 1;
 	}
 	else if (targ->bytecode[0] == T_DIR)	//get : type_arg.adr_dir[0]
 	{
@@ -47,7 +51,7 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 					(char*)(targ->arg),
 					DIR_ADR_SIZE);
 		ft_endian_convert(&(type_arg.adr_dir[0]), DIR_ADR_SIZE);
-		ret += 2;
+		point += 2;
 	}
 	else//T_IND								//get : type_arg.val_ind[0]
 	{
@@ -56,7 +60,7 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 		type_arg.val_ind[0] = (TYPE_IND)read_indirect_data(
 							tmap, pc_command,
 							type_arg.adr_ind[0]);
-		ret += 2;
+		point += 2;
 	}
 
 
@@ -67,29 +71,29 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 	{
 		if (read_registry(
 			tproc->registry,
-			*(((char*)(targ->arg)) + ret),
+			*(((char*)(targ->arg)) + point),
 			&(type_arg.val_reg[1])))
 		{
 			t_arg_destroy(targ);
-			return (5);//틀렸을 때 몇 개 반환하는지 보기
+			return (ret);//틀렸을 때 몇 개 반환하는지 보기
 		}
-		type_arg.adr_reg[1] = *(((char*)(targ->arg)) + ret);
-		ret += 1;
+		type_arg.adr_reg[1] = *(((char*)(targ->arg)) + point);
+		point += 1;
 	}
 	else						//T_DIR		//get : type_arg.adr_dir[1]
 	{
 		ft_memcpy(&(type_arg.adr_dir[1]),
-					(char*)(targ->arg) + ret,
+					(char*)(targ->arg) + point,
 					DIR_ADR_SIZE);
 		ft_endian_convert(&(type_arg.adr_dir[1]), DIR_ADR_SIZE);
-		ret += 2;
+		point += 2;
 	}
 
 	/*
 	** get 3rd arg
 	*/
-	type_arg.adr_reg[2] = *(((char*)(targ->arg)) + ret);
-	ret += 1;
+	type_arg.adr_reg[2] = *(((char*)(targ->arg)) + point);
+	point += 1;
 
 	/*
 	**	process ldi
@@ -116,12 +120,23 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 	where = ((pc_command + type_arg.val_dir[3]) % MEM_SIZE);
 	tmp = read_data(tmap, where, REG_SIZE);
 	ft_endian_convert(tmp, REG_SIZE);
-	put_registry(tproc->registry, type_arg.adr_reg[2], tmp);
+
+	if (put_registry(tproc->registry,
+					type_arg.adr_reg[2],
+					tmp))
+	{
+		free(tmp);
+		t_arg_destroy(targ);
+		return (ret);
+	}
+
 	if (type_arg.val_reg[3] == 0)
 		tproc->carry = 1;
+	else
+		tproc->carry = 0;
 	free(tmp);
 	t_arg_destroy(targ);
-	return (ret + 2);
+	return (ret);
 }
 
 

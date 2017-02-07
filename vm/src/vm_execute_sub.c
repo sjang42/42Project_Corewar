@@ -15,11 +15,15 @@
 int		deal_sub(t_map *tmap, int pc_command, t_proc *tproc)
 {
 	t_arg			*targ;
-	t_type_arg		type_arg;	
+	t_type_arg		type_arg;
+	int				ret;
 
+	ret = count_bytecode_cycle(tmap, OP_SUB + 1, pc_command)
+				+ op_tab[OP_SUB].num_bytecode
+				+ 1;
 	targ = t_arg_new(tmap, pc_command, OP_SUB + 1);
 	if (targ == NULL)
-		return (5);//틀렸을 때 몇 개 반환하는지 보기
+		return (ret);//틀렸을 때 몇 개 반환하는지 보기
 	if (read_registry(tproc->registry,
 						((char*)(targ->arg))[0],
 						&(type_arg.val_reg[0]))
@@ -34,9 +38,9 @@ int		deal_sub(t_map *tmap, int pc_command, t_proc *tproc)
 		)
 	{
 		t_arg_destroy(targ);
-		return (5);//틀렸을 때 몇 개 반환하는지 보기
+		return (ret);//틀렸을 때 몇 개 반환하는지 보기
 	}
 	type_arg.val_reg[3] = type_arg.val_reg[0] - type_arg.val_reg[1];
 	put_registry(tproc->registry, ((char*)(targ->arg))[2], &(type_arg.val_reg[3]));
-	return (5);
+	return (ret);
 }
