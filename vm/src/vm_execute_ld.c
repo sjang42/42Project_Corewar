@@ -69,9 +69,13 @@ int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc)
 		return (ret);
 	}
 	if (type_arg.val_reg[3] == 0)
+	{
 		tproc->carry = 1;
+	}
 	else
+	{
 		tproc->carry = 0;
+	}
 	t_arg_destroy(targ);
 	return (ret);
 }

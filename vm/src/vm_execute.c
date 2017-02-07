@@ -25,7 +25,8 @@ int		get_cycle(int opcode)
 	return (op_tab[opcode - 1].num_cycle);
 }
 
-int		vm_execute_proc(t_map *tmap, t_champion *tcham, int idx_proc)
+int		vm_execute_proc(t_map *tmap, t_champion *tcham, t_arena *tarena,
+						int idx_proc)
 {
 	int cur_byte;
 	int ret;
@@ -46,13 +47,13 @@ int		vm_execute_proc(t_map *tmap, t_champion *tcham, int idx_proc)
 	{
 		if (tcham->tproc[idx_proc].wait_cycle == 1)
 		{
-			ret = deal_command(tmap, tcham->tproc[idx_proc].on_command, tcham, idx_proc);
+			ret = deal_command(tmap, tcham, idx_proc, tarena);
 			tcham->tproc[idx_proc].on_command = 0;
 			return (ret);
 		}
 		else
 		{
-			(tcham->tproc[idx_proc].wait_cycle)--;
+			(tcham->tproc[idx_proc].wait_cycle) -= 1;
 			return (0);
 		}
 	}

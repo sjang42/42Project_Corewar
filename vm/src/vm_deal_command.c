@@ -12,14 +12,18 @@
 
 #include <vm_corewar.h>
 
-int		deal_command(t_map *tmap, int opcode, t_champion *tcham, int idx_proc)
+int		deal_command(t_map *tmap, t_champion *tcham,
+					int idx_proc, t_arena *tarena)
 {
 	int ret;
+	int opcode;
 
 	ret = 0;
+	opcode = tcham->tproc[idx_proc].on_command;
 	if (opcode == op_tab[OP_LIVE].opcode)
 	{
-		ret += deal_live(tmap, tcham->tproc[idx_proc].pc);
+		ret += deal_live(tarena, tmap, tcham->tproc[idx_proc].pc);
+		tcham->tproc[idx_proc].period_live += 1;
 	}
 	else if (opcode == op_tab[OP_LD].opcode)
 	{

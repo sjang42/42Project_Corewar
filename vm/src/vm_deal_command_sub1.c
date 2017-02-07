@@ -39,9 +39,9 @@ int		put_registry(char **registry, int idx, void *src)
 {
 	if (!registry || !*registry ||
 		idx < 1 || idx > REG_NUMBER)
-		return (0);
+		return (-1);
 	ft_memcpy(registry[idx - 1], src, REG_SIZE);
-	return (1);
+	return (0);
 }
 
 unsigned char 	read_current_byte(t_map *tmap, int pc)

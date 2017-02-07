@@ -23,10 +23,11 @@ typedef struct	s_proc
 	char	**registry;		//첫 프로세서의 r1은 넘버와 같이 초기화
 	int		on_command;
 	int		wait_cycle;
+	int		period_live;
 }				t_proc;
 
 //첫 프로세서에는 registry를 null로 주기
-t_proc			*t_proc_new(int pc, int carry, int num, char **registry);
+t_proc			*t_proc_new(int pc, int carry, char **registry);
 void			t_proc_destroy(t_proc *tproc);
-
+void			t_proc_put(t_proc *tproc, int pc, int carry, char **registry);
 #endif

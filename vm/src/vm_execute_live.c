@@ -12,11 +12,31 @@
 
 #include <vm_corewar.h>
 
-int		deal_live(t_map *tmap, int pc_command)
+int		change_last_live(t_champion **tcham, int num_cham,
+						int num, int cur_cycle)
+{
+	int i;
+	int ret;
+
+	i = 0;
+	while (i < num_cham)
+	{
+		if (tcham[i]->number == num)
+		{
+			tcham[i]->last_live = cur_cycle;
+			return (i);
+		}
+		i++;
+	}
+	return (-1);
+}
+
+int		deal_live(t_arena *tarena, t_map *tmap, int pc_command)
 {
 	t_arg	*targ;
 	int		num;
-	int				ret;
+	int		ret;
+	int		idx_cham;
 
 	ret = count_bytecode_cycle(tmap, OP_LIVE + 1, pc_command)
 				+ op_tab[OP_LIVE].num_bytecode
@@ -26,8 +46,14 @@ int		deal_live(t_map *tmap, int pc_command)
 		return (ret);//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 	ft_memcpy(&num, targ->arg, 4);
 	ft_endian_convert(&num, 4);
-	if (num < 0)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
+	if (num < 0 || num > tarena->num_cham)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 		return (ret);
+	if ((idx_cham = change_last_live(tarena->tcham, tarena->num_cham,
+							num, tarena->cycle))
+		!= -1)
+	{
+		tarena->last_alive_cham = idx_cham;
+	}
 	ft_putstr("“A process shows that player ");
 	ft_putnbr(num);
 	ft_putstr(" is alive”\n");

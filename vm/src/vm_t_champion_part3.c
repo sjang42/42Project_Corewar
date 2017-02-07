@@ -36,8 +36,6 @@ void			t_champion_destroy_exit(t_champion **tcham)
 
 void			t_champion_add_proc(t_champion *tcham, int idx_proc, int pc)
 {
-	t_proc	*new_tproc;
-
 	if (tcham->num_tproc + 1 >= tcham->mem_tproc)
 	{
 		tcham->tproc = (t_proc*)ft_realloc(tcham->tproc,
@@ -45,12 +43,29 @@ void			t_champion_add_proc(t_champion *tcham, int idx_proc, int pc)
 			sizeof(t_proc) * (tcham->mem_tproc + 5));
 		tcham->mem_tproc += 5;
 	}
-	new_tproc = t_proc_new(pc,
-						tcham->tproc[idx_proc].carry,
-						tcham->number,
-						tcham->tproc[idx_proc].registry);
-	ft_memcpy(&(tcham->tproc[tcham->num_tproc]),
-				new_tproc,
-				sizeof(t_proc));
+	t_proc_put(&(tcham->tproc[tcham->num_tproc]), pc,
+				tcham->tproc[idx_proc].carry,
+				tcham->tproc[idx_proc].registry);
 	tcham->num_tproc += 1;
+}
+
+int				t_champion_kill_proc(t_champion *tcham, int idx_proc)
+{
+	int i;
+
+	if (idx_proc >= tcham->num_tproc)
+		return (-1);
+	i = 0;
+	while (i < REG_NUMBER)
+	{
+		free(tcham->tproc[idx_proc].registry[i]);
+		i++;
+	}
+	free(tcham->tproc[idx_proc].registry);
+	if (idx_proc + 1 != tcham->num_tproc)
+		ft_memmove(&(tcham->tproc[idx_proc]),
+					&(tcham->tproc[idx_proc + 1]),
+					sizeof(t_proc) * (tcham->num_tproc - (idx_proc + 1)));
+	(tcham->num_tproc) -= 1;
+	return (0);
 }

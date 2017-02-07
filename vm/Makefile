@@ -34,6 +34,10 @@ OBJECTS					=	op.o\
 							vm_t_arg.o\
 							vm_t_arg_sub.o\
 							\
+							vm_t_arena.o\
+							vm_t_arena_checkup.o\
+							\
+							\
 							vm_execute_live.o\
 							vm_execute_ld.o\
 							vm_execute_st.o\
@@ -105,6 +109,9 @@ vm_execute.o			:	$(SRC)vm_execute.c $(HEADERS)
 
 vm_t_arg.o				:	$(SRC)vm_t_arg.c $(HEADERS)
 vm_t_arg_sub.o			:	$(SRC)vm_t_arg_sub.c $(HEADERS)
+
+vm_t_arena.o			:	$(SRC)vm_t_arena.c $(HEADERS)
+vm_t_arena_checkup.o	:	$(SRC)vm_t_arena_checkup.c $(HEADERS)
 
 add_libft.o				:	$(SRC)add_libft.c $(HEADERS)
 

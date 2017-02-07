@@ -35,6 +35,7 @@ typedef struct	s_champion
 	t_proc		*tproc;
 	int			mem_tproc;
 	int			num_tproc;
+	long long	last_live;
 }				t_champion;
 
 t_champion		*t_champion_new(char *fname, int num);
@@ -43,5 +44,6 @@ void			t_champion_destroy_exit(t_champion **tcham);
 void			t_champion_showinfo(t_champion *tcham);
 
 void			t_champion_add_proc(t_champion *tcham, int idx_proc, int pc);
+int				t_champion_kill_proc(t_champion *tcham, int idx_proc);
 
 #endif

@@ -32,10 +32,8 @@ static int		t_cham_get_file(t_file *tfile, char *fname)
 
 static int		t_cham_get_proc(t_proc *tproc, int num)
 {
-	t_proc	*new_tproc;
-
-	new_tproc = t_proc_new(0, 0, num, NULL);
-	ft_memcpy(tproc, new_tproc, sizeof(t_proc));
+	t_proc_put(tproc, 0, 0, NULL);
+	ft_memcpy(tproc->registry[0], &num, REG_SIZE);
 	return (0);
 }
 
@@ -47,6 +45,7 @@ t_champion		*t_champion_new(char *fname, int num)
 
 	tcham = (t_champion*)malloc(sizeof(t_champion));
 	tcham->number = num;
+	tcham->last_live = 0;
 	t_cham_get_file(&(tcham->tfile), fname);
 	size_str = ft_read_all(tcham->tfile.fd, &str);
 	if (size_str == -1 || size_str < LENGTH_BEFORE_INST)
