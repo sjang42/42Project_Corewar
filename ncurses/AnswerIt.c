@@ -32,25 +32,7 @@ int main(void)
 	point = 0;
 	win = initscr();
 
-	if (has_colors())
-	{
-		start_color();
-		mvprintw(5, 5 "There are %d COLORS, and %d COLOR_PAIRS available",
-				COLORS, COLOR_PAIRS);
-
-
-
-
-
-
-
-
-
-
-	}
-
 	box(win, '*', '*');
-
 
 	move(LINES / 12 * 3, COLS / 8 * 4 - (strlen(Welcome) / 2));
 	printw("%s", Welcome);

@@ -31,28 +31,61 @@ int		change_last_live(t_champion **tcham, int num_cham,
 	return (-1);
 }
 
-int		deal_live(t_arena *tarena, t_map *tmap, int pc_command)
+int		w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 {
 	t_arg	*targ;
 	int		num;
 	int		ret;
-	int		idx_cham;
+	int		live_cham;
 
-	ret = count_bytecode_cycle(tmap, OP_LIVE + 1, pc_command)
+	ret = count_bytecode_cycle(tmap, OP_LIVE + 1, tarena->tcham[idx_cham]->tproc[idx_proc].pc)
 				+ op_tab[OP_LIVE].num_bytecode
 				+ 1;
-	targ = t_arg_new(tmap, pc_command, OP_LIVE + 1);
+	targ = t_arg_new(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, OP_LIVE + 1);
 	if (targ == NULL)
 		return (ret);//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 	ft_memcpy(&num, targ->arg, 4);
 	ft_endian_convert(&num, 4);
 	if (num < 0 || num > tarena->num_cham)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 		return (ret);
-	if ((idx_cham = change_last_live(tarena->tcham, tarena->num_cham,
+	if ((live_cham = change_last_live(tarena->tcham, tarena->num_cham,
 							num, tarena->cycle))
 		!= -1)
 	{
-		tarena->last_alive_cham = idx_cham;
+		tarena->last_alive_cham = live_cham;
+		tarena->tcham[idx_cham]->tproc[idx_proc].period_live += 1;
+		info_show_cham_lastlive(tarena->twin->win_info, tarena, live_cham);
+		info_show_cham_live_current(tarena->twin->win_info, tarena, live_cham);
+	}
+	mvwprintw(tarena->twin->win_arena, TERM_SAYS_Y, TERM_SAYS_X + TERM_SAYS_MASSAGE_LEN,
+				"A process shows that player %d is alive", num);
+	t_arg_destroy(targ);
+	return (ret);
+}
+
+
+int		deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
+{
+	t_arg	*targ;
+	int		num;
+	int		ret;
+	int		live_cham;
+
+	ret = count_bytecode_cycle(tmap, OP_LIVE + 1, tarena->tcham[idx_cham]->tproc[idx_proc].pc)
+				+ op_tab[OP_LIVE].num_bytecode
+				+ 1;
+	targ = t_arg_new(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, OP_LIVE + 1);
+	if (targ == NULL)
+		return (ret);//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
+	ft_memcpy(&num, targ->arg, 4);
+	ft_endian_convert(&num, 4);
+	if (num < 0 || num > tarena->num_cham)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
+		return (ret);
+	if ((live_cham = change_last_live(tarena->tcham, tarena->num_cham,
+							num, tarena->cycle))
+		!= -1)
+	{
+		tarena->last_alive_cham = live_cham;
 	}
 	ft_putstr("“A process shows that player ");
 	ft_putnbr(num);

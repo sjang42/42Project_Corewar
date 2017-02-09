@@ -14,52 +14,55 @@
 #include <badguy.h>
 #include <ncurses.h>
 #include <unistd.h>
-
-void	draw_repeat_ch_hor(WINDOW *win, char ch, int size, int x, int y)
-{
-	int i;
-
-	i = 0;
-	while (i < size)
-	{
-		wmove(win, x, y + i);
-		waddch(win, ch);
-		// refresh();
-		// usleep(50000);
-		i++;
-	}
-}
-
-void	draw_repeat_ch_ver(WINDOW *win, char ch, int size, int x, int y)
-{
-	int i;
-
-	i = 0;
-	while (i < size)
-	{
-		wmove(win, x + i, y);
-		waddch(win, ch);
-		i++;
-	}
-}
-
-
+#include <stdio.h>
+// #include <vm_display.h>
+#include <ncurses.h>                                                         
+#include <stdbool.h>                                                                                            
+                                                                            
 int main(void)
 {
 	WINDOW *win;
+	WINDOW *win2;
+	WINDOW *win3;
 	int i;
 	
 	win = initscr();
-	draw_repeat_ch_hor(win, '*', 254, 0, 0);
-	draw_repeat_ch_hor(win, '*', 254, 67, 0);
-	draw_repeat_ch_ver(win, '*', 66, 1, 0);
-	draw_repeat_ch_ver(win, '*', 66, 1, 195);
-	draw_repeat_ch_ver(win, '*', 66, 1, 253);
+
+	win2 = newwin(50, 50, 0, 0);
+	win3 = newwin(50, 50, 0, 60);
+	wborder(win2, '*', '*','*','*','*','*','*', '*');
+	wborder(win3, '*', '*','*','*','*','*','*', '*');
+	wrefresh(win2);
+	wrefresh(win3);
+
+	mvwprintw(win2, 5, 5, "%d", can_change_color());
+	// init_color(1, 255, 255, 0);
+
+	init_pair(1, COLOR_YELLOW, COLOR_RED);
+	start_color();
+	attron(COLOR_PAIR(1));
+	mvwprintw(win, 5, 5, "hi");
 	refresh();
+	attroff(COLOR_PAIR(1));
 
-
-
-	getch();
+	wgetch(win2);
 	endwin();
 	return (0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

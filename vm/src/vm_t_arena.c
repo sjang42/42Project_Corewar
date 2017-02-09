@@ -23,6 +23,8 @@ t_arena 	*t_arena_new(int argc, char *argv[], int number[])
 	tarena->num_period = 0;
 	tarena->last_reduce = 0;
 	tarena->last_alive_cham = -1;
+	tarena->num_process = tarena->num_cham;
+
 	tarena->tcham = (t_champion**)malloc(sizeof(t_champion*) * (tarena->num_cham));
 	i = 0;
 	while (i < argc - 1)
@@ -31,45 +33,97 @@ t_arena 	*t_arena_new(int argc, char *argv[], int number[])
 		i++;
 	}
 	t_map_put_chams(tarena->tmap, tarena->tcham, tarena->num_cham);
-	tarena->cycle = 0;
+	tarena->cycle = 1;
 	tarena->cycle_to_die = CYCLE_TO_DIE;
 	return (tarena);
 }
 
-void		play_one_period(t_arena *tarena)
+void		play_one_period(t_arena *tarena, t_windows *twin)
 {
 	int		cycle;
 	int		idx_cham;
 	int		idx_proc;
+	int		key;
 
 	cycle = 0;
 	while (cycle < tarena->cycle_to_die)
 	{
+		info_show_cycle(twin->win_info, tarena->cycle);
 		idx_cham = tarena->num_cham - 1;
+		if (cycle % 20 == 0)
+		{
+			halfdelay(1);
+			key = getch();
+			if (key == ' ')
+			{
+				info_show_status(twin->win_info, 1);
+				while (1)
+				{
+					key = getch();
+					if (key == ' ')
+						break ;
+				}
+				info_show_status(twin->win_info, 0);
+			}
+		}
 		while (idx_cham >= 0)
 		{
 			idx_proc = 0;
 			while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
 			{
-				// ft_putstr("idx_cham : ");
-				// ft_putnbr(idx_cham);
-				// ft_putstr("\n");
-				// printf("cham[%d]->proc[%d]->pc : %d\n",idx_cham ,idx_proc, 	tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+				
+				ncur_unhighlight_pc(twin->win_arena, tarena->tmap,
+				&(tarena->tcham[idx_cham]->tproc[idx_proc]));
 				tarena->tcham[idx_cham]->tproc[idx_proc].pc =
 				(vm_execute_proc(tarena->tmap,
-								tarena->tcham[idx_cham],
+								idx_cham,
 								tarena,
 								idx_proc)
 				+ tarena->tcham[idx_cham]->tproc[idx_proc].pc)
 				% MEM_SIZE;
+				ncur_highlight_pc(twin->win_arena, tarena->tmap,
+				&(tarena->tcham[idx_cham]->tproc[idx_proc]));
 				idx_proc++;
+				wrefresh(twin->win_arena);
 			}
 			idx_cham--;
 		}
 		tarena->cycle += 1;
 		cycle++;
 	}
+	info_show_cycle(twin->win_info, tarena->cycle);
 }
+
+// void		play_one_period(t_arena *tarena)
+// {
+// 	int		cycle;
+// 	int		idx_cham;
+// 	int		idx_proc;
+
+// 	cycle = 0;
+// 	while (cycle < tarena->cycle_to_die)
+// 	{
+// 		idx_cham = tarena->num_cham - 1;
+// 		while (idx_cham >= 0)
+// 		{
+// 			idx_proc = 0;
+// 			while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
+// 			{
+// 				tarena->tcham[idx_cham]->tproc[idx_proc].pc =
+// 				(vm_execute_proc(tarena->tmap,
+// 								tarena->tcham[idx_cham],
+// 								tarena,
+// 								idx_proc)
+// 				+ tarena->tcham[idx_cham]->tproc[idx_proc].pc)
+// 				% MEM_SIZE;
+// 				idx_proc++;
+// 			}
+// 			idx_cham--;
+// 		}
+// 		tarena->cycle += 1;
+// 		cycle++;
+// 	}
+// }
 
 void		display_winner(t_arena *tarena)
 {
@@ -98,9 +152,11 @@ void		display_winner(t_arena *tarena)
 
 void		t_arena_play(t_arena *tarena)
 {
+	if (1)
+		info_show_status(tarena->twin->win_info, 0);
 	while (1)
 	{
-		play_one_period(tarena);
+		play_one_period(tarena, tarena->twin);
 		tarena->num_period += 1;
 		checkup_nbr_live(tarena);
 		checkup_max_checks(tarena);

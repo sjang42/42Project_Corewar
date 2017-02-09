@@ -15,20 +15,13 @@
 
 # include <op.h>
 # include <libft.h>
+# include <vm_structures.h>
 
 # include <vm_t_map.h>
 
 /*
 **	sizeof(byte_arg) == num_arg;
 */
-
-typedef	struct	s_arg
-{
-	int		num_arg;
-	int		*bytecode;
-	int		*bytes_arg;
-	void	**arg;
-}				t_arg;
 
 void			*read_arg(t_map *tmap, int pc_command, int opcode, int *bytecode);
 int				*get_bytecode(t_map *tmap, int pc_command, int opcode);

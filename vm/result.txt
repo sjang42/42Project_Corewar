@@ -1,2143 +1,4609 @@
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“A process shows that player 1 is alive”
-“Player 0 (bigzork) won”
+“Player 1 (jex) won”
+1 
+1 
+1 
+1 
+1 
+1 
+1 
+1 
+
+1 
+1 
+1 
+1 
+1 
+1 
+1 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+
+2 
+2 
+2 
+2 
+2 
+2 
+2 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+

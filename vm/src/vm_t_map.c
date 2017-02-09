@@ -20,7 +20,11 @@ t_map	*t_map_new(int size)
 	i = 0;
 	tmap = (t_map*)malloc(sizeof(t_map));
 	tmap->map = (char*)malloc(sizeof(char) * size);
+	tmap->possession = (char*)malloc(sizeof(char) * size);
+	tmap->color = (char*)malloc(sizeof(char) * size);
 	ft_bzero(tmap->map, size);
+	ft_bzero(tmap->possession, size);
+	ft_bzero(tmap->color, size);
 	tmap->size_map = size;
 	tmap->num_cham = 0;
 	return (tmap);
@@ -62,6 +66,7 @@ int		t_map_put_chams(t_map *tmap, t_champion **tcham, int num_cham)
 {
 	int 	i;
 	int		where;
+	int		j;
 
 	i = 0;
 	tmap->num_cham = num_cham;
@@ -72,6 +77,13 @@ int		t_map_put_chams(t_map *tmap, t_champion **tcham, int num_cham)
 		ft_memcpy(tmap->map + where,
 			((tcham[i])->tinst).inst,
 			((tcham[i])->theader).prog_size);
+		j = 0;
+		while (j < tcham[i]->theader.prog_size)
+		{
+			tmap->possession[where + j] = tcham[i]->number + 1;
+			tmap->color[where + j] = tcham[i]->number + 1;
+			j++;
+		}
 		i++;
 	}
 	return (0);
@@ -96,7 +108,13 @@ int		t_map_put_bytes(t_map *tmap, int where, void *bytes, int size)
 	return (0);
 }
 
-
+void	t_map_destroy(t_map *tmap)
+{
+	free(tmap->map);
+	free(tmap->possession);
+	free(tmap->color);
+	free(tmap);
+}
 
 
 

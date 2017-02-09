@@ -55,6 +55,14 @@ OBJECTS					=	op.o\
 							vm_execute_fork.o\
 							vm_execute_lfork.o\
 							\
+							vm_ncurses.o\
+							vm_ncurses_show_map.o\
+							vm_ncurses_colors.o\
+							\
+							vm_ncurses_info.o\
+							\
+							ft_option.o\
+							\
 							add_libft.o
 
 
@@ -75,6 +83,7 @@ HEADERS					=	$(ICL)vm_corewar.h\
 							$(OP)op.h
 
 LIBFT					=	-L../libft -lft
+NCURSES					=	-lncurses
 
 OP						=	../op/
 
@@ -83,7 +92,7 @@ OP						=	../op/
 all						:	$(TARGET)
 
 $(TARGET)				:	$(OBJECTS) $(HEADERS) ../libft/libft.a
-							$(CC) $(CFLAG) -o $@ $(OBJECTS) $(LIBFT)
+							$(CC) $(CFLAG) -o $@ $(OBJECTS) $(LIBFT) $(NCURSES)
 
 %.o						:	$(SRC)%.c
 							$(CC) -c $(CFLAG) $< -I$(ICL_LIBFT) -I$(ICL) -I$(ICL_ASM) -I$(OP) 
@@ -131,6 +140,16 @@ vm_execute_lldi.o		:	$(SRC)vm_execute_lldi.c $(HEADERS)
 vm_execute_aff.o		:	$(SRC)vm_execute_aff.c $(HEADERS)
 vm_execute_fork.o		:	$(SRC)vm_execute_fork.c $(HEADERS)
 vm_execute_lfork.o		:	$(SRC)vm_execute_lfork.c $(HEADERS)
+
+vm_ncurses.o			:	$(SRC)vm_ncurses.c $(HEADERS)
+vm_ncurses_show_map.o	:	$(SRC)vm_ncurses_show_map.c $(HEADERS)
+vm_ncurses_colors.o		:	$(SRC)vm_ncurses_colors.c $(HEADERS)
+
+vm_ncurses_info.o		:	$(SRC)vm_ncurses_info.c $(HEADERS)
+
+
+
+ft_option.o				:	$(SRC)ft_option.c $(HEADERS)
 
 clean					:
 							$(RM) $(OBJECTS)

@@ -19,31 +19,17 @@
 # include <vm_t_header.h>
 # include <vm_t_proc.h>
 # include <op.h>
-
-typedef struct	s_file
-{
-	char	*fname;
-	int		fd;
-}				t_file;
-
-typedef struct	s_champion
-{
-	int			number;
-	t_file		tfile;
-	header_t	theader;
-	t_inst		tinst;
-	t_proc		*tproc;
-	int			mem_tproc;
-	int			num_tproc;
-	long long	last_live;
-}				t_champion;
+# include <vm_structures.h>
 
 t_champion		*t_champion_new(char *fname, int num);
-void			t_champion_destroy(t_champion **tcham);
-void			t_champion_destroy_exit(t_champion **tcham);
+// void			t_champion_destroy(t_champion **tcham);
+void			t_champion_destroy_exit(t_champion *tcham);
 void			t_champion_showinfo(t_champion *tcham);
 
 void			t_champion_add_proc(t_champion *tcham, int idx_proc, int pc);
 int				t_champion_kill_proc(t_champion *tcham, int idx_proc);
+
+void			t_champion_destroy(t_champion *tcham);
+
 
 #endif

@@ -59,3 +59,32 @@ t_champion		*t_champion_new(char *fname, int num)
 	free(str);
 	return (tcham);
 }
+
+void			t_champion_destroy(t_champion *tcham)
+{
+	int idx_proc;
+
+	free(tcham->tfile.fname);
+	free(tcham->tinst.inst);
+	idx_proc = 0;
+	while (idx_proc < tcham->num_tproc)
+	{
+		free(tcham->tproc[idx_proc].registry);
+		idx_proc++;
+	}
+	free(tcham->tproc);
+	free(tcham);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

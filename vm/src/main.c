@@ -33,8 +33,11 @@ int		main(int argc, char *argv[])
 {
 	int 		i;
 	int			num[argc - 1];
+	int			option;
 	t_arena		*tarena;
+	t_windows	*twin;
 
+	i = ft_get_option(argc, argv, &option);
 	i = 0;
 	while (i < argc - 1)
 	{
@@ -42,7 +45,18 @@ int		main(int argc, char *argv[])
 		i++;
 	}
 	tarena = t_arena_new(argc, argv, num);
+
+	tarena->twin = ncur_new(tarena);
+	wrefresh(tarena->twin->win_arena);
+	curs_set(0);
+	getch();
 	t_arena_play(tarena);
+	getch();
+	ncur_finish(tarena->twin);
+	t_arena_destroy(tarena);
+
+	// curs_set(0);
+	// wrefresh(twin->win_arena);
 	// tarena->cycle_to_die = 1200;
 	// play_one_period(tarena);
 

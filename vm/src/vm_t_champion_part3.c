@@ -12,23 +12,23 @@
 
 #include <vm_t_champion.h>
 
-void			t_champion_destroy(t_champion **tcham)
-{
-	int i;
+// void			t_champion_destroy(t_champion **tcham)
+// {
+// 	int i;
 
-	free((*tcham)->tfile.fname);
-	free((*tcham)->tinst.inst);
-	i = 0;
-	while (i < (*tcham)->num_tproc)
-	{
-		t_proc_destroy(&((*tcham)->tproc[i]));
-		i++;
-	}
-	free(*tcham);
-	*tcham = NULL;
-}
+// 	free((*tcham)->tfile.fname);
+// 	free((*tcham)->tinst.inst);
+// 	i = 0;
+// 	while (i < (*tcham)->num_tproc)
+// 	{
+// 		t_proc_destroy(&((*tcham)->tproc[i]));
+// 		i++;
+// 	}
+// 	free(*tcham);
+// 	*tcham = NULL;
+// }
 
-void			t_champion_destroy_exit(t_champion **tcham)
+void			t_champion_destroy_exit(t_champion *tcham)
 {
 	t_champion_destroy(tcham);
 	ft_exit_error(NULL);

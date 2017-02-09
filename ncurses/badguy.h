@@ -13,6 +13,6 @@
 #ifndef BADGUY_H
 # define BADGUY_H
 
-# define REAL_PW "betman"
+# define REAL_PW "batman"
 
 #endif

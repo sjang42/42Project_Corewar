@@ -23,13 +23,10 @@
 # include <vm_t_map.h>
 # include <op.h>
 # include <vm_t_arena.h>
+# include <vm_ncurses.h>
+# include <vm_structures.h>
 
-typedef int		TYPE_DIR;
-typedef int		TYPE_REG;
-typedef short	TYPE_IND;
-typedef short	TYPE_DIR_ADR;
-
-# define DIR_ADR_SIZE				(IND_SIZE)
+#include <ft_option.h>
 
 enum
 {
@@ -51,15 +48,7 @@ enum
 	OP_AFF,
 };
 
-typedef struct	s_type_arg
-{
-	TYPE_REG		val_reg[4];
-	TYPE_IND		val_ind[4];
-	TYPE_DIR		val_dir[4];
-	TYPE_REG		adr_reg[4];
-	TYPE_IND		adr_ind[4];
-	TYPE_DIR_ADR	adr_dir[4];
-}				t_type_arg;
+# define DIR_ADR_SIZE				(IND_SIZE)
 
 # define MIN_OPCODE 1
 # define MAX_OPCODE 16
@@ -75,7 +64,7 @@ unsigned char 		read_current_byte(t_map *tmap, int pc);
 unsigned char		read_indirect_data(t_map *tmap, int pc_command, int idx);
 int					check_bytecode(int opcode, int *arg_byte);
 
-int		deal_command(t_map *tmap, t_champion *tcham,
+int		deal_command(t_map *tmap, int idx_cham,
 					int idx_proc, t_arena *tarena);
 
 int					get_registry(char **registry, int idx, void *dest);
@@ -86,7 +75,8 @@ int					get_cycle(int opcode);
 
 int				read_registry(char **registry, int idx, void *dest);
 
-int		deal_live(t_arena *tarena, t_map *tmap, int pc_command);
+int		w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);
+int		deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);
 int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc);
 int		deal_st(t_map *tmap, int pc_command, t_proc *tproc);
 
@@ -109,8 +99,9 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc);
 
 int		deal_aff(t_map *tmap, int pc_command, t_proc *tproc);
 
-int		deal_fork(t_map *tmap, t_champion *tcham,
-					int idx_proc, int pc_command);
+int		deal_fork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command);
+// int		deal_fork(t_map *tmap, t_champion *tcham,
+					// int idx_proc, int pc_command);
 int		deal_lfork(t_map *tmap, t_champion *tcham,
 					int idx_proc, int pc_command);
 

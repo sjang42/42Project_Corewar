@@ -15,16 +15,7 @@
 
 # include <op.h>
 # include <libft.h>
-
-typedef struct	s_proc
-{
-	int		pc;				//첫 프로세서는 시작 위치와 같이 초기화
-	int		carry;
-	char	**registry;		//첫 프로세서의 r1은 넘버와 같이 초기화
-	int		on_command;
-	int		wait_cycle;
-	int		period_live;
-}				t_proc;
+# include <vm_structures.h>
 
 //첫 프로세서에는 registry를 null로 주기
 t_proc			*t_proc_new(int pc, int carry, char **registry);

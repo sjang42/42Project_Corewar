@@ -15,6 +15,7 @@
 
 # include <op.h>
 # include <libft.h>
+# include <vm_structures.h>
 
 int		vm_read_header(header_t *theader, int fd, char *str, int size_str);
 #endif

@@ -29,7 +29,7 @@ int main(void)
 				COLORS, COLOR_PAIRS);
 		refresh();
 	}
-
+	init_color(18, 255, 255, 0);
 	init_pair(1, COLOR_RED, COLOR_BLACK);
 	init_pair(2, COLOR_RED, COLOR_GREEN);
 	init_pair(3, COLOR_GREEN, COLOR_RED);
@@ -37,10 +37,9 @@ int main(void)
 	init_pair(5, COLOR_BLACK, COLOR_WHITE);
 	init_pair(6, COLOR_MAGENTA, COLOR_BLUE);
 	init_pair(7, COLOR_CYAN, COLOR_WHITE);
-	init_color(8, 45, 168, 158);
-
+	init_pair(8, 1, 1);
 	i = 0;
-	while (i < 8)
+	while (i < 9)
 	{
 		attroff(A_BOLD);
 		attrset(COLOR_PAIR(i));
