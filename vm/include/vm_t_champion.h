@@ -21,7 +21,7 @@
 # include <op.h>
 # include <vm_structures.h>
 
-t_champion		*t_champion_new(char *fname, int num);
+t_champion		*t_champion_new(char *fname, int num, int color);
 // void			t_champion_destroy(t_champion **tcham);
 void			t_champion_destroy_exit(t_champion *tcham);
 void			t_champion_showinfo(t_champion *tcham);

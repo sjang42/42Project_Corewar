@@ -17,6 +17,7 @@
 # include <vm_t_map.h>
 # include <vm_structures.h>
 # include <vm_ncurses.h>
+#include <ft_option.h>
 
 # include <stdio.h>//
 
@@ -34,9 +35,8 @@
 **	last_live 는 live가 호출될 때마다 갱신되며, 그 당시의 cycle값을 저장한다.
 */
 
-t_arena 		*t_arena_new(int argc, char *argv[], int number[]);
+t_arena 	*t_arena_new(int argc, char *argv[]);
 void		t_arena_play(t_arena *tarena);
-void		play_one_period(t_arena *tarena, t_windows *twin);
 
 void			checkup_proc(t_arena *tarena);
 void			checkup_nbr_live(t_arena *tarena);

@@ -33,11 +33,12 @@ static int		t_cham_get_file(t_file *tfile, char *fname)
 static int		t_cham_get_proc(t_proc *tproc, int num)
 {
 	t_proc_put(tproc, 0, 0, NULL);
-	ft_memcpy(tproc->registry[0], &num, REG_SIZE);
+	num *= -1;
+	ft_memcpy(tproc->registry[0], &(num), REG_SIZE);
 	return (0);
 }
 
-t_champion		*t_champion_new(char *fname, int num)
+t_champion		*t_champion_new(char *fname, int num, int color)
 {
 	t_champion	*tcham;
 	char		*str;
@@ -45,6 +46,7 @@ t_champion		*t_champion_new(char *fname, int num)
 
 	tcham = (t_champion*)malloc(sizeof(t_champion));
 	tcham->number = num;
+	tcham->color = color;
 	tcham->last_live = 0;
 	t_cham_get_file(&(tcham->tfile), fname);
 	size_str = ft_read_all(tcham->tfile.fd, &str);

@@ -29,16 +29,33 @@ void		colors_init(WINDOW *win)
 
 int 		colors_set_pc(WINDOW *win, t_arena *tarena, int pc)
 {
-	int cham_num;
+	int idx_cham;
 
-	cham_num = tarena->tmap->possession[pc];
-	if (cham_num)
+	idx_cham = tarena->tmap->possession[pc];
+	if (idx_cham != -1)
 	{
-		wattron(win, COLOR_PAIR(cham_num) | A_BOLD);
+		wattron(win, COLOR_PAIR(tarena->tcham[idx_cham]->color) | A_BOLD);
 	}
 	else
 	{
 		wattron(win, COLOR_PAIR(7) | A_BOLD);
 	}
-	return (cham_num);
+	return (idx_cham);
 }
+
+int 		colors_off_pc(WINDOW *win, t_arena *tarena, int pc)
+{
+	int idx_cham;
+
+	idx_cham = tarena->tmap->possession[pc];
+	if (idx_cham != -1)
+	{
+		wattroff(win, COLOR_PAIR(tarena->tcham[idx_cham]->color) | A_BOLD);
+	}
+	else
+	{
+		wattroff(win, COLOR_PAIR(7) | A_BOLD);
+	}
+	return (idx_cham);
+}
+

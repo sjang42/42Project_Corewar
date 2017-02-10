@@ -17,14 +17,18 @@ t_map	*t_map_new(int size)
 	int		i;
 	t_map	*tmap;
 
-	i = 0;
 	tmap = (t_map*)malloc(sizeof(t_map));
 	tmap->map = (char*)malloc(sizeof(char) * size);
 	tmap->possession = (char*)malloc(sizeof(char) * size);
 	tmap->color = (char*)malloc(sizeof(char) * size);
 	ft_bzero(tmap->map, size);
-	ft_bzero(tmap->possession, size);
 	ft_bzero(tmap->color, size);
+	i = 0;
+	while (i < size)
+	{
+		tmap->possession[i] = -1;
+		i++;
+	}
 	tmap->size_map = size;
 	tmap->num_cham = 0;
 	return (tmap);
@@ -80,14 +84,62 @@ int		t_map_put_chams(t_map *tmap, t_champion **tcham, int num_cham)
 		j = 0;
 		while (j < tcham[i]->theader.prog_size)
 		{
-			tmap->possession[where + j] = tcham[i]->number + 1;
-			tmap->color[where + j] = tcham[i]->number + 1;
+			tmap->possession[where + j] = i;
 			j++;
 		}
 		i++;
 	}
 	return (0);
 }
+
+void	w_sti_reg_to_map(t_arena *tarena, int idx_cham, int where, void *bytes)
+{
+	char	*to_put;
+	int		i;
+	unsigned char cham_num;
+
+	to_put = (char*)bytes;
+	cham_num = (unsigned char)(tarena->tcham[idx_cham]->number + 1);
+	i = 0;
+	while (i < REG_SIZE)
+	{
+		ft_memcpy(
+			tarena->tmap->map + ((where + i) % MEM_SIZE),
+			bytes + i,
+			1);
+		ft_memcpy(
+			tarena->tmap->possession + ((where + i) % MEM_SIZE),
+			&(idx_cham),
+			1);
+		i++;
+	}
+}
+
+// int		w_t_map_put_bytes(t_arena *tarena, int idx_cham,
+// 							int where, void *bytes);
+// 	// int where, void *bytes, int size)
+// {
+// 	char	*to_put;
+// 	int		i;
+// 	unsigned char cham_num;
+
+// 	to_put = (char*)bytes;
+// 	cham_num = (unsigned char)(tarena->tcham[idx_cham]->number + 1);
+// 	i = 0;
+// 	while (i < REG_SIZE)
+// 	{
+// 		ft_memcpy(
+// 			tarena->tmap->map + ((where + i) % MEM_SIZE),
+// 			bytes + i,
+// 			1);
+// 		ft_memcpy(
+// 			tarena->tmap->possession + ((where + i) % MEM_SIZE),
+// 			&(cham_num),
+// 			1);
+// 		i++;
+// 	}
+// 	return (0);
+// }
 
 int		t_map_put_bytes(t_map *tmap, int where, void *bytes, int size)
 {

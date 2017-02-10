@@ -67,6 +67,7 @@ typedef struct	s_champion
 	t_proc		*tproc;
 	int			mem_tproc;
 	int			num_tproc;
+	int			color;
 	long long	last_live;
 }				t_champion;
 
@@ -90,6 +91,8 @@ typedef	struct	s_arena
 	int			last_alive_cham;
 	t_windows	*twin;
 	int			num_process;
+	int 		option;
+	int			dump;
 }				t_arena;
 
 

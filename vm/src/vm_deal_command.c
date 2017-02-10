@@ -20,20 +20,17 @@ int		deal_command(t_map *tmap, int idx_cham,
 
 	ret = 0;
 	opcode = tarena->tcham[idx_cham]->tproc[idx_proc].on_command;
-	if (1)
-		ncur_erase_termsays(tarena->twin->win_arena);
 	if (opcode == op_tab[OP_LIVE].opcode)
 	{
-		if (1)
+		if (tarena->option & NCURSES)
 			ret += w_deal_live(tarena, tmap, idx_cham, idx_proc);
-		// else
-		// 	ret += deal_live(tarena, tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+		else
+			ret += deal_live(tarena, tmap, idx_cham, idx_proc);
 	}
 	else if (opcode == op_tab[OP_LD].opcode)
 	{
 		ret += deal_ld(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
 	}
-
 	else if (opcode == op_tab[OP_ST].opcode)
 	{
 		ret += deal_st(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
@@ -70,7 +67,10 @@ int		deal_command(t_map *tmap, int idx_cham,
 	}
 	else if (opcode == op_tab[OP_STI].opcode)
 	{
-		ret += deal_sti(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
+		if (tarena->option & NCURSES)
+			ret += w_deal_sti(tarena, idx_cham, idx_proc);
+		else
+			ret += deal_sti(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
 	}
 	else if (opcode == op_tab[OP_LLD].opcode)
 	{
@@ -86,11 +86,17 @@ int		deal_command(t_map *tmap, int idx_cham,
 	}
 	else if (opcode == op_tab[OP_FORK].opcode)
 	{
-		ret += deal_fork(tarena, idx_cham, idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+		if (tarena->option & NCURSES)
+			ret += w_deal_fork(tarena, idx_cham, idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+		else
+			ret += deal_fork(tmap, tarena->tcham[idx_cham], idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
 	}
 	else if (opcode == op_tab[OP_LFORK].opcode)
 	{
-		ret += deal_lfork(tmap, tarena->tcham[idx_cham], idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+		if (tarena->option & NCURSES)
+			ret += w_deal_lfork(tarena, idx_cham, idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+		else
+			ret += deal_lfork(tmap, tarena->tcham[idx_cham], idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
 	}
 		
 	return (ret);

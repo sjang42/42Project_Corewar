@@ -53,6 +53,10 @@ enum
 # define MIN_OPCODE 1
 # define MAX_OPCODE 16
 
+
+
+
+
 void				print_memory(const void *addr, size_t size);
 
 int					ft_endian_convert(void *src, size_t size);
@@ -75,7 +79,6 @@ int					get_cycle(int opcode);
 
 int				read_registry(char **registry, int idx, void *dest);
 
-int		w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);
 int		deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);
 int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc);
 int		deal_st(t_map *tmap, int pc_command, t_proc *tproc);
@@ -99,12 +102,19 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc);
 
 int		deal_aff(t_map *tmap, int pc_command, t_proc *tproc);
 
-int		deal_fork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command);
-// int		deal_fork(t_map *tmap, t_champion *tcham,
-					// int idx_proc, int pc_command);
+int		deal_fork(t_map *tmap, t_champion *tcham,
+					int idx_proc, int pc_command);
 int		deal_lfork(t_map *tmap, t_champion *tcham,
 					int idx_proc, int pc_command);
 
-int		count_bytecode_cycle(t_map *tmap, int opcode, int pc_command);
 
+int		w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);
+int		w_deal_sti(t_arena *tarena, int idx_cham, int idx_proc);
+int		w_deal_fork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command);
+int		w_deal_lfork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command);
+
+
+
+int		count_bytecode_cycle(t_map *tmap, int opcode, int pc_command);
+char	*ft_itoa_base(int value, int base);
 #endif

@@ -95,7 +95,14 @@
 # define INFO_NAME_NUM_X				(34)
 
 # define INFO_NAME_CHAM1_Y				(15)
-# define INFO_NAME_CHAM1_X				3
+# define INFO_NAME_CHAM1_X				(3)
+
+# define INFO_CYCLE_DIE_LEN				(15)
+# define INFO_CYCLE_DIE_X				(INFO_NAME_CHAM1_X)
+# define INFO_CYCLE_DIE_NUM_X			(INFO_CYCLE_DIE_X + INFO_CYCLE_DIE_LEN)
+
+
+
 
 # define COLORS_BACKGOUND				COLOR_BLACK
 # define RGB_CHAM1						0, 255, 0
@@ -114,8 +121,9 @@ t_windows		*ncur_new(t_arena *tarena);
 
 void		colors_init(WINDOW *win);
 int 		colors_set_pc(WINDOW *win, t_arena *tarena, int pc);
-void		ncur_unhighlight_pc(WINDOW *win, t_map *tmap, t_proc *tproc);
-void		ncur_highlight_pc(WINDOW *win, t_map *tmap, t_proc *tproc);
+int 		colors_off_pc(WINDOW *win, t_arena *tarena, int pc);
+void		ncur_unhighlight_pc(WINDOW *win, t_map *tmap, t_proc *tproc, t_arena *tarena);
+void		ncur_highlight_pc(WINDOW *win, t_map *tmap, t_proc *tproc, t_arena *tarena);
 void		ncur_finish(t_windows *twin);
 
 void			ncur_show_termsays(WINDOW *win_arena);
@@ -131,6 +139,16 @@ void			info_show_process(WINDOW *win_info, int num_process);
 
 void			info_show_cham_lastlive(WINDOW *win_info, t_arena *tarena, int idx_cham);
 void			info_show_cham_live_current(WINDOW *win_info, t_arena *tarena, int idx_cham);
+
+void			ncur_show_live(WINDOW *win_arena, t_arena *tarena, int idx_cham, int live_cham);
+
+void		w_ft_displaybyte(WINDOW *win, int y, int x, unsigned char ptr);
+
+void		ncur_map_update(t_arena *tarena, int pc, int size);
+
+void			info_show_cycle_die_period(WINDOW *win_info, t_arena *tarena);
+void			info_show_constants(WINDOW *win_info, t_arena *tarena);
+
 #endif
 
 

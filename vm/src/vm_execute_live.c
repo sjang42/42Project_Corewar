@@ -46,6 +46,7 @@ int		w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 		return (ret);//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 	ft_memcpy(&num, targ->arg, 4);
 	ft_endian_convert(&num, 4);
+	num *= -1;
 	if (num < 0 || num > tarena->num_cham)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 		return (ret);
 	if ((live_cham = change_last_live(tarena->tcham, tarena->num_cham,
@@ -56,13 +57,11 @@ int		w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 		tarena->tcham[idx_cham]->tproc[idx_proc].period_live += 1;
 		info_show_cham_lastlive(tarena->twin->win_info, tarena, live_cham);
 		info_show_cham_live_current(tarena->twin->win_info, tarena, live_cham);
+		ncur_show_live(tarena->twin->win_arena, tarena, idx_cham, live_cham);
 	}
-	mvwprintw(tarena->twin->win_arena, TERM_SAYS_Y, TERM_SAYS_X + TERM_SAYS_MASSAGE_LEN,
-				"A process shows that player %d is alive", num);
 	t_arg_destroy(targ);
 	return (ret);
 }
-
 
 int		deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 {
@@ -79,6 +78,7 @@ int		deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 		return (ret);//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 	ft_memcpy(&num, targ->arg, 4);
 	ft_endian_convert(&num, 4);
+	num *= -1;
 	if (num < 0 || num > tarena->num_cham)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 		return (ret);
 	if ((live_cham = change_last_live(tarena->tcham, tarena->num_cham,

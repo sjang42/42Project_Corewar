@@ -12,40 +12,12 @@
 
 #include <vm_ncurses.h>
 
-void	draw_repeat_ch_hor(WINDOW *win, char ch, int size, int x, int y)
-{
-	int i;
-
-	i = 0;
-	while (i < size)
-	{
-		wmove(win, x, y + i);
-		waddch(win, ch);
-		i++;
-	}
-}
-
-void	draw_repeat_ch_ver(WINDOW *win, char ch, int size, int x, int y)
-{
-	int i;
-
-	i = 0;
-	while (i < size)
-	{
-		wmove(win, x + i, y);
-		waddch(win, ch);
-		i++;
-	}
-}
-
 void	ncur_finish(t_windows *twin)
 {
 	delwin(twin->win_arena);
 	delwin(twin->win_info);
 	endwin();
 }
-
-
 
 void		t_arena_destroy(t_arena *tarena)
 {
@@ -62,7 +34,30 @@ void		t_arena_destroy(t_arena *tarena)
 	free(tarena);
 }
 
+void		ncur_map_update(t_arena *tarena, int pc, int size)
+{
+	int i;
+	t_xy xy;
 
+	xy.x = (CONTENTS_START_X) + ((pc % (CONTENTS_BYTES_PER_LINE) * 3));
+	xy.y = (CONTENTS_START_Y) + (pc / (CONTENTS_BYTES_PER_LINE));
+	i = 0;
+	while (i < size)
+	{
+		colors_set_pc(tarena->twin->win_arena, tarena, pc);
+		w_ft_displaybyte(tarena->twin->win_arena, xy.y, xy.x, tarena->tmap->map[pc]);
+		xy.x += 3;
+		if (((pc + 1) % CONTENTS_BYTES_PER_LINE) == 0)
+		{
+			xy.x = CONTENTS_START_X;
+			xy.y += 1;
+		}
+		colors_off_pc(tarena->twin->win_arena, tarena, pc);
+		pc++;
+		i++;
+	}
+	wrefresh(tarena->twin->win_arena);
+}
 
 
 

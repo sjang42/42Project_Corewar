@@ -56,10 +56,10 @@ int						ft_get_option(
 	*option = OPTION_NOTHING;
 	if (argc < 2)
 		return (0);
-	i = 0;
-	while (i + 1 < argc)
+	i = 1;
+	while (i < argc)
 	{
-		tmp = ft_decide_option(argv[i + 1]);
+		tmp = ft_decide_option(argv[i]);
 		if (tmp == OPTION_NOTHING)
 			return (i);
 		*option |= tmp;

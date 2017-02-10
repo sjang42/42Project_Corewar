@@ -17,6 +17,7 @@ OBJECTS					=	op.o\
 							main.o\
 							\
 							vm_t_map.o\
+							vm_t_map_dump.o\
 							\
 							vm_t_proc.o\
 							\
@@ -63,7 +64,8 @@ OBJECTS					=	op.o\
 							\
 							ft_option.o\
 							\
-							add_libft.o
+							add_libft.o\
+							ft_itoa_base.o
 
 
 SRC						=	./src/
@@ -103,7 +105,10 @@ $(TARGET)				:	$(OBJECTS) $(HEADERS) ../libft/libft.a
 op.o					:	$(OP)op.c $(HEADERS)
 
 main.o					:	$(SRC)main.c $(HEADERS)
+
 vm_t_map.o				:	$(SRC)vm_t_map.c $(HEADERS)
+vm_t_map_dump.o			:	$(SRC)vm_t_map_dump.c $(HEADERS)
+
 vm_t_proc.o				:	$(SRC)vm_t_proc.c $(HEADERS)
 vm_t_champion.o			:	$(SRC)vm_t_champion.c $(HEADERS)
 vm_t_champion_part2.o	:	$(SRC)vm_t_champion_part2.c $(HEADERS)
@@ -150,6 +155,7 @@ vm_ncurses_info.o		:	$(SRC)vm_ncurses_info.c $(HEADERS)
 
 
 ft_option.o				:	$(SRC)ft_option.c $(HEADERS)
+ft_itoa_base.o			:	$(SRC)ft_itoa_base.c $(HEADERS)
 
 clean					:
 							$(RM) $(OBJECTS)

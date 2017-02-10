@@ -26,10 +26,14 @@ void		checkup_proc(t_arena *tarena)
 			if (tarena->tcham[idx_cham]->tproc[idx_proc].period_live == 0)
 			{
 				tarena->num_process -= 1;
-				info_show_process(tarena->twin->win_info, tarena->num_process);
 				t_champion_kill_proc(tarena->tcham[idx_cham], idx_proc);
-				ncur_unhighlight_pc(tarena->twin->win_arena, tarena->tmap,
-					&(tarena->tcham[idx_cham]->tproc[idx_proc]));
+				if (tarena->option & NCURSES)
+				{
+					info_show_process(tarena->twin->win_info, tarena->num_process);
+					ncur_unhighlight_pc(tarena->twin->win_arena, tarena->tmap,
+						&(tarena->tcham[idx_cham]->tproc[idx_proc]),
+						tarena);
+				}
 			}
 			else
 			{
@@ -37,7 +41,7 @@ void		checkup_proc(t_arena *tarena)
 			}
 			idx_proc++;
 		}
-		if (1)
+		if (tarena->option & NCURSES)
 			info_show_cham_live_current(tarena->twin->win_info, tarena, idx_cham);
 		idx_cham++;
 	}

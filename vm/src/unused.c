@@ -11,6 +11,31 @@
 /* ************************************************************************** */
 
 
+void	draw_repeat_ch_hor(WINDOW *win, char ch, int size, int x, int y)
+{
+	int i;
+
+	i = 0;
+	while (i < size)
+	{
+		wmove(win, x, y + i);
+		waddch(win, ch);
+		i++;
+	}
+}
+
+void	draw_repeat_ch_ver(WINDOW *win, char ch, int size, int x, int y)
+{
+	int i;
+
+	i = 0;
+	while (i < size)
+	{
+		wmove(win, x + i, y);
+		waddch(win, ch);
+		i++;
+	}
+}
 
 
 int		check_arg_byte(int opcode, int *arg_byte)
