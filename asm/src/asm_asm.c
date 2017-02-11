@@ -24,7 +24,8 @@ static int		get_fd_write(char *file_origin)
 	tmp = ft_strstr(out_name, ".s");
 	if (tmp)
 		*tmp = 0;
-	ft_strcat(out_name, ".cor");
+	ft_strcat(out_name, ".jex");
+	// ft_strcat(out_name, ".cor");
 	fd_write = open(out_name, O_WRONLY | O_CREAT,
 					S_IRWXU | S_IRWXG | S_IRWXO);
 	if (fd_write < 0)

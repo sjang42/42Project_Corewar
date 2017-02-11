@@ -77,7 +77,7 @@ t_label		*get_label(t_strs *tstrs)
 		}
 		else
 		{
-			printf("%s\n", tstrs->strarr[i - 1]);
+			printf("%s\n", tstrs->strarr[i]);
 			ft_exit_error("5");
 		}
 		i++;

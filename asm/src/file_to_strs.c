@@ -60,6 +60,9 @@ t_strs		*file_to_strs(int fd)
 	{
 		if (line[0] != COMMENT_CHAR && line[0] != 0)
 		{
+			//debug
+				// printf("line : %s\n", line);
+			//debug
 			adr_comment = ft_strchr(line, ';');
 			if (adr_comment)
 				*adr_comment = 0;
@@ -68,6 +71,13 @@ t_strs		*file_to_strs(int fd)
 				*adr_comment = 0;
 			trimed = ft_strtrim(line);
 			ft_remove_tabs(&trimed);
+			//debug
+				if (trimed[0] == '\0')
+				{
+					continue ;
+				}
+				// printf("trim : %s\n", trimed);
+			//debug
 			label_char = ft_devide_label(trimed, strs);
 			free(line);
 			line = trimed;
