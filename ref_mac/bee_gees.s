@@ -12,7 +12,7 @@ xor	r2, %15, r4		;if (r4) {carry = 0}?????
 live2:
 	live 	%4
 zjmp	%:endwhile		;if (carry)
-fork	%:forks#hi
+fork	%:forks
 ld	%0, r4			;carry = 1
 zjmp	%:forks
 #EndWhile
