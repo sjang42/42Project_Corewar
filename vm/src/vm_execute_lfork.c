@@ -59,9 +59,8 @@ int		w_deal_lfork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command)
 	tarena->num_process += 1;
 	t_champion_add_proc(tarena->tcham[idx_cham], idx_proc, 
 						(pc_command + type_arg.adr_dir[0]) % MEM_SIZE);
-	//ncurses
-	info_show_process(tarena->twin->win_info, tarena->num_process);
-	//
+	if (tarena->option & NCURSES)
+		info_show_process(tarena->twin->win_info, tarena->num_process);
 	t_arg_destroy(targ);
 	return (ret);
 }

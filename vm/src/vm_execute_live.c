@@ -12,6 +12,13 @@
 
 #include <vm_corewar.h>
 
+void	vm_show_live(int cham_num)
+{
+	ft_putstr("“A process shows that player ");
+	ft_putnbr(cham_num);
+	ft_putstr(" is alive”\n");
+}
+
 int		change_last_live(t_champion **tcham, int num_cham,
 						int num, int cur_cycle)
 {
@@ -84,18 +91,19 @@ int		deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 	if (num < 0 || num > tarena->num_cham)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 		return (ret);
 	tarena->tcham[idx_cham]->tproc[idx_proc].period_live += 1;
-	if ((live_cham = change_last_live(tarena->tcham, tarena->num_cham,
-							num, tarena->cycle))
+	if ((live_cham = change_last_live(tarena->tcham, tarena->num_cham, num, tarena->cycle))
 		!= -1)
 	{
+		if (tarena->option & NCURSES)
+		{
+			info_show_cham_lastlive(tarena->twin->win_info, tarena, live_cham);
+			info_show_cham_live_current(tarena->twin->win_info, tarena, live_cham);
+			ncur_show_live(tarena->twin->win_arena, tarena, idx_cham, live_cham);
+		}
+		else if (!(tarena->option & DUMP))
+			vm_show_live(num);
 		tarena->last_alive_cham = live_cham;
 		tarena->tcham[live_cham]->current_live += 1;
-	}
-	if (!(tarena->option & DUMP))
-	{
-		ft_putstr("“A process shows that player ");
-		ft_putnbr(num);
-		ft_putstr(" is alive”\n");
 	}
 	t_arg_destroy(targ);
 	return (ret);

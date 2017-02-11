@@ -50,7 +50,6 @@ int		w_deal_fork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command)
 	targ = t_arg_new(tarena->tmap, pc_command, OP_FORK + 1);
 	if (targ == NULL)
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
-
 	ft_memcpy(&(type_arg.adr_dir[0]),
 				(char*)(targ->arg),
 				DIR_ADR_SIZE);
@@ -59,9 +58,8 @@ int		w_deal_fork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command)
 	tarena->num_process += 1;
 	t_champion_add_proc(tarena->tcham[idx_cham], idx_proc, 
 						(pc_command + type_arg.adr_dir[0]) % MEM_SIZE);
-	//ncurses
-	info_show_process(tarena->twin->win_info, tarena->num_process);
-	//
+	if (tarena->option & NCURSES)
+		info_show_process(tarena->twin->win_info, tarena->num_process);
 	t_arg_destroy(targ);
 	return (ret);
 }

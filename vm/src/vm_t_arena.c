@@ -220,6 +220,9 @@ void		t_arena_play(t_arena *tarena)
 	{
 		play_one_period(tarena);
 		tarena->num_period += 1;
+		if ((tarena->option & DUMP) &&
+			tarena->cycle == (tarena->dump + 1))
+			break ;
 		checkup_nbr_live(tarena);
 		checkup_max_checks(tarena);
 		checkup_proc(tarena);
@@ -233,29 +236,35 @@ void		t_arena_play(t_arena *tarena)
 			tarena->game_done = 1;
 			break;
 		}
-		else if ((tarena->option & DUMP) &&
-			tarena->cycle == (tarena->dump + 1))
-			break;
 	}
 }
 
 void			t_arena_showinfo(t_arena *tarena)
 {
+	int i;
+
+	i = 0;
+
 	ft_putstr("----------------------------------\n");
-	ft_putstr("Cycle :\t");
+	ft_putstr("Cycle : ");
 	ft_putnbr(tarena->cycle - 1);
 	ft_putstr("\n");
 
-	ft_putstr("Number of Process :\t");
+	ft_putstr("Period : ");
+	ft_putnbr(tarena->num_period);
+	ft_putstr("\n");
+
+	printf("num p : %d\n", tarena->num_process);
+	ft_putstr("Number of Process : ");
 	ft_putnbr(tarena->num_process);
 	ft_putstr("\n");
 
-	ft_putstr("Cycle to die :\t");
+	ft_putstr("Cycle to die : ");
 	ft_putnbr(tarena->cycle_to_die);
 	ft_putstr("\n");
 
-	ft_putstr("Last alive cham :\t");
-	ft_putnbr(tarena->last_alive_cham);
+	ft_putstr("Last alive cham : ");
+	ft_putnbr(tarena->tcham[tarena->last_alive_cham]->number);
 	ft_putstr("\n");
 	ft_putstr("----------------------------------\n");
 }
