@@ -25,7 +25,12 @@ int		deal_zjmp(t_map *tmap, int pc_command, t_proc *tproc)
 	targ = t_arg_new(tmap, pc_command, OP_ZJMP + 1);
 	ft_bzero(&type_arg, sizeof(t_type_arg));
 	if (targ == NULL)
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
+	}
 	ft_memcpy(&(type_arg.adr_dir[0]),
 				(char*)(targ->arg),
 				DIR_ADR_SIZE);

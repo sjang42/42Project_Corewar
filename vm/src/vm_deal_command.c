@@ -21,40 +21,45 @@ int		deal_command(t_map *tmap, int idx_cham,
 	//debug
 	//
 	#ifdef __DEBUG_JEX
-		if (tarena->cycle > 10266)
+		if (tarena->cycle > 4825)
 		{
 			int mem;
 			int test = 0x000000ff;
 			printf("\n%s\n", "here is me!!");
-			// printf("idx_cham : %x\n", idx_cham);
-			// printf("idx_proc : %x\n", idx_proc);
-			// printf("op : %d\n", tarena->tcham[idx_cham]->tproc[idx_proc].on_command);
-			// printf("pc : %x\n", tarena->tcham[idx_cham]->tproc[idx_proc].pc);
-			// printf("carry : %x\n", tarena->tcham[idx_cham]->tproc[idx_proc].carry);
+			printf("idx_cham : %x\n", idx_cham);
+			printf("idx_proc : %x\n", idx_proc);
+			printf("op : %d\n", tarena->tcham[idx_cham]->tproc[idx_proc].on_command);
+			printf("pc : %x\n", tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+			printf("carry : %x\n", tarena->tcham[idx_cham]->tproc[idx_proc].carry);
 			printf("cycle : %d\n", tarena->cycle);
-			// ft_print_memory(tarena->tcham[idx_cham]->tproc[idx_proc].registry[4], REG_SIZE);
+			ft_print_memory(tarena->tcham[idx_cham]->tproc[idx_proc].registry[4], REG_SIZE);
 
-			// ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[0], 4);
-			// printf("r1 : %d\n", mem);
-			// ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[1], 4);
-			// printf("r2 : %d\n", mem);
-			// ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[2], 4);
-			// printf("r3 : %d\n", mem);
-			// ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[3], 4);
-			// printf("r4 : %d\n", mem);
-			// ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[4], 4);
-			// printf("r5 : %d\n", mem);
-			// ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[5], 4);
-			// printf("r6 : %d\n", mem);
-			// ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[6], 4);
-			// printf("r7 : %d\n", mem);
-			// ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[7], 4);
-			// printf("r8 : %d\n", mem);
-			// ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[8], 4);
-			// printf("r9 : %d\n", mem);
-			// ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[9], 4);
-			// printf("r10 : %d\n", mem);
-
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[0], 4);
+			printf("r1 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[1], 4);
+			printf("r2 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[2], 4);
+			printf("r3 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[3], 4);
+			printf("r4 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[4], 4);
+			printf("r5 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[5], 4);
+			printf("r6 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[6], 4);
+			printf("r7 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[7], 4);
+			printf("r8 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[8], 4);
+			printf("r9 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[9], 4);
+			printf("r10 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[12], 4);
+			printf("r13 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[13], 4);
+			printf("r14 : %d\n", mem);
+			ft_memcpy(&mem, tarena->tcham[idx_cham]->tproc[idx_proc].registry[14], 4);
+			printf("r15 : %d\n", mem);
 
 			// printf("test : %d\n", test);
 			printf("%s\n", "");
@@ -113,9 +118,9 @@ int		deal_command(t_map *tmap, int idx_cham,
 	}
 	else if (opcode == op_tab[OP_STI].opcode)
 	{
-		if (tarena->option & NCURSES)
-			ret += w_deal_sti(tarena, idx_cham, idx_proc);
-		else
+		// if (tarena->option & NCURSES)
+		// 	ret += w_deal_sti(tarena, idx_cham, idx_proc);
+		// else
 			ret += deal_sti(tarena, idx_cham, idx_proc);
 			// ret += deal_sti(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
 	}

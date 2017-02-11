@@ -23,7 +23,12 @@ int		deal_add(t_map *tmap, int pc_command, t_proc *tproc)
 				+ 1;
 	targ = t_arg_new(tmap, pc_command, OP_ADD + 1);
 	if (targ == NULL)
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
+	}
 	if (read_registry(tproc->registry,
 						((char*)(targ->arg))[0],
 						&(type_arg.val_reg[0]))
@@ -37,6 +42,9 @@ int		deal_add(t_map *tmap, int pc_command, t_proc *tproc)
 						&(type_arg.val_reg[2]))
 		)
 	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		t_arg_destroy(targ);
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
 	}
@@ -46,6 +54,9 @@ int		deal_add(t_map *tmap, int pc_command, t_proc *tproc)
 					((char*)(targ->arg))[2],
 					&(type_arg.val_reg[3])))
 	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		t_arg_destroy(targ);
 		return (ret);
 	}

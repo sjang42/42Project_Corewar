@@ -26,7 +26,12 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 				+ 1;
 	targ = t_arg_new(tmap, pc_command, OP_LLDI + 1);
 	if (targ == NULL)
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);
+	}
 	point = 0;
 
 	/*
@@ -39,6 +44,9 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 			((char*)(targ->arg))[0],
 			&(type_arg.val_reg[0])))
 		{
+			#ifdef __DEBUG_JEX
+				printf("%s\n", "wrong exit");
+			#endif
 			t_arg_destroy(targ);
 			return (ret);//틀렸을 때 몇 개 반환하는지 보기
 		}
@@ -74,6 +82,9 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 			*(((char*)(targ->arg)) + point),
 			&(type_arg.val_reg[1])))
 		{
+			#ifdef __DEBUG_JEX
+				printf("%s\n", "wrong exit");
+			#endif
 			t_arg_destroy(targ);
 			return (ret);//틀렸을 때 몇 개 반환하는지 보기
 		}
@@ -118,6 +129,8 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 	}
 
 	where = ((pc_command + type_arg.val_dir[3]) % MEM_SIZE);
+	if (where < 0)
+		where += MEM_SIZE;
 	tmp = read_data(tmap, where, REG_SIZE);
 	ft_endian_convert(tmp, REG_SIZE);
 
@@ -125,6 +138,9 @@ int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc)
 					type_arg.adr_reg[2],
 					tmp))
 	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		free(tmp);
 		t_arg_destroy(targ);
 		return (ret);

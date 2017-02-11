@@ -18,6 +18,8 @@ void	*read_data(t_map *tmap, int pc, size_t size)
 	size_t		i;
 
 	ret = (char*)malloc(sizeof(char) * size);
+	if (pc < 0)
+		pc += MEM_SIZE;
 	i = 0;
 	while (i < size)
 	{

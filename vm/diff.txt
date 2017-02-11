@@ -1,0 +1,461 @@
+0a1,2
+> Introducing contestants...
+> * Player 1, weighing 490 bytes, "fluttershy" ("oh, my, what a scary project") !
+65,521d66
+< ----------------------------------
+< Cycle : 4826
+< Period : 4
+< Number of Process : 15
+< Cycle to die : 1436
+< Last alive cham : 1
+< ----------------------------------
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< ((char*)(targ->arg))[0] : 1
+< type_arg.val_reg[0] : -1
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< hi2
+< dir
+< hi
+< came in cycle for 9 : 4826
+< came in cycle for 9 : 4826
+< num p : 15

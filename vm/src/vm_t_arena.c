@@ -103,28 +103,32 @@ void		play_one_period(t_arena *tarena)
 	cycle = 0;
 	while (cycle < tarena->cycle_to_die)
 	{
+		if (tarena->cycle > 4000)
+		{
+			getch();
+		}
 		if (tarena->option & DUMP && tarena->cycle > tarena->dump)
 			break ;
 		idx_cham = tarena->num_cham - 1;
 		if (tarena->option & NCURSES)
 		{
 			info_show_cycle(tarena->twin->win_info, tarena->cycle);
-			if (cycle % 20 == 0)
-			{
-				halfdelay(1);
-				key = getch();
-				if (key == ' ')
-				{
-					info_show_status(tarena->twin->win_info, 1);
-					while (1)
-					{
-						key = getch();
-						if (key == ' ')
-							break ;
-					}
-					info_show_status(tarena->twin->win_info, 0);
-				}
-			}
+			// if (cycle % 20 == 0)
+			// {
+			// 	halfdelay(1);
+			// 	key = getch();
+			// 	if (key == ' ')
+			// 	{
+			// 		info_show_status(tarena->twin->win_info, 1);
+			// 		while (1)
+			// 		{
+			// 			key = getch();
+			// 			if (key == ' ')
+			// 				break ;
+			// 		}
+			// 		info_show_status(tarena->twin->win_info, 0);
+			// 	}
+			// }
 		}
 		while (idx_cham >= 0)
 		{

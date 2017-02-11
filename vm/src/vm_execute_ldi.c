@@ -26,7 +26,12 @@ int		deal_ldi(t_map *tmap, int pc_command, t_proc *tproc)
 				+ 1;
 	targ = t_arg_new(tmap, pc_command, OP_LDI + 1);
 	if (targ == NULL)
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);
+	}
 	point = 0;
 
 	/*
@@ -39,6 +44,9 @@ int		deal_ldi(t_map *tmap, int pc_command, t_proc *tproc)
 			((char*)(targ->arg))[0],
 			&(type_arg.val_reg[0])))
 		{
+			#ifdef __DEBUG_JEX
+				printf("%s\n", "wrong exit");
+			#endif
 			t_arg_destroy(targ);
 			return (ret);//틀렸을 때 몇 개 반환하는지 보기
 		}
@@ -74,6 +82,9 @@ int		deal_ldi(t_map *tmap, int pc_command, t_proc *tproc)
 			*(((char*)(targ->arg)) + point),
 			&(type_arg.val_reg[1])))
 		{
+			#ifdef __DEBUG_JEX
+				printf("%s\n", "wrong exit");
+			#endif
 			t_arg_destroy(targ);
 			return (ret);//틀렸을 때 몇 개 반환하는지 보기
 		}
@@ -117,7 +128,9 @@ int		deal_ldi(t_map *tmap, int pc_command, t_proc *tproc)
 			type_arg.val_dir[3] = type_arg.val_ind[0] + type_arg.adr_dir[1];
 	}
 
-	where = ((pc_command + type_arg.val_dir[3]) % MEM_SIZE);
+	where = ((pc_command + (type_arg.val_dir[3] % IDX_MOD)) % MEM_SIZE);
+	if (where < 0)
+		where += MEM_SIZE;
 	tmp = read_data(tmap, where, REG_SIZE);
 	ft_endian_convert(tmp, REG_SIZE);
 	put_registry(tproc->registry, type_arg.adr_reg[2], tmp);

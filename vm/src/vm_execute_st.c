@@ -30,7 +30,13 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 				+ 1;
 	targ = t_arg_new(tarena->tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, OP_ST + 1);
 	if (targ == NULL)
+	{
+		
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);
+	}
 
 	/*
 	** get 1st arg : type_arg.val_reg[0]
@@ -39,6 +45,9 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 		((char*)(targ->arg))[0],
 		&(type_arg.val_reg[0])))
 	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		t_arg_destroy(targ);
 		return (ret);
 	}
@@ -53,6 +62,9 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 			((char*)(targ->arg))[1],
 			&(type_arg.adr_reg[1])))
 		{
+			#ifdef __DEBUG_JEX
+				printf("%s\n", "wrong exit");
+			#endif
 			t_arg_destroy(targ);
 			return (ret);
 		}
@@ -65,6 +77,13 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 		ft_endian_convert(&(type_arg.adr_ind[1]), IND_SIZE);
 		where = tarena->tcham[idx_cham]->tproc[idx_proc].pc +
 				(type_arg.adr_ind[1] % IDX_MOD);
+		#ifdef __DEBUG_JEX
+		if (tarena->cycle > 1790)
+		{
+			printf("((char*)(targ->arg))[0] : %d\n", ((char*)(targ->arg))[0]);
+			printf("type_arg.val_reg[0] : %d\n", type_arg.val_reg[0]);
+		}
+		#endif
 		w_sti_reg_to_map(tarena, idx_cham, where, &(type_arg.val_reg[0]));
 		if (tarena->option & NCURSES)
 			ncur_map_update(tarena, where, REG_SIZE);

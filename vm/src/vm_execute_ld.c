@@ -25,7 +25,12 @@ int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc)
 	ft_bzero(&type_arg, sizeof(t_type_arg));
 	targ = t_arg_new(tmap, pc_command, OP_LD + 1);
 	if (targ == NULL)
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
+	}
 	point = 0;
 
 	/*
@@ -70,6 +75,9 @@ int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc)
 					type_arg.adr_reg[3],
 					&type_arg.val_reg[3]))
 	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		t_arg_destroy(targ);
 		return (ret);
 	}

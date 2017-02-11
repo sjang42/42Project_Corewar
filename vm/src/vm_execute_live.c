@@ -50,12 +50,22 @@ int		w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 				+ 1;
 	targ = t_arg_new(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, OP_LIVE + 1);
 	if (targ == NULL)
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
+	}
 	ft_memcpy(&num, targ->arg, 4);
 	ft_endian_convert(&num, 4);
 	num *= -1;
 	if (num < 0 || num > tarena->num_cham)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);
+	}
 	tarena->tcham[idx_cham]->tproc[idx_proc].period_live += 1;
 	if ((live_cham = change_last_live(tarena->tcham, tarena->num_cham,
 							num, tarena->cycle))
@@ -84,12 +94,22 @@ int		deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 
 	targ = t_arg_new(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, OP_LIVE + 1);
 	if (targ == NULL)
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
+	}
 	ft_memcpy(&num, targ->arg, 4);
 	ft_endian_convert(&num, 4);
 	num *= -1;
 	if (num < 0 || num > tarena->num_cham)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);
+	}
 	tarena->tcham[idx_cham]->tproc[idx_proc].period_live += 1;
 	if ((live_cham = change_last_live(tarena->tcham, tarena->num_cham, num, tarena->cycle))
 		!= -1)

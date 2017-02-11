@@ -41,6 +41,7 @@ typedef struct	s_proc
 	int		on_command;
 	int		wait_cycle;
 	int		period_live;
+	int		number;
 }				t_proc;
 
 typedef struct		s_map

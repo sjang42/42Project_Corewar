@@ -39,7 +39,7 @@ int		vm_execute_proc(t_map *tmap, int idx_cham, t_arena *tarena,
 		if (is_opcode(cur_byte))
 		{
 			#ifdef __DEBUG_JEX
-				if (tarena->cycle > 10250)
+				if (tarena->cycle > 4825)
 				{
 					printf("came in cycle for %d : %d\n",
 							cur_byte,
@@ -63,7 +63,7 @@ int		vm_execute_proc(t_map *tmap, int idx_cham, t_arena *tarena,
 		if (tarena->tcham[idx_cham]->tproc[idx_proc].wait_cycle == 1)
 		{
 	#ifdef __DEBUG_JEX
-			if (tarena->cycle > 10250)
+			if (tarena->cycle > 4825)
 		{
 			printf("executing cycle for %d : %d\n\n",
 					tarena->tcham[idx_cham]->tproc[idx_proc].on_command,

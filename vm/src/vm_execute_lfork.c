@@ -24,7 +24,12 @@ int		deal_lfork(t_map *tmap, t_champion *tcham,
 				+ 1;
 	targ = t_arg_new(tmap, pc_command, OP_LFORK + 1);
 	if (targ == NULL)
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
+	}
 
 	ft_memcpy(&(type_arg.adr_dir[0]),
 				(char*)(targ->arg),
@@ -49,7 +54,12 @@ int		w_deal_lfork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command)
 				+ 1;
 	targ = t_arg_new(tarena->tmap, pc_command, OP_LFORK + 1);
 	if (targ == NULL)
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
+	}
 
 	ft_memcpy(&(type_arg.adr_dir[0]),
 				(char*)(targ->arg),

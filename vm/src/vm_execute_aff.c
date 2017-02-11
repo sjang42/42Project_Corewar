@@ -23,12 +23,20 @@ int		deal_aff(t_map *tmap, int pc_command, t_proc *tproc)
 				+ 1;
 	targ = t_arg_new(tmap, pc_command, OP_AFF + 1);
 	if (targ == NULL)
+	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
+	}
 	if (read_registry(
 		tproc->registry,
 		((char*)(targ->arg))[0],
 		&(type_arg.val_reg[0])))
 	{
+		#ifdef __DEBUG_JEX
+			printf("%s\n", "wrong exit");
+		#endif
 		t_arg_destroy(targ);
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
 	}

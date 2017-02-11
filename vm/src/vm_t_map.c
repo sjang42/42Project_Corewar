@@ -104,6 +104,13 @@ void	w_sti_reg_to_map(t_arena *tarena, int idx_cham, int where, void *bytes)
 	dup_bytes = (char*)malloc(sizeof(char) * REG_SIZE);
 	ft_memcpy(dup_bytes, bytes, REG_SIZE);
 	ft_endian_convert(dup_bytes, REG_SIZE);
+	#ifdef __DEBUG_JEX
+		if (tarena->cycle > 4820)
+		{
+			ft_putstr("here\n");
+			ft_print_memory(dup_bytes, 4);
+		}
+	#endif
 	i = 0;
 	while (i < REG_SIZE)
 	{
