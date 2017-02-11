@@ -31,7 +31,10 @@ void			t_proc_put(t_proc *tproc, int pc, int carry, char **registry)
 	tproc->registry = (char**)malloc(sizeof(char*) * REG_NUMBER);
 	tproc->on_command = 0;
 	tproc->wait_cycle = 0;
-	tproc->period_live = 0;
+	if (registry == NULL)
+		tproc->period_live = 0;
+	else
+		tproc->period_live = 1;
 	i = 0;
 	while (i < REG_NUMBER)
 	{

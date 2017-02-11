@@ -27,6 +27,9 @@ void		checkup_proc(t_arena *tarena)
 			{
 				tarena->num_process -= 1;
 				t_champion_kill_proc(tarena->tcham[idx_cham], idx_proc);
+				#ifdef __DEBUG_JEX
+					printf("one proc killed at cycle : %d\n", tarena->cycle);
+				#endif
 				if (tarena->option & NCURSES)
 				{
 					info_show_process(tarena->twin->win_info, tarena->num_process);

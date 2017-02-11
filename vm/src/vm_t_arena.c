@@ -238,3 +238,37 @@ void		t_arena_play(t_arena *tarena)
 			break;
 	}
 }
+
+void			t_arena_showinfo(t_arena *tarena)
+{
+	ft_putstr("----------------------------------\n");
+	ft_putstr("Cycle :\t");
+	ft_putnbr(tarena->cycle - 1);
+	ft_putstr("\n");
+
+	ft_putstr("Number of Process :\t");
+	ft_putnbr(tarena->num_process);
+	ft_putstr("\n");
+
+	ft_putstr("Cycle to die :\t");
+	ft_putnbr(tarena->cycle_to_die);
+	ft_putstr("\n");
+
+	ft_putstr("Last alive cham :\t");
+	ft_putnbr(tarena->last_alive_cham);
+	ft_putstr("\n");
+	ft_putstr("----------------------------------\n");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

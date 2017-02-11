@@ -48,13 +48,13 @@ int		main(int argc, char *argv[])
 	t_arena_play(tarena);
 	if (tarena->game_done)
 		display_winner(tarena);
-	else if (tarena->option & DUMP)
-	{
-		t_map_dump(tarena->tmap);
-	}
-	//debug
+	// else if (tarena->option & DUMP)
+	// {
+	// 	t_map_dump(tarena->tmap);
+	// }
+	#ifdef __DEBUG_JEX
 		printf("tarena->cycle : %d\n", tarena->cycle);
-	//debug
+	#endif
 	if (tarena->option & NCURSES)
 	{
 		getch();
@@ -62,6 +62,7 @@ int		main(int argc, char *argv[])
 		curs_set(0);
 		wrefresh(twin->win_arena);
 	}
+	t_arena_showinfo(tarena);
 	t_arena_destroy(tarena);
 }
 
@@ -81,10 +82,10 @@ int		main(int argc, char *argv[])
 // 	t_arena_play(tarena);
 // 	play_one_period(tarena);
 // 	// ft_print_memory(tarena->tmap->map, 64);
-// 	// i = 0;
-// 	// while (i < argc - 1)
-// 	// {
-// 	// 	t_champion_showinfo(tarena->tcham[i]);
-// 	// 	i++;
-// 	// }
+	// i = 0;
+	// while (i < argc - 1)
+	// {
+	// 	t_champion_showinfo(tarena->tcham[i]);
+	// 	i++;
+	// }
 // }
