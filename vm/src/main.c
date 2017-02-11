@@ -44,6 +44,10 @@ int		main(int argc, char *argv[])
 		curs_set(0);
 		getch();
 	}
+
+	//debug
+	//debug
+
 	// printf("op : %d\n", tarena->option & DUMP);
 	t_arena_play(tarena);
 	if (tarena->game_done)

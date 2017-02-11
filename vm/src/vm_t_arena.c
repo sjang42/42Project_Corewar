@@ -53,6 +53,7 @@ t_arena 	*t_arena_new(int argc, char *argv[])
 	tarena->last_reduce = 0;
 	tarena->dump = 0;
 	tarena->game_done = 0;
+	tarena->used_proc_num = 0;
 	tarena->last_alive_cham = -1;
 	i = 1;
 	while (i < argc - 1)
@@ -80,7 +81,9 @@ t_arena 	*t_arena_new(int argc, char *argv[])
 		}
 		else
 			cham_num = decide_number(tarena);
-		tarena->tcham[tarena->num_cham] = t_champion_new(argv[idx_argv], cham_num, color);
+		tarena->tcham[tarena->num_cham] = t_champion_new(
+						argv[idx_argv], cham_num, color, tarena->used_proc_num);
+		tarena->used_proc_num += 1;
 		tarena->num_cham += 1;
 		color++;
 		idx_argv++;
@@ -98,67 +101,181 @@ void		play_one_period(t_arena *tarena)
 	int		idx_cham;
 	int		idx_proc;
 	int		key;
-	int		num_tproc;
+	int		total_tproc;
+	int		proc_num;
+	int		min;
+	t_proc *tproc_min;
 
 	cycle = 0;
 	while (cycle < tarena->cycle_to_die)
 	{
-		if (tarena->cycle > 4000)
-		{
-			getch();
-		}
+		
 		if (tarena->option & DUMP && tarena->cycle > tarena->dump)
 			break ;
 		idx_cham = tarena->num_cham - 1;
 		if (tarena->option & NCURSES)
 		{
 			info_show_cycle(tarena->twin->win_info, tarena->cycle);
-			// if (cycle % 20 == 0)
-			// {
-			// 	halfdelay(1);
-			// 	key = getch();
-			// 	if (key == ' ')
-			// 	{
-			// 		info_show_status(tarena->twin->win_info, 1);
-			// 		while (1)
-			// 		{
-			// 			key = getch();
-			// 			if (key == ' ')
-			// 				break ;
-			// 		}
-			// 		info_show_status(tarena->twin->win_info, 0);
-			// 	}
-			// }
-		}
-		while (idx_cham >= 0)
-		{
-			idx_proc = 0;
-			num_tproc = tarena->tcham[idx_cham]->num_tproc;
-			while (idx_proc < num_tproc)
+			if (cycle % 20 == 0)
 			{
-				if (tarena->option & NCURSES)
+				halfdelay(1);
+				key = getch();
+				if (key == ' ')
+				{
+					info_show_status(tarena->twin->win_info, 1);
+					while (1)
+					{
+						key = getch();
+						if (key == ' ')
+							break ;
+					}
+					info_show_status(tarena->twin->win_info, 0);
+				}
+			}
+		}
+		proc_num = 0;
+		min = 0;
+		total_tproc = tarena->num_process;
+
+			//debug
+		// printf("num1 : %d\n", tarena->tcham[0]->tproc[0].number);
+		// printf("tarena->used_proc_num %d\n",  tarena->used_proc_num);
+		// printf("num2 : %d\n", tarena->tcham[0]->tproc[1].number);
+		// printf("num3 : %d\n", tarena->tcham[0]->tproc[2].number);
+		// printf("num4 : %d\n", tarena->tcham[0]->tproc[3].number);
+			//debug
+
+
+
+		while (proc_num < total_tproc)
+		{
+			//debug
+			// printf("min  : %d\n", min);
+			// printf("proc_num : %d\n", proc_num);
+			// printf("total_tproc : %d\n", total_tproc);
+			// printf("tarena->num_process : %d\n", tarena->num_process);
+			// printf("tol num %d\n", tarena->used_proc_num);
+			//debug
+			min = t_proc_find_minproc(tarena, min, &idx_cham, &idx_proc);			
+			//debug
+			// printf("min2 : %d\n", min);
+			//debug
+			if (tarena->option & NCURSES)
 					ncur_unhighlight_pc(tarena->twin->win_arena, tarena->tmap,
 					&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
-				tarena->tcham[idx_cham]->tproc[idx_proc].pc =
-				(vm_execute_proc(tarena->tmap,
-								idx_cham,
-								tarena,
-								idx_proc)
-				+ tarena->tcham[idx_cham]->tproc[idx_proc].pc)
-				% MEM_SIZE;
-				if (tarena->option & NCURSES)
-					ncur_highlight_pc(tarena->twin->win_arena, tarena->tmap,
-					&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
-				idx_proc++;
-			}
-			idx_cham--;
+			tarena->tcham[idx_cham]->tproc[idx_proc].pc =
+			(vm_execute_proc(tarena->tmap,
+							idx_cham,
+							tarena,
+							idx_proc)
+			+ tarena->tcham[idx_cham]->tproc[idx_proc].pc)
+			% MEM_SIZE;
+			if (tarena->option & NCURSES)
+				ncur_highlight_pc(tarena->twin->win_arena, tarena->tmap,
+				&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
+			proc_num++;
 		}
+		// while (idx_cham >= 0)
+		// {
+		// 	idx_proc = 0;
+		// 	num_tproc = tarena->tcham[idx_cham]->num_tproc;
+		// 	while (idx_proc < num_tproc)
+		// 	{
+		// 		if (tarena->option & NCURSES)
+		// 			ncur_unhighlight_pc(tarena->twin->win_arena, tarena->tmap,
+		// 			&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
+		// 		tarena->tcham[idx_cham]->tproc[idx_proc].pc =
+		// 		(vm_execute_proc(tarena->tmap,
+		// 						idx_cham,
+		// 						tarena,
+		// 						idx_proc)
+		// 		+ tarena->tcham[idx_cham]->tproc[idx_proc].pc)
+		// 		% MEM_SIZE;
+		// 		if (tarena->option & NCURSES)
+		// 			ncur_highlight_pc(tarena->twin->win_arena, tarena->tmap,
+		// 			&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
+		// 		idx_proc++;
+		// 	}
+		// 	idx_cham--;
+		// }
 		tarena->cycle += 1;
 		cycle++;
 	}
 	if (tarena->option & NCURSES)
 		info_show_cycle(tarena->twin->win_info, tarena->cycle);
 }
+
+
+
+
+
+// void		play_one_period(t_arena *tarena)
+// {
+// 	int		cycle;
+// 	int		idx_cham;
+// 	int		idx_proc;
+// 	int		key;
+// 	int		num_tproc;
+
+// 	cycle = 0;
+// 	while (cycle < tarena->cycle_to_die)
+// 	{
+// 		if (tarena->cycle > 4000)
+// 		{
+// 			getch();
+// 		}
+// 		if (tarena->option & DUMP && tarena->cycle > tarena->dump)
+// 			break ;
+// 		idx_cham = tarena->num_cham - 1;
+// 		if (tarena->option & NCURSES)
+// 		{
+// 			info_show_cycle(tarena->twin->win_info, tarena->cycle);
+// 			// if (cycle % 20 == 0)
+// 			// {
+// 			// 	halfdelay(1);
+// 			// 	key = getch();
+// 			// 	if (key == ' ')
+// 			// 	{
+// 			// 		info_show_status(tarena->twin->win_info, 1);
+// 			// 		while (1)
+// 			// 		{
+// 			// 			key = getch();
+// 			// 			if (key == ' ')
+// 			// 				break ;
+// 			// 		}
+// 			// 		info_show_status(tarena->twin->win_info, 0);
+// 			// 	}
+// 			// }
+// 		}
+// 		while (idx_cham >= 0)
+// 		{
+// 			idx_proc = 0;
+// 			num_tproc = tarena->tcham[idx_cham]->num_tproc;
+// 			while (idx_proc < num_tproc)
+// 			{
+// 				if (tarena->option & NCURSES)
+// 					ncur_unhighlight_pc(tarena->twin->win_arena, tarena->tmap,
+// 					&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
+// 				tarena->tcham[idx_cham]->tproc[idx_proc].pc =
+// 				(vm_execute_proc(tarena->tmap,
+// 								idx_cham,
+// 								tarena,
+// 								idx_proc)
+// 				+ tarena->tcham[idx_cham]->tproc[idx_proc].pc)
+// 				% MEM_SIZE;
+// 				if (tarena->option & NCURSES)
+// 					ncur_highlight_pc(tarena->twin->win_arena, tarena->tmap,
+// 					&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
+// 				idx_proc++;
+// 			}
+// 			idx_cham--;
+// 		}
+// 		tarena->cycle += 1;
+// 		cycle++;
+// 	}
+// 	if (tarena->option & NCURSES)
+// 		info_show_cycle(tarena->twin->win_info, tarena->cycle);
+// }
 
 // void		play_one_period(t_arena *tarena)
 // {

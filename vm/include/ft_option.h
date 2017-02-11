@@ -16,13 +16,13 @@
 # define OPTION0 NOTHING
 # define OPTION1 DUMP
 # define OPTION2 NCURSES
-# define OPTION3 ADD3
+# define OPTION3 COMMANDS
 # define OPTION4 ADD4
 # define OPTION5 ADD5
 
 # define OPTION1_STR "-dump"
 # define OPTION2_STR "-v"
-# define OPTION3_STR "add"
+# define OPTION3_STR "-c"
 # define OPTION4_STR "add"
 # define OPTION5_STR "add"
 

@@ -29,7 +29,7 @@ int		deal_zjmp(t_map *tmap, int pc_command, t_proc *tproc)
 		#ifdef __DEBUG_JEX
 			printf("%s\n", "wrong exit");
 		#endif
-		return (ret);//틀렸을 때 몇 개 반환하는지 보기
+		return (ret);
 	}
 	ft_memcpy(&(type_arg.adr_dir[0]),
 				(char*)(targ->arg),

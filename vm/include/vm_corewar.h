@@ -28,7 +28,7 @@
 
 #include <ft_option.h>
 
-// # define __DEBUG_JEX
+# define __DEBUG_JEX
 
 
 enum

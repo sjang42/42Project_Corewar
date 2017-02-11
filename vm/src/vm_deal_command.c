@@ -21,7 +21,7 @@ int		deal_command(t_map *tmap, int idx_cham,
 	//debug
 	//
 	#ifdef __DEBUG_JEX
-		if (tarena->cycle > 4825)
+		if (tarena->cycle > 4380)
 		{
 			int mem;
 			int test = 0x000000ff;
@@ -138,17 +138,11 @@ int		deal_command(t_map *tmap, int idx_cham,
 	}
 	else if (opcode == op_tab[OP_FORK].opcode)
 	{
-		// if (tarena->option & NCURSES)
-			ret += w_deal_fork(tarena, idx_cham, idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
-		// else
-			// ret += deal_fork(tmap, tarena->tcham[idx_cham], idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+		ret += w_deal_fork(tarena, idx_cham, idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
 	}
 	else if (opcode == op_tab[OP_LFORK].opcode)
 	{
-		// if (tarena->option & NCURSES)
-			ret += w_deal_lfork(tarena, idx_cham, idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
-		// else
-			// ret += deal_lfork(tmap, tarena->tcham[idx_cham], idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+		ret += w_deal_lfork(tarena, idx_cham, idx_proc, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
 	}
 		
 	return (ret);

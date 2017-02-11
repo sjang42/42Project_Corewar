@@ -42,6 +42,7 @@ typedef struct	s_proc
 	int		wait_cycle;
 	int		period_live;
 	int		number;
+	int		belong_idx_cham;
 }				t_proc;
 
 typedef struct		s_map
@@ -94,6 +95,7 @@ typedef	struct	s_arena
 	int			last_alive_cham;
 	t_windows	*twin;
 	int			num_process;
+	int			used_proc_num;
 	int 		option;
 	int			dump;
 }				t_arena;

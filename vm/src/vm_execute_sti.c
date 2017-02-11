@@ -294,6 +294,13 @@ int		deal_sti(t_arena *tarena, int idx_cham, int idx_proc)
 	// 		pc_command + (type_arg.val_dir[3] % IDX_MOD),
 	// 		&(type_arg.val_reg[0]),
 	// 		REG_SIZE);
+	// if (tarena->option & COMMANDS)
+	// {
+		
+	// }
+
+
+
 	t_arg_destroy(targ);
 	return (ret);
 }

@@ -34,7 +34,7 @@ void			t_champion_destroy_exit(t_champion *tcham)
 	ft_exit_error(NULL);
 }
 
-void			t_champion_add_proc(t_champion *tcham, int idx_proc, int pc)
+void			t_champion_add_proc(t_champion *tcham, int idx_proc, int pc, int proc_num)
 {
 	if (tcham->num_tproc + 1 >= tcham->mem_tproc)
 	{
@@ -43,9 +43,12 @@ void			t_champion_add_proc(t_champion *tcham, int idx_proc, int pc)
 			sizeof(t_proc) * (tcham->mem_tproc + 5));
 		tcham->mem_tproc += 5;
 	}
+	//debug
+	//debug
 	t_proc_put(&(tcham->tproc[tcham->num_tproc]), pc,
 				tcham->tproc[idx_proc].carry,
 				tcham->tproc[idx_proc].registry);
+	(tcham->tproc[tcham->num_tproc]).number = proc_num;
 	tcham->num_tproc += 1;
 }
 

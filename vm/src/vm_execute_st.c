@@ -24,6 +24,7 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 	TYPE_IND	val_ind;
 	int			ret;
 
+	ft_bzero(&type_arg, sizeof(t_type_arg));
 	ret = count_bytecode_cycle(tarena->tmap, OP_ST + 1,
 			tarena->tcham[idx_cham]->tproc[idx_proc].pc)
 				+ op_tab[OP_ST].num_bytecode
@@ -78,11 +79,11 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 		where = tarena->tcham[idx_cham]->tproc[idx_proc].pc +
 				(type_arg.adr_ind[1] % IDX_MOD);
 		#ifdef __DEBUG_JEX
-		if (tarena->cycle > 1790)
-		{
-			printf("((char*)(targ->arg))[0] : %d\n", ((char*)(targ->arg))[0]);
-			printf("type_arg.val_reg[0] : %d\n", type_arg.val_reg[0]);
-		}
+			if (tarena->cycle > 4380)
+			{
+				printf("((char*)(targ->arg))[0] : %d\n", ((char*)(targ->arg))[0]);
+				printf("type_arg.val_reg[0] : %d\n", type_arg.val_reg[0]);
+			}
 		#endif
 		w_sti_reg_to_map(tarena, idx_cham, where, &(type_arg.val_reg[0]));
 		if (tarena->option & NCURSES)
@@ -142,46 +143,46 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 
 
 
-int		deal_st(t_map *tmap, int pc_command, t_proc *tproc)
-{
-	t_arg		*targ;
-	TYPE_REG	value_reg;
-	TYPE_REG	address_reg;
-	TYPE_IND	address_ind;
-	TYPE_IND	val_ind;
-	int			ret;
+// int		deal_st(t_map *tmap, int pc_command, t_proc *tproc)
+// {
+// 	t_arg		*targ;
+// 	TYPE_REG	value_reg;
+// 	TYPE_REG	address_reg;
+// 	TYPE_IND	address_ind;
+// 	TYPE_IND	val_ind;
+// 	int			ret;
 
-	ret = count_bytecode_cycle(tmap, OP_ST + 1, pc_command)
-				+ op_tab[OP_ST].num_bytecode
-				+ 1;
-	targ = t_arg_new(tmap, pc_command, OP_ST + 1);
-	if (targ == NULL)
-		return (ret);
-	if (read_registry(tproc->registry, ((char*)(targ->arg))[0], &value_reg))
-	{
-		t_arg_destroy(targ);
-		return (ret);//틀렸을 때 몇 개 반환하는지 보기
-	}
-	if (targ->bytecode[1] == T_REG)
-	{
-		if (read_registry(tproc->registry, ((char*)(targ->arg))[1], &address_reg))
-		{
-			t_arg_destroy(targ);
-			return (ret);//틀렸을 때 몇 개 반환하는지 보기
-		}
-		t_map_put_bytes(tmap,
-			pc_command + (address_reg % IDX_MOD),
-			&(value_reg), REG_SIZE);
-	}
-	else // T_IND
-	{
-		ft_memcpy(&address_ind, ((char*)(targ->arg)) + 1, IND_SIZE);
-		ft_endian_convert(&address_ind, 2);
-		val_ind = read_indirect_data(tmap, pc_command, address_ind % IDX_MOD);
-		t_map_put_bytes(tmap,
-			pc_command + (val_ind % IDX_MOD),
-			&(value_reg), REG_SIZE);
-	}
-	t_arg_destroy(targ);
-	return (ret);
-}
+// 	ret = count_bytecode_cycle(tmap, OP_ST + 1, pc_command)
+// 				+ op_tab[OP_ST].num_bytecode
+// 				+ 1;
+// 	targ = t_arg_new(tmap, pc_command, OP_ST + 1);
+// 	if (targ == NULL)
+// 		return (ret);
+// 	if (read_registry(tproc->registry, ((char*)(targ->arg))[0], &value_reg))
+// 	{
+// 		t_arg_destroy(targ);
+// 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
+// 	}
+// 	if (targ->bytecode[1] == T_REG)
+// 	{
+// 		if (read_registry(tproc->registry, ((char*)(targ->arg))[1], &address_reg))
+// 		{
+// 			t_arg_destroy(targ);
+// 			return (ret);//틀렸을 때 몇 개 반환하는지 보기
+// 		}
+// 		t_map_put_bytes(tmap,
+// 			pc_command + (address_reg % IDX_MOD),
+// 			&(value_reg), REG_SIZE);
+// 	}
+// 	else // T_IND
+// 	{
+// 		ft_memcpy(&address_ind, ((char*)(targ->arg)) + 1, IND_SIZE);
+// 		ft_endian_convert(&address_ind, 2);
+// 		val_ind = read_indirect_data(tmap, pc_command, address_ind % IDX_MOD);
+// 		t_map_put_bytes(tmap,
+// 			pc_command + (val_ind % IDX_MOD),
+// 			&(value_reg), REG_SIZE);
+// 	}
+// 	t_arg_destroy(targ);
+// 	return (ret);
+// }
