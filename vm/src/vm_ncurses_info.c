@@ -133,17 +133,17 @@ void			info_show_cham_live_current(WINDOW *win_info, t_arena *tarena,
 	int sum;
 
 	wattron(win_info, COLOR_PAIR(7) | A_BOLD);
-	i = 0;
-	sum = 0;
-	while (i < tarena->tcham[idx_cham]->num_tproc)
-	{
-		sum += tarena->tcham[idx_cham]->tproc[i].period_live;
-		i++;
-	}
+	// i = 0;
+	// sum = 0;
+	// while (i < tarena->tcham[idx_cham]->num_tproc)
+	// {
+	// 	sum += tarena->tcham[idx_cham]->tproc[i].period_live;
+	// 	i++;
+	// }
 	x = INFO_NAME_NUM_X;
 	y = INFO_NAME_CHAM1_Y + (4 * idx_cham) + 2;
 	mvwprintw(win_info, y, x, "      ");
-	mvwprintw(win_info, y, x, "%d", sum);
+	mvwprintw(win_info, y, x, "%d", tarena->tcham[idx_cham]->current_live);
 	wrefresh(win_info);
 	wattroff(win_info, COLOR_PAIR(7) | A_BOLD);
 }

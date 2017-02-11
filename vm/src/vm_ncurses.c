@@ -39,6 +39,8 @@ void		ncur_map_update(t_arena *tarena, int pc, int size)
 	int i;
 	t_xy xy;
 
+	if (pc < 0)
+		pc += MEM_SIZE;
 	xy.x = (CONTENTS_START_X) + ((pc % (CONTENTS_BYTES_PER_LINE) * 3));
 	xy.y = (CONTENTS_START_Y) + (pc / (CONTENTS_BYTES_PER_LINE));
 	i = 0;

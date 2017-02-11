@@ -17,6 +17,7 @@ int		deal_zjmp(t_map *tmap, int pc_command, t_proc *tproc)
 	t_arg			*targ;
 	t_type_arg		type_arg;
 	int				ret;
+	int				where;
 	
 	ret = count_bytecode_cycle(tmap, OP_ZJMP + 1, pc_command)
 				+ op_tab[OP_ZJMP].num_bytecode
@@ -31,7 +32,10 @@ int		deal_zjmp(t_map *tmap, int pc_command, t_proc *tproc)
 	ft_endian_convert(&(type_arg.adr_dir[0]), DIR_ADR_SIZE);
 	if (tproc->carry)
 	{
-		tproc->pc = (tproc->pc + type_arg.adr_dir[0] % IDX_MOD) % MEM_SIZE;
+		where = (tproc->pc + (type_arg.adr_dir[0] % (IDX_MOD))) % MEM_SIZE;
+		if (where < 0)
+			where += MEM_SIZE;
+		tproc->pc = where;
 		ret = 0;
 	}
 	t_arg_destroy(targ);

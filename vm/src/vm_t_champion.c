@@ -48,6 +48,7 @@ t_champion		*t_champion_new(char *fname, int num, int color)
 	tcham->number = num;
 	tcham->color = color;
 	tcham->last_live = 0;
+	tcham->current_live = 0;
 	t_cham_get_file(&(tcham->tfile), fname);
 	size_str = ft_read_all(tcham->tfile.fd, &str);
 	if (size_str == -1 || size_str < LENGTH_BEFORE_INST)

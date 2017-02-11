@@ -46,10 +46,23 @@ int		put_registry(char **registry, int idx, void *src)
 
 unsigned char 	read_current_byte(t_map *tmap, int pc)
 {
+	int where;
+
+	where = pc % (MEM_SIZE);
+	if (where < 0)
+		where += MEM_SIZE;
 	return (tmap->map[pc % (MEM_SIZE)]);
 }
 
-unsigned char	read_indirect_data(t_map *tmap, int pc_command, int idx)
+char			read_indirect_data(t_map *tmap, int pc_command, int idx)
 {
-	return (read_current_byte(tmap, (pc_command + idx) % (MEM_SIZE)));
+	int where;
+
+	where = (pc_command + idx) % (MEM_SIZE);
+	if (where < 0)
+		where += MEM_SIZE;
+	//debug
+		// printf("read_current_byte(tmap, where) : %d\n", read_current_byte(tmap, where));
+	//debug
+	return (read_current_byte(tmap, where));
 }

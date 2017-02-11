@@ -39,7 +39,7 @@ int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc)
 		ft_endian_convert(&(type_arg.val_dir[0]), DIR_SIZE);
 		point += 4;
 	}
-	else						//TYPE_IND		//get : type_arg.val_ind[0]
+	else //if (targ->bytecode[0] == T_IND)		//get : type_arg.val_ind[0]
 	{
 		ft_memcpy(&(type_arg.adr_ind[0]), (char*)(targ->arg), IND_SIZE);
 		ft_endian_convert(&(type_arg.adr_ind[0]), IND_SIZE);
@@ -56,6 +56,11 @@ int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc)
 	type_arg.val_reg[3] = (targ->bytecode[0] == T_DIR) ?
 							type_arg.val_dir[0] :
 							type_arg.val_ind[0];
+	//debug
+		// printf("type_arg.val_ind[0] : %d\n", type_arg.val_ind[0]);
+		// printf("type_arg.val_reg[3] : %d\n", type_arg.val_reg[3]);
+	//debug
+
 	point += 1;
 
 	/*

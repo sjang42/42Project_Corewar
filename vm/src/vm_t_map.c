@@ -96,16 +96,20 @@ void	w_sti_reg_to_map(t_arena *tarena, int idx_cham, int where, void *bytes)
 {
 	char	*to_put;
 	int		i;
-	unsigned char cham_num;
+	char *dup_bytes;
 
 	to_put = (char*)bytes;
-	cham_num = (unsigned char)(tarena->tcham[idx_cham]->number + 1);
+	if (where < 0)
+		where += (MEM_SIZE);
+	dup_bytes = (char*)malloc(sizeof(char) * REG_SIZE);
+	ft_memcpy(dup_bytes, bytes, REG_SIZE);
+	ft_endian_convert(dup_bytes, REG_SIZE);
 	i = 0;
 	while (i < REG_SIZE)
 	{
 		ft_memcpy(
 			tarena->tmap->map + ((where + i) % MEM_SIZE),
-			bytes + i,
+			dup_bytes + i,
 			1);
 		ft_memcpy(
 			tarena->tmap->possession + ((where + i) % MEM_SIZE),
@@ -113,6 +117,7 @@ void	w_sti_reg_to_map(t_arena *tarena, int idx_cham, int where, void *bytes)
 			1);
 		i++;
 	}
+	free(dup_bytes);
 }
 
 // int		w_t_map_put_bytes(t_arena *tarena, int idx_cham,

@@ -44,7 +44,17 @@ int		main(int argc, char *argv[])
 		curs_set(0);
 		getch();
 	}
+	// printf("op : %d\n", tarena->option & DUMP);
 	t_arena_play(tarena);
+	if (tarena->game_done)
+		display_winner(tarena);
+	else if (tarena->option & DUMP)
+	{
+		t_map_dump(tarena->tmap);
+	}
+	//debug
+		printf("tarena->cycle : %d\n", tarena->cycle);
+	//debug
 	if (tarena->option & NCURSES)
 	{
 		getch();

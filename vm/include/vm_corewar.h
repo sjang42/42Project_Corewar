@@ -28,6 +28,9 @@
 
 #include <ft_option.h>
 
+// # define __DEBUG_JEX
+
+
 enum
 {
 	OP_LIVE = 0,
@@ -65,7 +68,7 @@ void				*read_data(t_map *tmap, int pc, size_t size);
 int					*read_bytecode(t_map *tmap, int pc_command, int num_arg);
 int		put_registry(char **registry, int idx, void *src);
 unsigned char 		read_current_byte(t_map *tmap, int pc);
-unsigned char		read_indirect_data(t_map *tmap, int pc_command, int idx);
+char		read_indirect_data(t_map *tmap, int pc_command, int idx);
 int					check_bytecode(int opcode, int *arg_byte);
 
 int		deal_command(t_map *tmap, int idx_cham,
@@ -87,7 +90,8 @@ int		deal_add(t_map *tmap, int pc_command, t_proc *tproc);
 int		deal_sub(t_map *tmap, int pc_command, t_proc *tproc);
 
 
-int		deal_sti(t_map *tmap, int pc_command, t_proc *tproc);
+int		deal_sti(t_arena *tarena, int idx_cham, int idx_proc);
+// int		deal_sti(t_map *tmap, int pc_command, t_proc *tproc);
 
 int		deal_and(t_map *tmap, int pc_command, t_proc *tproc);
 int		deal_or(t_map *tmap, int pc_command, t_proc *tproc);
@@ -112,7 +116,7 @@ int		w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);
 int		w_deal_sti(t_arena *tarena, int idx_cham, int idx_proc);
 int		w_deal_fork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command);
 int		w_deal_lfork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command);
-
+int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc);
 
 
 int		count_bytecode_cycle(t_map *tmap, int opcode, int pc_command);

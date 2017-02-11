@@ -68,6 +68,7 @@ typedef struct	s_champion
 	int			mem_tproc;
 	int			num_tproc;
 	int			color;
+	int			current_live;
 	long long	last_live;
 }				t_champion;
 
@@ -86,6 +87,7 @@ typedef	struct	s_arena
 	int			num_cham;
 	long long	cycle;
 	int			cycle_to_die;
+	int			game_done;
 	int			num_period;
 	int			last_reduce;
 	int			last_alive_cham;
@@ -94,7 +96,6 @@ typedef	struct	s_arena
 	int 		option;
 	int			dump;
 }				t_arena;
-
 
 typedef struct	s_type_arg
 {

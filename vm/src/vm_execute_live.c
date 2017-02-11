@@ -49,12 +49,13 @@ int		w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 	num *= -1;
 	if (num < 0 || num > tarena->num_cham)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 		return (ret);
+	tarena->tcham[idx_cham]->tproc[idx_proc].period_live += 1;
 	if ((live_cham = change_last_live(tarena->tcham, tarena->num_cham,
 							num, tarena->cycle))
 		!= -1)
 	{
 		tarena->last_alive_cham = live_cham;
-		tarena->tcham[idx_cham]->tproc[idx_proc].period_live += 1;
+		tarena->tcham[live_cham]->current_live += 1;
 		info_show_cham_lastlive(tarena->twin->win_info, tarena, live_cham);
 		info_show_cham_live_current(tarena->twin->win_info, tarena, live_cham);
 		ncur_show_live(tarena->twin->win_arena, tarena, idx_cham, live_cham);
@@ -73,6 +74,7 @@ int		deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 	ret = count_bytecode_cycle(tmap, OP_LIVE + 1, tarena->tcham[idx_cham]->tproc[idx_proc].pc)
 				+ op_tab[OP_LIVE].num_bytecode
 				+ 1;
+
 	targ = t_arg_new(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, OP_LIVE + 1);
 	if (targ == NULL)
 		return (ret);//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
@@ -81,15 +83,20 @@ int		deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 	num *= -1;
 	if (num < 0 || num > tarena->num_cham)//live 넘버가 터무니없는 경우 지나가기만 하고 실행 하진 않음
 		return (ret);
+	tarena->tcham[idx_cham]->tproc[idx_proc].period_live += 1;
 	if ((live_cham = change_last_live(tarena->tcham, tarena->num_cham,
 							num, tarena->cycle))
 		!= -1)
 	{
 		tarena->last_alive_cham = live_cham;
+		tarena->tcham[live_cham]->current_live += 1;
 	}
-	ft_putstr("“A process shows that player ");
-	ft_putnbr(num);
-	ft_putstr(" is alive”\n");
+	if (!(tarena->option & DUMP))
+	{
+		ft_putstr("“A process shows that player ");
+		ft_putnbr(num);
+		ft_putstr(" is alive”\n");
+	}
 	t_arg_destroy(targ);
 	return (ret);
 }

@@ -49,7 +49,6 @@ int		vm_execute_proc(t_map *tmap, int idx_cham, t_arena *tarena,
 // int				vm_execute_proc(t_map *tmap, t_champion *tcham, t_arena *tarena,
 						// int idx_proc);
 void			t_arena_destroy(t_arena *tarena);
-void			t_arena_destroy(t_arena *tarena);
 
-
+void		display_winner(t_arena *tarena);
 #endif

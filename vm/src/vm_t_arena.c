@@ -19,7 +19,7 @@ int			decide_number(t_arena *tarena)
 	int success;
 
 	success = 0;
-	min = 0;
+	min = 1;
 	while (!success)
 	{
 		i = 0;
@@ -39,7 +39,6 @@ int			decide_number(t_arena *tarena)
 	return (min);
 }
 
-
 t_arena 	*t_arena_new(int argc, char *argv[])
 {
 	t_arena		*tarena;
@@ -53,8 +52,8 @@ t_arena 	*t_arena_new(int argc, char *argv[])
 	tarena->num_period = 0;
 	tarena->last_reduce = 0;
 	tarena->dump = 0;
+	tarena->game_done = 0;
 	tarena->last_alive_cham = -1;
-	tarena->num_process = tarena->num_cham;
 	i = 1;
 	while (i < argc - 1)
 	{
@@ -86,6 +85,7 @@ t_arena 	*t_arena_new(int argc, char *argv[])
 		color++;
 		idx_argv++;
 	}
+	tarena->num_process = tarena->num_cham;
 	t_map_put_chams(tarena->tmap, tarena->tcham, tarena->num_cham);
 	tarena->cycle = 1;
 	tarena->cycle_to_die = CYCLE_TO_DIE;
@@ -98,35 +98,39 @@ void		play_one_period(t_arena *tarena)
 	int		idx_cham;
 	int		idx_proc;
 	int		key;
+	int		num_tproc;
 
 	cycle = 0;
 	while (cycle < tarena->cycle_to_die)
 	{
+		if (tarena->option & DUMP && tarena->cycle > tarena->dump)
+			break ;
 		idx_cham = tarena->num_cham - 1;
 		if (tarena->option & NCURSES)
 		{
 			info_show_cycle(tarena->twin->win_info, tarena->cycle);
-			// if (cycle % 20 == 0)
-			// {1
-			// 	halfdelay(1);
-			// 	key = getch();
-			// 	if (key == ' ')
-			// 	{
-			// 		info_show_status(tarena->twin->win_info, 1);
-			// 		while (1)
-			// 		{
-			// 			key = getch();
-			// 			if (key == ' ')
-			// 				break ;
-			// 		}
-			// 		info_show_status(tarena->twin->win_info, 0);
-			// 	}
-			// }
+			if (cycle % 20 == 0)
+			{
+				halfdelay(1);
+				key = getch();
+				if (key == ' ')
+				{
+					info_show_status(tarena->twin->win_info, 1);
+					while (1)
+					{
+						key = getch();
+						if (key == ' ')
+							break ;
+					}
+					info_show_status(tarena->twin->win_info, 0);
+				}
+			}
 		}
 		while (idx_cham >= 0)
 		{
 			idx_proc = 0;
-			while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
+			num_tproc = tarena->tcham[idx_cham]->num_tproc;
+			while (idx_proc < num_tproc)
 			{
 				if (tarena->option & NCURSES)
 					ncur_unhighlight_pc(tarena->twin->win_arena, tarena->tmap,
@@ -222,10 +226,15 @@ void		t_arena_play(t_arena *tarena)
 		if (tarena->option & NCURSES)
 		{
 			info_show_cycle_die_period(tarena->twin->win_info, tarena);
-			getch();
+			// getch();
 		}
 		if (count_alive_cham(tarena) <= 0)
-			break ;
+		{
+			tarena->game_done = 1;
+			break;
+		}
+		else if ((tarena->option & DUMP) &&
+			tarena->cycle == (tarena->dump + 1))
+			break;
 	}
-	display_winner(tarena);
 }

@@ -108,11 +108,9 @@ t_windows		*ncur_new(t_arena *tarena)
 	twin->win_arena = newwin(CONTENTS_TOTAL_LINES,
 							CONTENTS_TOTAL_COLS,
 							0, 0);
-
 	twin->win_info = newwin(INFO_TOTAL_LINES,
 							INFO_TOTAL_COLS,
-							0,
-							CONTENTS_TOTAL_COLS - 1);
+							0, CONTENTS_TOTAL_COLS - 1);
 	colors_init(twin->win_arena);
 	colors_init(twin->win_info);
 	bkgd(COLOR_PAIR(9));

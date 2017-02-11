@@ -38,6 +38,7 @@ void		checkup_proc(t_arena *tarena)
 			else
 			{
 				tarena->tcham[idx_cham]->tproc[idx_proc].period_live = 0;
+				tarena->tcham[idx_cham]->current_live = 0;
 			}
 			idx_proc++;
 		}
