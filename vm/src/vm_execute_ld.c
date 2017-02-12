@@ -12,7 +12,7 @@
 
 #include <vm_corewar.h>
 
-int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc)
+int		deal_ld(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc)
 {
 	t_arg			*targ;
 	t_type_arg		type_arg;
@@ -89,6 +89,8 @@ int		deal_ld(t_map *tmap, int pc_command, t_proc *tproc)
 	{
 		tproc->carry = 0;
 	}
+	if (tarena->option & COMMANDS)
+		show_commands_ld(tproc, type_arg);
 	t_arg_destroy(targ);
 	return (ret);
 }

@@ -64,6 +64,8 @@ OBJECTS					=	op.o\
 							\
 							ft_option.o\
 							\
+							vm_show_commands.o\
+							\
 							add_libft.o\
 							ft_itoa_base.o
 
@@ -145,6 +147,9 @@ vm_execute_lldi.o		:	$(SRC)vm_execute_lldi.c $(HEADERS)
 vm_execute_aff.o		:	$(SRC)vm_execute_aff.c $(HEADERS)
 vm_execute_fork.o		:	$(SRC)vm_execute_fork.c $(HEADERS)
 vm_execute_lfork.o		:	$(SRC)vm_execute_lfork.c $(HEADERS)
+
+vm_show_commands.o		:	$(SRC)vm_show_commands.c $(HEADERS)
+
 
 vm_ncurses.o			:	$(SRC)vm_ncurses.c $(HEADERS)
 vm_ncurses_show_map.o	:	$(SRC)vm_ncurses_show_map.c $(HEADERS)

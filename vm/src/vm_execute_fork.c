@@ -51,6 +51,7 @@ int		w_deal_fork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command)
 	t_arg			*targ;
 	t_type_arg		type_arg;
 	int				ret;
+	int				where;
 
 	ret = count_bytecode_cycle(tarena->tmap, OP_FORK + 1, pc_command)
 				+ op_tab[OP_FORK].num_bytecode
@@ -68,19 +69,22 @@ int		w_deal_fork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command)
 				DIR_ADR_SIZE);
 	ft_endian_convert(&(type_arg.adr_dir[0]), DIR_ADR_SIZE);
 	type_arg.adr_dir[0] %= IDX_MOD;
-	if (type_arg.adr_dir[0] < 0)
-		type_arg.adr_dir[0] += MEM_SIZE;
+	where = (pc_command + type_arg.adr_dir[0]) % MEM_SIZE;
+	if (where < 0)
+		where += MEM_SIZE;
 	tarena->num_process += 1;
 	//debug
 	//debug
 	t_champion_add_proc(tarena->tcham[idx_cham], idx_proc, 
-						(pc_command + type_arg.adr_dir[0]) % MEM_SIZE,
+						where,
 						tarena->used_proc_num);
 	tarena->used_proc_num += 1;
 	//debug
 	//debug
 	if (tarena->option & NCURSES)
 		info_show_process(tarena->twin->win_info, tarena->num_process);
+	if (tarena->option & COMMANDS)
+		show_commands_fork(&(tarena->tcham[idx_cham]->tproc[idx_proc]), type_arg, where);
 	t_arg_destroy(targ);
 	return (ret);
 }

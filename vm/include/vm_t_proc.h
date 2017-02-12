@@ -25,5 +25,7 @@ void			t_proc_put(t_proc *tproc, int pc, int carry, char **registry);
 
 int				t_proc_find_minproc(t_arena *tarena, int min,
 									int *idx_cham_store, int *idx_proc_store);
+int 			t_proc_find_maxproc(t_arena *tarena, int max,
+									int *idx_cham_store, int *idx_proc_store);
 
 #endif

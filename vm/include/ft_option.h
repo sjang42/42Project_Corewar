@@ -32,7 +32,7 @@
 # define OPTION4_ARG 0
 # define OPTION5_ARG 0
 
-# define MAX_OP 2
+# define MAX_OP 3
 
 enum
 {

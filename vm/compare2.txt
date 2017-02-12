@@ -1,0 +1,12 @@
+P      | sti r1 391 1
+P      | sti r1 399 1
+P      | sti r1 400 1
+P      | sti r1 87 1
+P      | sti r1 397 1
+P      | sti r1 390 9
+P      | sti r1 383 17
+P      | sti r1 421 1
+P      | sti r1 393 2
+P      | sti r1 461 1
+P      | sti r1 454 9
+P      | sti r1 408 1

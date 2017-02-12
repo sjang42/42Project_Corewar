@@ -79,7 +79,7 @@ int		deal_command(t_map *tmap, int idx_cham,
 	}
 	else if (opcode == op_tab[OP_LD].opcode)
 	{
-		ret += deal_ld(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
+		ret += deal_ld(tarena, tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
 	}
 	else if (opcode == op_tab[OP_ST].opcode)
 	{
@@ -110,7 +110,7 @@ int		deal_command(t_map *tmap, int idx_cham,
 	}
 	else if (opcode == op_tab[OP_ZJMP].opcode)
 	{
-		ret += deal_zjmp(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
+		ret += deal_zjmp(tarena, tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
 	}
 	else if (opcode == op_tab[OP_LDI].opcode)
 	{

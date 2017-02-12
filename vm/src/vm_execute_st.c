@@ -89,6 +89,8 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 		if (tarena->option & NCURSES)
 			ncur_map_update(tarena, where, REG_SIZE);
 	}
+	if (tarena->option & COMMANDS)
+		show_commands_st(&(tarena->tcham[idx_cham]->tproc[idx_proc]), targ, type_arg.adr_ind[1]);
 	t_arg_destroy(targ);
 	return (ret);
 }

@@ -10,11 +10,84 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// void		show_commands_sti(t_arg *targ, t_type_arg type_arg
-// 								t_proc *tproc)
-// {
-// 	ft_putstr("P  ");
-// 	ft_putnbr(tproc->number);
-// 	ft_putstr("| sti ");
+#include <vm_corewar.h>
 
-// }
+void		show_commands_sti(t_arg *targ, t_type_arg type_arg,
+								t_proc *tproc)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("sti r%d ", ((char*)(targ->arg))[0]);
+	if (targ->bytecode[2] == T_REG)
+	{
+		if (targ->bytecode[1] == T_REG)
+			printf("%d %d\n", type_arg.val_reg[1], type_arg.val_reg[2]);
+		else if (targ->bytecode[1] == T_DIR)
+			printf("%d %d\n", type_arg.adr_dir[1], type_arg.val_reg[2]);
+		else
+			printf("%d %d\n", type_arg.val_ind[1], type_arg.val_reg[2]);
+	}
+	else //T_DIR
+	{
+		if (targ->bytecode[1] == T_REG)
+			printf("%d %d\n", type_arg.val_reg[1], type_arg.adr_dir[2]);
+		else if (targ->bytecode[1] == T_DIR)
+			printf("%d %d\n", type_arg.adr_dir[1], type_arg.adr_dir[2]);
+		else //targ->bytecode[1] == T_IND
+			printf("%d %d\n", type_arg.val_ind[1], type_arg.adr_dir[2]);
+	}
+}
+
+void		show_commands_zjmp(t_proc *tproc, int where)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("zjmp %d ", where);
+	if (tproc->carry)
+		printf("OK\n");
+	else
+		printf("FAIL\n");
+}
+
+void		show_commands_st(t_proc *tproc, t_arg *targ, int where)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("st r%d ", ((char*)(targ->arg))[0]);
+	if (targ->bytecode[1] == T_REG)
+		printf("r%d\n", ((char*)(targ->arg))[1]);
+	else
+		printf("%d\n", where);
+}
+
+void		show_commands_ld(t_proc *tproc, t_type_arg type_arg)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("ld %d r%d\n", type_arg.val_reg[3], type_arg.adr_reg[3]);
+}
+
+void		show_commands_fork(t_proc *tproc, t_type_arg type_arg, int where)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("fork %d (%d)\n", type_arg.adr_dir[0], where);
+}
+
+void		show_commands_lfork(t_proc *tproc, t_type_arg type_arg, int where)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("lfork %d (%d)\n", type_arg.adr_dir[0], where);
+}
+
+void		show_commands_live(t_proc *tproc, int num)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("live %d\n", num);
+}
+
+
+
+
+
+
+
+
+
+
+

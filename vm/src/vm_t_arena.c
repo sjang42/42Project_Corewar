@@ -103,7 +103,7 @@ void		play_one_period(t_arena *tarena)
 	int		key;
 	int		total_tproc;
 	int		proc_num;
-	int		min;
+	int		max;
 	t_proc *tproc_min;
 
 	cycle = 0;
@@ -134,7 +134,7 @@ void		play_one_period(t_arena *tarena)
 			}
 		}
 		proc_num = 0;
-		min = 0;
+		max = tarena->used_proc_num;
 		total_tproc = tarena->num_process;
 
 			//debug
@@ -156,7 +156,7 @@ void		play_one_period(t_arena *tarena)
 			// printf("tarena->num_process : %d\n", tarena->num_process);
 			// printf("tol num %d\n", tarena->used_proc_num);
 			//debug
-			min = t_proc_find_minproc(tarena, min, &idx_cham, &idx_proc);			
+			max = t_proc_find_maxproc(tarena, max, &idx_cham, &idx_proc);			
 			//debug
 			// printf("min2 : %d\n", min);
 			//debug

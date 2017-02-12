@@ -12,7 +12,7 @@
 
 #include <vm_corewar.h>
 
-int		deal_zjmp(t_map *tmap, int pc_command, t_proc *tproc)
+int		deal_zjmp(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc)
 {
 	t_arg			*targ;
 	t_type_arg		type_arg;
@@ -43,6 +43,8 @@ int		deal_zjmp(t_map *tmap, int pc_command, t_proc *tproc)
 		tproc->pc = where;
 		ret = 0;
 	}
+	if (tarena->option & COMMANDS)
+		show_commands_zjmp(tproc, type_arg.adr_dir[0]);
 	t_arg_destroy(targ);
 	return (ret);
 }

@@ -125,7 +125,7 @@ t_windows		*ncur_new(t_arena *tarena)
 	wborder(twin->win_info, '*', '*', '*', '*', '*', '*', '*', '*');
 	wattroff(twin->win_info, COLOR_PAIR(5) | A_BOLD);
 	wattron(twin->win_arena, COLOR_PAIR(7) | A_BOLD);
-	
+
 	ncur_show_termsays(twin->win_arena);
 	ncur_map_init(twin->win_arena, tarena->tmap, tarena);
 	info_show_status(twin->win_info, 1);

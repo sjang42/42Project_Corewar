@@ -298,7 +298,8 @@ int		deal_sti(t_arena *tarena, int idx_cham, int idx_proc)
 	// {
 		
 	// }
-
+	if (tarena->option & COMMANDS)
+		show_commands_sti(targ, type_arg, tproc);
 
 
 	t_arg_destroy(targ);

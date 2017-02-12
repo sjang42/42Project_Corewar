@@ -26,9 +26,7 @@ void		checkup_proc(t_arena *tarena)
 			if (tarena->tcham[idx_cham]->tproc[idx_proc].period_live == 0)
 			{
 				tarena->num_process -= 1;
-				t_champion_kill_proc(tarena->tcham[idx_cham], idx_proc);
 				//debug/
-				printf("%s\n", "hey");
 				//debug/
 				#ifdef __DEBUG_JEX
 					printf("one proc killed at cycle : %d\n", tarena->cycle);
@@ -40,6 +38,7 @@ void		checkup_proc(t_arena *tarena)
 						&(tarena->tcham[idx_cham]->tproc[idx_proc]),
 						tarena);
 				}
+				t_champion_kill_proc(tarena->tcham[idx_cham], idx_proc);
 			}
 			else
 			{

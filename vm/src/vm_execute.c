@@ -31,10 +31,15 @@ int		vm_execute_proc(t_map *tmap, int idx_cham, t_arena *tarena,
 	int cur_byte;
 	int ret;
 
+	#ifdef __DEBUG_JEX
+		printf("idx_proc : %d\n", idx_proc);
+		printf("cycle : %d\n", tarena->cycle);
+		if (idx_proc == tarena->num_process - 1)
+			printf("%s\n", "\n");
+	#endif
+
 	if (!(tarena->tcham[idx_cham]->tproc[idx_proc].on_command))
 	{
-	
-
 		cur_byte = read_current_byte(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc);
 		if (is_opcode(cur_byte))
 		{

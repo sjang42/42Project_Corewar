@@ -41,8 +41,13 @@ void		ncur_map_update(t_arena *tarena, int pc, int size)
 
 	if (pc < 0)
 		pc += MEM_SIZE;
-	xy.x = (CONTENTS_START_X) + ((pc % (CONTENTS_BYTES_PER_LINE) * 3));
+	xy.x = (CONTENTS_START_X) + (((pc % (CONTENTS_BYTES_PER_LINE)) * 3));
 	xy.y = (CONTENTS_START_Y) + (pc / (CONTENTS_BYTES_PER_LINE));
+	//debug
+		// wattron(tarena->twin->win_info, COLOR_PAIR(7) | A_BOLD);
+		// mvwprintw(tarena->twin->win_info, 30, 4, "x : %d, y : %d\n", xy.x, xy.y);
+		// wattroff(tarena->twin->win_info, COLOR_PAIR(7) | A_BOLD);
+	//debug
 	i = 0;
 	while (i < size)
 	{
@@ -53,6 +58,8 @@ void		ncur_map_update(t_arena *tarena, int pc, int size)
 		{
 			xy.x = CONTENTS_START_X;
 			xy.y += 1;
+			if (MEM_SIZE / CONTENTS_BYTES_PER_LINE + CONTENTS_START_Y == xy.y)
+				xy.y = (CONTENTS_START_Y);
 		}
 		colors_off_pc(tarena->twin->win_arena, tarena, pc);
 		pc++;
