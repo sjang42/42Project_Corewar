@@ -1,3 +1,3390 @@
-Introducing contestants...
-* Player 1, weighing 617 bytes, "helltrain" ("choo-choo, motherf*****s !") !
-Contestant 1, "helltrain", has won !
+P    1 | fork 80 (80)
+P    2 | ld 0 r16
+P    1 | live 0
+P    2 | zjmp 462 OK
+P    2 | live 0
+P    2 | ld 190055943 r10
+P    2 | ld 84476405 r11
+P    1 | fork 82 (90)
+P    3 | ld 0 r16
+P    1 | ld 251658255 r2
+P    1 | ld 1 r12
+P    1 | ld 40 r11
+P    1 | st r1 11
+P    3 | zjmp 395 OK
+P    1 | st r16 -4
+P    3 | live 0
+P    2 | fork 41 (609)
+P    1 | live -1
+P    3 | ld 190055943 r10
+P    2 | ld 190055172 r3
+P    1 | st r16 -300
+P    4 | live 0
+P    3 | ld 84476405 r11
+P    2 | ld 190055172 r6
+P    1 | st r2 -301
+P    4 | ld 84475923 r3
+P    3 | ld 150994956 r3
+P    2 | ld 507 r7
+P    1 | st r2 -302
+P    4 | ld 84475923 r6
+P    3 | ld 150994956 r6
+P    2 | ld 24 r4
+P    4 | ld 511 r7
+P    3 | ld 26 r7
+P    2 | ld 0 r5
+P    1 | sub r11 r12 r11
+P    4 | ld 28 r4
+P    3 | ld 495 r4
+P    4 | ld 0 r5
+P    3 | ld 0 r5
+P    2 | zjmp 46 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    4 | zjmp 3 OK
+P    3 | zjmp 106 OK
+P    2 | live 0
+P    2 | st r10 511
+P    4 | live 0
+P    3 | live 0
+P    2 | st r11 510
+P    4 | st r10 511
+P    3 | st r10 511
+P    1 | zjmp -35 OK
+P    4 | st r11 510
+P    3 | st r11 510
+P    1 | live -1
+P    2 | zjmp 501 OK
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    4 | zjmp 501 OK
+P    3 | zjmp 501 OK
+P    1 | st r2 -302
+P    1 | sub r11 r12 r11
+P    2 | sti r6 507 0
+P    4 | sti r6 511 0
+P    3 | sti r6 26 0
+P    1 | zjmp 33 FAILED
+P    2 | zjmp 501 OK
+P    1 | ld 0 r16
+P    4 | zjmp 501 OK
+P    3 | zjmp 501 OK
+P    1 | zjmp -35 OK
+P    2 | sti r3 24 0
+P    1 | live -1
+P    1 | st r16 -300
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    2 | sti r3 24 0
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    2 | sti r3 24 0
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | sub r11 r12 r11
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp -35 OK
+P    2 | zjmp 19 OK
+P    1 | live -1
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | sti r3 24 0
+P    1 | sub r11 r12 r11
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    1 | zjmp -35 OK
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | live -1
+P    2 | zjmp 19 OK
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r2 -302
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp 33 FAILED
+P    2 | zjmp 19 OK
+P    1 | ld 0 r16
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    2 | sti r3 24 0
+P    1 | live -1
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    2 | zjmp 19 OK
+P    1 | st r2 -302
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    1 | zjmp 33 FAILED
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | ld 0 r16
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    1 | live -1
+P    2 | sti r3 24 0
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r2 -302
+P    2 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    2 | sti r3 24 0
+P    1 | ld 0 r16
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    2 | sti r3 24 0
+P    1 | st r2 -302
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | sub r11 r12 r11
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp -35 OK
+P    2 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | sti r3 24 0
+P    1 | sub r11 r12 r11
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    2 | sti r3 24 0
+P    1 | zjmp -35 OK
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | live -1
+P    1 | st r16 -300
+P    2 | zjmp 19 OK
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    2 | sti r3 24 0
+P    1 | live -1
+P    1 | st r16 -300
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    2 | sti r3 24 0
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    2 | sti r3 24 0
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | sub r11 r12 r11
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp -35 OK
+P    2 | zjmp 19 OK
+P    1 | live -1
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | sti r3 24 0
+P    1 | sub r11 r12 r11
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    1 | zjmp -35 OK
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | live -1
+P    2 | zjmp 19 OK
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r2 -302
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp 33 FAILED
+P    2 | zjmp 19 OK
+P    1 | ld 0 r16
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    2 | sti r3 24 0
+P    1 | live -1
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    2 | zjmp 19 OK
+P    1 | st r2 -302
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    1 | zjmp 33 FAILED
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | ld 0 r16
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    1 | live -1
+P    2 | sti r3 24 0
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r2 -302
+P    2 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    2 | sti r3 24 0
+P    1 | ld 0 r16
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    2 | sti r3 24 0
+P    1 | st r2 -302
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | sub r11 r12 r11
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp -35 OK
+P    2 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | sti r3 24 0
+P    1 | sub r11 r12 r11
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    2 | sti r3 24 0
+P    1 | zjmp -35 OK
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | live -1
+P    1 | st r16 -300
+P    2 | zjmp 19 OK
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    2 | sti r3 24 0
+P    1 | live -1
+P    1 | st r16 -300
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    2 | sti r3 24 0
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    2 | sti r3 24 0
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | sub r11 r12 r11
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp -35 OK
+P    2 | zjmp 19 OK
+P    1 | live -1
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | sti r3 24 0
+P    1 | sub r11 r12 r11
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    1 | zjmp -35 OK
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | live -1
+P    2 | zjmp 19 OK
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r2 -302
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp 33 FAILED
+P    2 | zjmp 19 OK
+P    1 | ld 0 r16
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    2 | sti r3 24 0
+P    1 | live -1
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    2 | zjmp 19 OK
+P    1 | st r2 -302
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    1 | zjmp 33 FAILED
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | ld 0 r16
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    1 | live -1
+P    2 | sti r3 24 0
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r2 -302
+P    2 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    2 | sti r3 24 0
+P    1 | ld 0 r16
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    2 | sti r3 24 0
+P    1 | st r2 -302
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | sub r11 r12 r11
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp -35 OK
+P    2 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | sti r3 24 0
+P    1 | sub r11 r12 r11
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    2 | sti r3 24 0
+P    1 | zjmp -35 OK
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | live -1
+P    1 | st r16 -300
+P    2 | zjmp 19 OK
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    2 | sti r3 24 0
+P    1 | live -1
+P    1 | st r16 -300
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    2 | sti r3 24 0
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    2 | sti r3 24 0
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | sub r11 r12 r11
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp -35 OK
+P    2 | zjmp 19 OK
+P    1 | live -1
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | sti r3 24 0
+P    1 | sub r11 r12 r11
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    1 | zjmp -35 OK
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | live -1
+P    2 | zjmp 19 OK
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r2 -302
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp 33 FAILED
+P    2 | zjmp 19 OK
+P    1 | ld 0 r16
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    2 | sti r3 24 0
+P    1 | live -1
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    2 | zjmp 19 OK
+P    1 | st r2 -302
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    2 | sti r3 24 0
+P    1 | zjmp 33 FAILED
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | ld 0 r16
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    1 | live -1
+P    2 | sti r3 24 0
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | st r2 -302
+P    2 | zjmp 19 OK
+P    1 | sub r11 r12 r11
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    2 | sti r3 24 0
+P    1 | ld 0 r16
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    2 | zjmp 19 OK
+P    1 | zjmp -35 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    2 | sti r3 24 0
+P    1 | st r2 -302
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | sub r11 r12 r11
+P    2 | zjmp 19 OK
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    2 | sti r3 24 0
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp -35 OK
+P    2 | zjmp 19 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    4 | zjmp 19 OK
+P    3 | zjmp 19 OK
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    2 | sti r3 24 0
+P    1 | sub r11 r12 r11
+P    4 | sti r3 28 0
+P    3 | sti r3 495 0
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    1 | zjmp -35 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    1 | sub r11 r12 r11
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    1 | zjmp -35 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    1 | sub r11 r12 r11
+P    1 | zjmp 33 FAILED
+P    1 | ld 0 r16
+P    1 | zjmp -35 OK
+P    1 | live -1
+P    1 | st r16 -300
+P    1 | st r2 -301
+P    1 | st r2 -302
+P    1 | sub r11 r12 r11
+P    1 | zjmp 33 OK
+P    1 | ldi -58 1 r13
+P    1 | ld 0 r16
+P    1 | st r13 6
+P    1 | live -1
+P    1 | fork -5 (119)
+P    1 | st r13 6
+P    5 | live -1
+P    1 | live -1
+P    5 | fork -5 (119)
+P    5 | st r13 6
+P    1 | fork 44 (181)
+P    7 | ld 202068999 r10
+P    6 | live -1
+P    1 | ld 190056971 r10
+P    7 | st r13 7
+P    5 | live -1
+P    1 | ld 135004416 r7
+P    7 | ld 276 r8
+P    1 | ld 273 r8
+P    7 | ld 274 r11
+P    1 | ld 270 r11
+P    7 | ld 0 r12
+P    1 | ld 0 r12
+P    6 | fork -5 (119)
+P    6 | st r13 6
+P    5 | fork 44 (181)
+P    9 | ld 202068999 r10
+P    8 | live -1
+P    5 | ld 190056971 r10
+P    9 | st r13 7
+P    6 | live -1
+P    5 | ld 135004416 r7
+P    9 | ld 276 r8
+P    7 | fork 6 (219)
+P    5 | ld 273 r8
+P    1 | fork 44 (219)
+P    9 | ld 274 r11
+P    5 | ld 270 r11
+P    9 | ld 0 r12
+P    5 | ld 0 r12
+P   11 | zjmp 3 OK
+P   10 | zjmp 3 OK
+P    7 | zjmp 261 OK
+P    1 | zjmp 299 OK
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live 0
+P    1 | live 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    8 | fork -5 (119)
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P    8 | st r13 6
+P    6 | fork 44 (181)
+P   13 | ld 202068999 r10
+P   12 | live -1
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    6 | ld 190056971 r10
+P    1 | live -1
+P   13 | st r13 7
+P    8 | live -1
+P    6 | ld 135004416 r7
+P   13 | ld 276 r8
+P    9 | fork 6 (219)
+P    6 | ld 273 r8
+P    5 | fork 44 (219)
+P   13 | ld 274 r11
+P    6 | ld 270 r11
+P   13 | ld 0 r12
+P    6 | ld 0 r12
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | zjmp 3 OK
+P   14 | zjmp 3 OK
+P    9 | zjmp 261 OK
+P    5 | zjmp 299 OK
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live 0
+P    5 | live 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live 0
+P   10 | live 0
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P   12 | fork -5 (119)
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   12 | st r13 6
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    8 | fork 44 (181)
+P    7 | sti r10 274 0
+P    1 | sti r10 270 0
+P   17 | ld 202068999 r10
+P   16 | live -1
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    8 | ld 190056971 r10
+P    5 | live -1
+P   17 | st r13 7
+P   12 | live -1
+P    8 | ld 135004416 r7
+P   17 | ld 276 r8
+P   13 | fork 6 (219)
+P    8 | ld 273 r8
+P    6 | fork 44 (219)
+P   17 | ld 274 r11
+P    8 | ld 270 r11
+P   17 | ld 0 r12
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    8 | ld 0 r12
+P    7 | sti r7 276 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | zjmp 3 OK
+P   18 | zjmp 3 OK
+P   13 | zjmp 261 OK
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | zjmp 299 OK
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live 0
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live 0
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live 0
+P   14 | live 0
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   16 | fork -5 (119)
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   16 | st r13 6
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P   12 | fork 44 (181)
+P    9 | sti r10 274 0
+P    5 | sti r10 270 0
+P   21 | ld 202068999 r10
+P   20 | live -1
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   12 | ld 190056971 r10
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   21 | st r13 7
+P   16 | live -1
+P   12 | ld 135004416 r7
+P   21 | ld 276 r8
+P   17 | fork 6 (219)
+P   12 | ld 273 r8
+P    8 | fork 44 (219)
+P   21 | ld 274 r11
+P   12 | ld 270 r11
+P   21 | ld 0 r12
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P   12 | ld 0 r12
+P    9 | sti r7 276 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | zjmp 3 OK
+P   22 | zjmp 3 OK
+P   17 | zjmp 261 OK
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | zjmp 299 OK
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live 0
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live 0
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live 0
+P   18 | live 0
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   20 | fork -5 (119)
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   20 | st r13 6
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   16 | fork 44 (181)
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   25 | ld 202068999 r10
+P   24 | live -1
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   16 | ld 190056971 r10
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   25 | st r13 7
+P   20 | live -1
+P   16 | ld 135004416 r7
+P   25 | ld 276 r8
+P   16 | ld 273 r8
+P   25 | ld 274 r11
+P   16 | ld 270 r11
+P   25 | ld 0 r12
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   16 | ld 0 r12
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live 0
+P   22 | live 0
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   24 | fork -5 (119)
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   24 | st r13 6
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   20 | fork 44 (181)
+P   17 | sti r10 274 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   27 | ld 202068999 r10
+P   26 | live -1
+P   20 | ld 190056971 r10
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   27 | st r13 7
+P   24 | live -1
+P   20 | ld 135004416 r7
+P   27 | ld 276 r8
+P   25 | fork 6 (219)
+P   20 | ld 273 r8
+P   16 | fork 44 (219)
+P   27 | ld 274 r11
+P   20 | ld 270 r11
+P   27 | ld 0 r12
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   20 | ld 0 r12
+P   17 | sti r7 276 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   29 | zjmp 3 OK
+P   28 | zjmp 3 OK
+P   25 | zjmp 261 OK
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   16 | zjmp 299 OK
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   29 | sti r10 270 0
+P   28 | sti r10 274 0
+P   25 | sti r10 274 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   16 | sti r10 270 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   29 | sti r7 273 0
+P   28 | sti r7 276 0
+P   25 | sti r7 276 0
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   16 | sti r7 273 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   29 | live 0
+P   28 | live 0
+P   25 | live 0
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   16 | live 0
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   29 | sti r10 270 0
+P   28 | sti r10 274 0
+P   25 | sti r10 274 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   16 | sti r10 270 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   29 | sti r7 273 0
+P   28 | sti r7 276 0
+P   25 | sti r7 276 0
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   16 | sti r7 273 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   29 | live 0
+P   28 | live 0
+P   25 | live -1
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   16 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   29 | sti r10 270 0
+P   28 | sti r10 274 0
+P   25 | sti r10 274 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   16 | sti r10 270 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   29 | sti r7 273 0
+P   28 | sti r7 276 0
+P   25 | sti r7 276 0
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   16 | sti r7 273 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   29 | live 0
+P   28 | live 0
+P   25 | live -1
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   16 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1
+P   19 | sti r7 273 0
+P   18 | sti r7 276 0
+P   13 | sti r7 276 0
+P   11 | sti r7 273 0
+P   10 | sti r7 276 0
+P    7 | sti r7 276 0
+P    6 | sti r7 273 0
+P    1 | sti r7 273 0
+P   29 | sti r10 270 0
+P   28 | sti r10 274 0
+P   25 | sti r10 274 0
+P   23 | sti r10 270 0
+P   22 | sti r10 274 0
+P   17 | sti r10 274 0
+P   16 | sti r10 270 0
+P   15 | sti r10 270 0
+P   14 | sti r10 274 0
+P    9 | sti r10 274 0
+P    8 | sti r10 270 0
+P    5 | sti r10 270 0
+P   19 | live -1
+P   18 | live -1
+P   13 | live -1
+P   11 | live -1
+P   10 | live -1
+P    7 | live -1
+P    6 | live -1
+P    1 | live -1
+P   29 | sti r7 273 0
+P   28 | sti r7 276 0
+P   25 | sti r7 276 0
+P   23 | sti r7 273 0
+P   22 | sti r7 276 0
+P   17 | sti r7 276 0
+P   16 | sti r7 273 0
+P   15 | sti r7 273 0
+P   14 | sti r7 276 0
+P    9 | sti r7 276 0
+P    8 | sti r7 273 0
+P    5 | sti r7 273 0
+P   19 | sti r10 270 0
+P   18 | sti r10 274 0
+P   13 | sti r10 274 0
+P   11 | sti r10 270 0
+P   10 | sti r10 274 0
+P    7 | sti r10 274 0
+P    6 | sti r10 270 0
+P    1 | sti r10 270 0
+P   29 | live 0
+P   28 | live 0
+P   25 | live -1
+P   23 | live -1
+P   22 | live -1
+P   17 | live -1
+P   16 | live -1
+P   15 | live -1
+P   14 | live -1
+P    9 | live -1
+P    8 | live -1
+P    5 | live -1

@@ -16,18 +16,21 @@ void		checkup_proc(t_arena *tarena)
 {
 	int idx_cham;
 	int idx_proc;
+	int num_tproc;
+	int i;
 
 	idx_cham = 0;
 	while (idx_cham < tarena->num_cham)
 	{
+		i = 0;
 		idx_proc = 0;
-		while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
+		num_tproc = tarena->tcham[idx_cham]->num_tproc;
+		while (i < num_tproc)
 		{
-			if (tarena->tcham[idx_cham]->tproc[idx_proc].period_live == 0)
+			if (tarena->tcham[idx_cham]->tproc[idx_proc].period_live == 0 &&
+				tarena->tcham[idx_cham]->tproc[idx_proc].period_born != 1)
 			{
 				tarena->num_process -= 1;
-				//debug/
-				//debug/
 				#ifdef __DEBUG_JEX
 					printf("one proc killed at cycle : %d\n", tarena->cycle);
 				#endif
@@ -43,12 +46,13 @@ void		checkup_proc(t_arena *tarena)
 			else
 			{
 				tarena->tcham[idx_cham]->tproc[idx_proc].period_live = 0;
-				tarena->tcham[idx_cham]->current_live = 0;
+				idx_proc++;
 			}
-			idx_proc++;
+			i++;
 		}
 		if (tarena->option & NCURSES)
 			info_show_cham_live_current(tarena->twin->win_info, tarena, idx_cham);
+		tarena->tcham[idx_cham]->current_live = 0;
 		idx_cham++;
 	}
 }
@@ -63,14 +67,26 @@ void		checkup_nbr_live(t_arena *tarena)
 	idx_cham = 0;
 	while (idx_cham < tarena->num_cham)
 	{
+		//try;
+		// sum_live += tarena->tcham[idx_cham]->current_live;
+		//try;
 		idx_proc = 0;
 		while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
 		{
-			sum_live +=
-			tarena->
-					tcham[idx_cham]->
-									tproc[idx_proc].
-													period_live;
+			// if (tarena->tcham[idx_cham]->tproc[idx_proc].period_born)
+			// {
+			// 	sum_live += tarena->
+			// 				tcham[idx_cham]->
+			// 				tproc[idx_proc].
+			// 				period_live - 1;
+			// }
+			// else
+			// {
+				sum_live += tarena->
+							tcham[idx_cham]->
+							tproc[idx_proc].
+							period_live;
+			// }
 			idx_proc++;
 		}
 		idx_cham++;
@@ -105,4 +121,42 @@ int			count_alive_cham(t_arena *tarena)
 		idx_cham++;
 	}
 	return (count);
+}
+
+void		delete_just_born(t_arena *tarena)
+{
+	int idx_cham;
+	int idx_proc;
+
+	idx_cham = 0;
+	while (idx_cham < tarena->num_cham)
+	{
+		idx_proc = 0;
+		while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
+		{
+			if (tarena->tcham[idx_cham]->tproc[idx_proc].just_born)
+				tarena->tcham[idx_cham]->tproc[idx_proc].just_born = 0;
+			idx_proc++;
+		}
+		idx_cham++;
+	}
+}
+
+void		delete_period_born(t_arena *tarena)
+{
+	int idx_cham;
+	int idx_proc;
+
+	idx_cham = 0;
+	while (idx_cham < tarena->num_cham)
+	{
+		idx_proc = 0;
+		while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
+		{
+			if (tarena->tcham[idx_cham]->tproc[idx_proc].period_born)
+				tarena->tcham[idx_cham]->tproc[idx_proc].period_born = 0;
+			idx_proc++;
+		}
+		idx_cham++;
+	}
 }

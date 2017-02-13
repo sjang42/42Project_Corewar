@@ -12,7 +12,7 @@
 
 #include <vm_corewar.h>
 
-int		deal_ldi(t_map *tmap, int pc_command, t_proc *tproc)
+int		deal_ldi(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc)
 {
 	t_arg			*targ;
 	t_type_arg		type_arg;
@@ -127,7 +127,6 @@ int		deal_ldi(t_map *tmap, int pc_command, t_proc *tproc)
 		else //targ->bytecode[0] == T_IND
 			type_arg.val_dir[3] = type_arg.val_ind[0] + type_arg.adr_dir[1];
 	}
-
 	where = ((pc_command + (type_arg.val_dir[3] % IDX_MOD)) % MEM_SIZE);
 	if (where < 0)
 		where += MEM_SIZE;
@@ -135,6 +134,8 @@ int		deal_ldi(t_map *tmap, int pc_command, t_proc *tproc)
 	ft_endian_convert(tmp, REG_SIZE);
 	put_registry(tproc->registry, type_arg.adr_reg[2], tmp);
 	free(tmp);
+	if (tarena->option & COMMANDS)
+		show_commands_ldi(targ, type_arg, tproc);
 	t_arg_destroy(targ);
 	return (ret);
 }

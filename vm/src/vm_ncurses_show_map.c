@@ -27,9 +27,10 @@ void		w_ft_displaybyte(WINDOW *win, int y, int x, unsigned char ptr)
 		mod += '0';
 	else
 		mod += 'a' - 10;
-	wmove(win, y, x);
-	waddch(win, result);
-	waddch(win, mod);
+	mvwprintw(win, y,x, "%c%c", result, mod);
+	// wmove(win, y, x);
+	// waddch(win, result);
+	// waddch(win, mod);
 }
 
 void			ncur_map_init(WINDOW *win, t_map *tmap, t_arena *tarena)

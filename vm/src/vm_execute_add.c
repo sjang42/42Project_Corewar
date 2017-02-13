@@ -12,7 +12,7 @@
 
 #include <vm_corewar.h>
 
-int		deal_add(t_map *tmap, int pc_command, t_proc *tproc)
+int		deal_add(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc)
 {
 	t_arg			*targ;
 	t_type_arg		type_arg;
@@ -49,7 +49,6 @@ int		deal_add(t_map *tmap, int pc_command, t_proc *tproc)
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
 	}
 	type_arg.val_reg[3] = type_arg.val_reg[0] + type_arg.val_reg[1];
-	;
 	if (put_registry(tproc->registry,
 					((char*)(targ->arg))[2],
 					&(type_arg.val_reg[3])))
@@ -64,7 +63,8 @@ int		deal_add(t_map *tmap, int pc_command, t_proc *tproc)
 		tproc->carry = 1;
 	else
 		tproc->carry = 0;
-
+	if (tarena->option & COMMANDS)
+		show_commands_add(tproc, targ);
 	t_arg_destroy(targ);
 	return (ret);
 }

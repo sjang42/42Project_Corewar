@@ -118,7 +118,10 @@ int		deal_or(t_map *tmap, int pc_command, t_proc *tproc)
 		#endif
 		t_arg_destroy(targ);
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
-	}
+	}if (type_arg.val_reg[3] == 0)
+		tproc->carry = 1;
+	else
+		tproc->carry = 0;
 	t_arg_destroy(targ);
 	return (ret);
 }

@@ -29,13 +29,15 @@ void			t_proc_put(t_proc *tproc, int pc, int carry, char **registry)
 
 	tproc->pc = pc;
 	tproc->carry = carry;
-	tproc->registry = (char**)malloc(sizeof(char*) * REG_NUMBER);
+	tproc->registry = (char**)malloc(sizeof(char*) * (REG_NUMBER));
 	tproc->on_command = 0;
 	tproc->wait_cycle = 0;
-	if (registry == NULL)
+	tproc->just_born = 1;
+	tproc->period_born = 1;
+	// if (registry)
+	// 	tproc->period_live = 1;
+	// else
 		tproc->period_live = 0;
-	else
-		tproc->period_live = 1;
 	i = 0;
 	while (i < REG_NUMBER)
 	{
@@ -114,7 +116,8 @@ int 			t_proc_find_maxproc(t_arena *tarena, int max,
 			idx_proc = 0;
 			while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
 			{
-				if (tarena->tcham[idx_cham]->tproc[idx_proc].number == max)
+				if (tarena->tcham[idx_cham]->tproc[idx_proc].number == max &&
+					tarena->tcham[idx_cham]->tproc[idx_proc].just_born != 1)
 				{
 					success = 1;
 					break ;

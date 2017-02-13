@@ -42,6 +42,8 @@ typedef struct	s_proc
 	int		wait_cycle;
 	int		period_live;
 	int		number;
+	int		just_born;
+	int		period_born;
 	int		belong_idx_cham;
 }				t_proc;
 

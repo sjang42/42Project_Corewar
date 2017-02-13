@@ -34,6 +34,7 @@ static int		t_cham_get_proc(t_proc *tproc, int num, int proc_num)
 {
 	t_proc_put(tproc, 0, 0, NULL);
 	tproc->number = proc_num;
+	tproc->just_born = 0;
 	num *= -1;
 	ft_memcpy(tproc->registry[0], &(num), REG_SIZE);
 	return (0);
@@ -56,8 +57,8 @@ t_champion		*t_champion_new(char *fname, int num, int color, int proc_num)
 		ft_exit_error("Wrong file");
 	vm_read_header(&(tcham->theader), tcham->tfile.fd, str, size_str);
 	t_cham_get_inst(&(tcham->tinst), tcham->theader.prog_size, str);
-	tcham->tproc = (t_proc*)malloc(sizeof(t_proc) * 100);
-	tcham->mem_tproc = 100;
+	tcham->tproc = (t_proc*)malloc(sizeof(t_proc) * 5);
+	tcham->mem_tproc = 5;
 	tcham->num_tproc = 1;
 	t_cham_get_proc(&(tcham->tproc[0]), num, proc_num);
 	free(str);

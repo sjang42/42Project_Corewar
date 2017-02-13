@@ -52,6 +52,9 @@ void			t_arena_destroy(t_arena *tarena);
 
 void		display_winner(t_arena *tarena);
 
+void		delete_period_born(t_arena *tarena);
+void		delete_just_born(t_arena *tarena);
+
 void			t_arena_showinfo(t_arena *tarena);
 
 #endif

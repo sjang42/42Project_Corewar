@@ -89,12 +89,12 @@ int		deal_command(t_map *tmap, int idx_cham,
 
 	else if (opcode == op_tab[OP_ADD].opcode)
 	{
-		ret += deal_add(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
+		ret += deal_add(tarena, tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
 	}
 
 	else if (opcode == op_tab[OP_SUB].opcode)
 	{
-		ret += deal_sub(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
+		ret += deal_sub(tarena, tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
 	}
 	else if (opcode == op_tab[OP_AND].opcode)
 	{
@@ -114,7 +114,7 @@ int		deal_command(t_map *tmap, int idx_cham,
 	}
 	else if (opcode == op_tab[OP_LDI].opcode)
 	{
-		ret += deal_ldi(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
+		ret += deal_ldi(tarena, tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
 	}
 	else if (opcode == op_tab[OP_STI].opcode)
 	{

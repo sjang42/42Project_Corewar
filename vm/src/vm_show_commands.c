@@ -13,7 +13,7 @@
 #include <vm_corewar.h>
 
 void		show_commands_sti(t_arg *targ, t_type_arg type_arg,
-								t_proc *tproc)
+								t_proc *tproc, int where)
 {
 	printf("P%5d | ", tproc->number + 1);
 	printf("sti r%d ", ((char*)(targ->arg))[0]);
@@ -35,7 +35,35 @@ void		show_commands_sti(t_arg *targ, t_type_arg type_arg,
 		else //targ->bytecode[1] == T_IND
 			printf("%d %d\n", type_arg.val_ind[1], type_arg.adr_dir[2]);
 	}
+	printf("-> store to %d\n", where);
 }
+
+void		show_commands_ldi(t_arg *targ, t_type_arg type_arg,
+								t_proc *tproc)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("ldi ");
+	if (targ->bytecode[1] == T_REG)
+	{
+		if (targ->bytecode[0] == T_REG)
+			printf("%d %d ", type_arg.val_reg[0], type_arg.val_reg[1]);
+		else if (targ->bytecode[0] == T_DIR)
+			printf("%d %d ", type_arg.adr_dir[0], type_arg.val_reg[1]);
+		else //targ->bytecode[0] == T_IND
+			printf("%d %d ", type_arg.val_ind[0], type_arg.val_reg[1]);
+	}
+	else //(targ->bytecode[1] == T_DIR)
+	{
+		if (targ->bytecode[0] == T_REG)
+			printf("%d %d ", type_arg.val_reg[0], type_arg.adr_dir[1]);
+		else if (targ->bytecode[0] == T_DIR)
+			printf("%d %d ", type_arg.adr_dir[0], type_arg.adr_dir[1]);
+		else //targ->bytecode[0] == T_IND
+			printf("%d %d ", type_arg.val_ind[0], type_arg.adr_dir[1]);
+	}
+	printf("r%d\n", type_arg.adr_reg[2]);
+}
+
 
 void		show_commands_zjmp(t_proc *tproc, int where)
 {
@@ -44,7 +72,7 @@ void		show_commands_zjmp(t_proc *tproc, int where)
 	if (tproc->carry)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("FAILED\n");
 }
 
 void		show_commands_st(t_proc *tproc, t_arg *targ, int where)
@@ -81,11 +109,17 @@ void		show_commands_live(t_proc *tproc, int num)
 	printf("live %d\n", num);
 }
 
+void		show_commands_sub(t_proc *tproc, t_arg *targ)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("sub r%d r%d r%d\n", ((char*)(targ->arg))[0], ((char*)(targ->arg))[1], ((char*)(targ->arg))[2]);
+}
 
-
-
-
-
+void		show_commands_add(t_proc *tproc, t_arg *targ)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("and r%d r%d r%d\n", ((char*)(targ->arg))[0], ((char*)(targ->arg))[1], ((char*)(targ->arg))[2]);
+}
 
 
 

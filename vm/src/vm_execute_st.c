@@ -24,6 +24,10 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 	TYPE_IND	val_ind;
 	int			ret;
 
+	//debug
+		// printf("st pc : %x\n", tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+		// printf("cycle : %d\n", tarena->cycle);
+	//debug
 	ft_bzero(&type_arg, sizeof(t_type_arg));
 	ret = count_bytecode_cycle(tarena->tmap, OP_ST + 1,
 			tarena->tcham[idx_cham]->tproc[idx_proc].pc)
@@ -32,7 +36,6 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 	targ = t_arg_new(tarena->tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, OP_ST + 1);
 	if (targ == NULL)
 	{
-		
 		#ifdef __DEBUG_JEX
 			printf("%s\n", "wrong exit");
 		#endif
@@ -58,17 +61,7 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 	*/
 	if (targ->bytecode[1] == T_REG)
 	{
-		if (read_registry(
-			tarena->tcham[idx_cham]->tproc[idx_proc].registry,
-			((char*)(targ->arg))[1],
-			&(type_arg.adr_reg[1])))
-		{
-			#ifdef __DEBUG_JEX
-				printf("%s\n", "wrong exit");
-			#endif
-			t_arg_destroy(targ);
-			return (ret);
-		}
+		type_arg.adr_reg[1] = ((char*)(targ->arg))[1];
 		put_registry(tarena->tcham[idx_cham]->tproc[idx_proc].registry,
 						type_arg.adr_reg[1], &(type_arg.val_reg[0]));
 	}
