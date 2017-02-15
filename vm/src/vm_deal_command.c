@@ -102,7 +102,7 @@ int		deal_command(t_map *tmap, int idx_cham,
 	}
 	else if (opcode == op_tab[OP_OR].opcode)
 	{
-		ret += deal_or(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
+		ret += deal_or(tarena, tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
 	}
 	else if (opcode == op_tab[OP_XOR].opcode)
 	{
@@ -134,7 +134,8 @@ int		deal_command(t_map *tmap, int idx_cham,
 	}
 	else if (opcode == op_tab[OP_AFF].opcode)
 	{
-		ret += deal_aff(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
+		ret += deal_aff(tarena, idx_cham, idx_proc);
+		// ret += deal_aff(tarena, tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, &(tarena->tcham[idx_cham]->tproc[idx_proc]));
 	}
 	else if (opcode == op_tab[OP_FORK].opcode)
 	{

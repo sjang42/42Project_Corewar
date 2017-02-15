@@ -46,7 +46,8 @@ void			t_champion_add_proc(t_champion *tcham, int idx_proc, int pc, int proc_num
 	t_proc_put(&(tcham->tproc[tcham->num_tproc]), pc,
 				tcham->tproc[idx_proc].carry,
 				tcham->tproc[idx_proc].registry);
-	(tcham->tproc[tcham->num_tproc]).number = proc_num;
+	tcham->tproc[tcham->num_tproc].number = proc_num;
+	tcham->tproc[tcham->num_tproc].once_lived = tcham->tproc[idx_proc].once_lived;
 	tcham->num_tproc += 1;
 }
 

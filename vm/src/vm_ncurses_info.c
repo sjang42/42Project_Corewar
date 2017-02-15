@@ -21,12 +21,29 @@ void			ncur_erase_termsays(WINDOW *win)
 	wmove(win, TERM_SAYS_Y, TERM_SAYS_X + TERM_SAYS_MASSAGE_LEN);
 	while (i < 181)
 	{
-		waddch(win, ' ');
+		wprintw(win, " ");
 		i++;
 	}
 	wrefresh(win);
 	wattroff(win, COLOR_PAIR(7) | A_BOLD);
 }
+
+void			ncur_erase_aff(WINDOW *win)
+{
+	int i;
+
+	i = 0;
+	wattron(win, COLOR_PAIR(7) | A_BOLD);
+	wmove(win, AFF_Y, AFF_X + AFF_MASSAGE_LEN);
+	while (i < 181)
+	{
+		wprintw(win, " ");
+		i++;
+	}
+	wrefresh(win);
+	wattroff(win, COLOR_PAIR(7) | A_BOLD);
+}
+
 
 void			ncur_show_termsays(WINDOW *win_arena)
 {
@@ -163,6 +180,26 @@ void			ncur_show_live(WINDOW *win_arena, t_arena *tarena,
 	mvwprintw(win_arena,
 			TERM_SAYS_Y, TERM_SAYS_X + TERM_SAYS_MASSAGE_LEN,
 			"A process shows that player %d is alive", live_cham);
+	wrefresh(win_arena);
+	wattroff(win_arena, COLOR_PAIR(idx_cham + 1) | A_BOLD | A_REVERSE);
+	idx++;
+}
+
+void			ncur_show_aff(WINDOW *win_arena, int idx_cham, char byte)
+{
+	static int idx = 0;
+
+	ncur_erase_aff(win_arena);
+	if (idx >= 10)
+		idx = 0;
+	wattron(win_arena, COLOR_PAIR(7) | A_BOLD);
+	mvwprintw(win_arena, AFF_Y, AFF_X, "AFF : ", byte);
+	wattroff(win_arena, COLOR_PAIR(7) | A_BOLD);
+	if (idx % 2 == 0)
+		wattron(win_arena, COLOR_PAIR(idx_cham + 1) | A_BOLD);
+	else
+		wattron(win_arena, COLOR_PAIR(idx_cham + 1) | A_BOLD | A_REVERSE);
+	mvwprintw(win_arena, AFF_Y, AFF_X + AFF_MASSAGE_LEN, "%c", byte);
 	wrefresh(win_arena);
 	wattroff(win_arena, COLOR_PAIR(idx_cham + 1) | A_BOLD | A_REVERSE);
 	idx++;

@@ -135,7 +135,7 @@ int		deal_ldi(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc)
 	put_registry(tproc->registry, type_arg.adr_reg[2], tmp);
 	free(tmp);
 	if (tarena->option & COMMANDS)
-		show_commands_ldi(targ, type_arg, tproc);
+		show_commands_ldi(targ, type_arg, tproc, where);
 	t_arg_destroy(targ);
 	return (ret);
 }

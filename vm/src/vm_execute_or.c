@@ -12,7 +12,7 @@
 
 #include <vm_corewar.h>
 
-int		deal_or(t_map *tmap, int pc_command, t_proc *tproc)
+int		deal_or(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc)
 {
 	t_arg			*targ;
 	t_type_arg		type_arg;
@@ -118,10 +118,14 @@ int		deal_or(t_map *tmap, int pc_command, t_proc *tproc)
 		#endif
 		t_arg_destroy(targ);
 		return (ret);//틀렸을 때 몇 개 반환하는지 보기
-	}if (type_arg.val_reg[3] == 0)
+	}
+	if (type_arg.val_reg[3] == 0)
 		tproc->carry = 1;
 	else
 		tproc->carry = 0;
+	if (tarena->option & COMMANDS)
+		show_commands_or(tproc, targ, type_arg);
+
 	t_arg_destroy(targ);
 	return (ret);
 }

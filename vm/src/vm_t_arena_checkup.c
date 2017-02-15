@@ -27,8 +27,7 @@ void		checkup_proc(t_arena *tarena)
 		num_tproc = tarena->tcham[idx_cham]->num_tproc;
 		while (i < num_tproc)
 		{
-			if (tarena->tcham[idx_cham]->tproc[idx_proc].period_live == 0 &&
-				tarena->tcham[idx_cham]->tproc[idx_proc].period_born != 1)
+			if (tarena->tcham[idx_cham]->tproc[idx_proc].once_lived == 0)
 			{
 				tarena->num_process -= 1;
 				#ifdef __DEBUG_JEX
@@ -46,6 +45,7 @@ void		checkup_proc(t_arena *tarena)
 			else
 			{
 				tarena->tcham[idx_cham]->tproc[idx_proc].period_live = 0;
+				tarena->tcham[idx_cham]->tproc[idx_proc].once_lived = 0;
 				tarena->tcham[idx_cham]->tproc[idx_proc].period_born = 0;
 				idx_proc++;
 			}

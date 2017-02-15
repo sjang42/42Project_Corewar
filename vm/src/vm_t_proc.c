@@ -34,6 +34,7 @@ void			t_proc_put(t_proc *tproc, int pc, int carry, char **registry)
 	tproc->wait_cycle = 0;
 	tproc->just_born = 1;
 	tproc->period_born = 1;
+	tproc->once_lived = 0;
 	// if (registry)
 	// 	tproc->period_live = 1;
 	// else

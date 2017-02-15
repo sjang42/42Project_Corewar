@@ -155,8 +155,7 @@ int		deal_sti(t_arena *tarena, int idx_cham, int idx_proc)
 	tproc = &(tarena->tcham[idx_cham]->tproc[idx_proc]);
 
 	ret = count_bytecode_cycle(tarena->tmap, OP_STI + 1, pc_command)
-				+ op_tab[OP_STI].num_bytecode
-				+ 1;
+				+ op_tab[OP_STI].num_bytecode + 1;
 	targ = t_arg_new(tarena->tmap, pc_command, OP_STI + 1);
 	/*
 	**	get 1st arg

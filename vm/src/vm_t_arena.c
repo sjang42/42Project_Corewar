@@ -183,7 +183,7 @@ void		t_arena_play(t_arena *tarena)
 		if (tarena->option & CYCLE)
 			printf("Period is       : %d\n", tarena->num_period);
 		if ((tarena->option & CYCLE) && tarena->cycle_to_die != cycle_to_die)
-			printf("Cycle to die is now : %d\n", tarena->cycle_to_die);
+			printf("Cycle to die is now %d\n", tarena->cycle_to_die);
 		if (tarena->option & NCURSES)
 		{
 			info_show_cycle_die_period(tarena->twin->win_info, tarena);

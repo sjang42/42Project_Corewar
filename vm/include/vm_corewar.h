@@ -94,7 +94,7 @@ int		deal_sti(t_arena *tarena, int idx_cham, int idx_proc);
 // int		deal_sti(t_map *tmap, int pc_command, t_proc *tproc);
 
 int		deal_and(t_map *tmap, int pc_command, t_proc *tproc);
-int		deal_or(t_map *tmap, int pc_command, t_proc *tproc);
+int		deal_or(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
 int		deal_xor(t_map *tmap, int pc_command, t_proc *tproc);
 
 int		deal_zjmp(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
@@ -104,7 +104,7 @@ int		deal_ldi(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
 int		deal_lld(t_map *tmap, int pc_command, t_proc *tproc);
 int		deal_lldi(t_map *tmap, int pc_command, t_proc *tproc);
 
-int		deal_aff(t_map *tmap, int pc_command, t_proc *tproc);
+int		deal_aff(t_arena *tarena, int idx_cham, int idx_proc);
 
 int		deal_fork(t_map *tmap, t_champion *tcham,
 					int idx_proc, int pc_command);
@@ -123,7 +123,7 @@ int		count_bytecode_cycle(t_map *tmap, int opcode, int pc_command);
 char	*ft_itoa_base(int value, int base);
 
 
-void		show_commands_ldi(t_arg *targ, t_type_arg type_arg, t_proc *tproc);
+void		show_commands_ldi(t_arg *targ, t_type_arg type_arg, t_proc *tproc, int where);
 void		show_commands_sti(t_arg *targ, t_type_arg type_arg,
 								t_proc *tproc, int where);
 void		show_commands_zjmp(t_proc *tproc, int where);
@@ -134,7 +134,7 @@ void		show_commands_lfork(t_proc *tproc, t_type_arg type_arg, int where);
 void		show_commands_live(t_proc *tproc, int num);
 void		show_commands_sub(t_proc *tproc, t_arg *targ);
 void		show_commands_add(t_proc *tproc, t_arg *targ);
-
+void		show_commands_or(t_proc *tproc, t_arg *targ, t_type_arg type_arg);
 
 
 

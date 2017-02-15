@@ -12,7 +12,7 @@
 
 #include <vm_ncurses.h>
 
-void	ncur_finish(t_windows *twin)
+void		ncur_finish(t_windows *twin)
 {
 	delwin(twin->win_arena);
 	delwin(twin->win_info);
@@ -43,6 +43,8 @@ void		ncur_map_update(t_arena *tarena, int pc, int size)
 		pc += MEM_SIZE;
 	xy.x = (CONTENTS_START_X) + (((pc % (CONTENTS_BYTES_PER_LINE)) * 3));
 	xy.y = (CONTENTS_START_Y) + (pc / (CONTENTS_BYTES_PER_LINE));
+	if (MEM_SIZE / CONTENTS_BYTES_PER_LINE + CONTENTS_START_Y <= xy.y)
+				xy.y = (CONTENTS_START_Y);
 	//debug
 		// wattron(tarena->twin->win_info, COLOR_PAIR(7) | A_BOLD);
 		// mvwprintw(tarena->twin->win_info, 30, 4, "x : %d, y : %d\n", xy.x, xy.y);
@@ -67,33 +69,6 @@ void		ncur_map_update(t_arena *tarena, int pc, int size)
 	}
 	wrefresh(tarena->twin->win_arena);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // void	ncur_box(WINDOW *win)

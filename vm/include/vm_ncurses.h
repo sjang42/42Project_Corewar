@@ -28,7 +28,7 @@
 # define CONTENTS_CHARS_SUFFIX_HOR		2
 
 # define CONTENTS_CHARS_PREFIX_VER		1
-# define CONTENTS_CHARS_SUFFIX_VER		1
+# define CONTENTS_CHARS_SUFFIX_VER		2
 
 # define INFO_CHARS						56
 
@@ -71,11 +71,13 @@
 
 # define TERM_SAYS_Y					(CONTENTS_TOTAL_LINES - 2)
 # define TERM_SAYS_X					(3)
-
 # define TERM_SAYS_MASSAGE				"Term says : "
 # define TERM_SAYS_MASSAGE_LEN			(12)
 
-
+# define AFF_Y							(TERM_SAYS_Y - 1)
+# define AFF_X							(3)
+# define AFF_MASSAGE					"AFF : "
+# define AFF_MASSAGE_LEN				(6)
 
 # define INFO_PAUSED_LEN				(13)
 # define INFO_PAUSED_Y					(2)
@@ -140,6 +142,7 @@ void			info_show_process(WINDOW *win_info, int num_process);
 void			info_show_cham_lastlive(WINDOW *win_info, t_arena *tarena, int idx_cham);
 void			info_show_cham_live_current(WINDOW *win_info, t_arena *tarena, int idx_cham);
 
+void			ncur_show_aff(WINDOW *win_arena, int idx_cham, char byte);
 void			ncur_show_live(WINDOW *win_arena, t_arena *tarena, int idx_cham, int live_cham);
 
 void		w_ft_displaybyte(WINDOW *win, int y, int x, unsigned char ptr);

@@ -45,13 +45,14 @@ int		main(int argc, char *argv[])
 		getch();
 	}
 
-	//debug
-	//debug
-
-	// printf("op : %d\n", tarena->option & DUMP);
 	t_arena_play(tarena);
 	if (tarena->game_done)
+	{
+		//debug
+		printf("win cycle : %lld\n", tarena->cycle);
+		//debug
 		display_winner(tarena);
+	}
 	else if (tarena->option & DUMP)
 	{
 		t_map_dump(tarena->tmap);
