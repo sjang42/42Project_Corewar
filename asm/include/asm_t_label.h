@@ -28,9 +28,9 @@ typedef struct	s_label
 	int				mem_label;
 }				t_label;
 
-
 t_label			*t_label_new(int size);
 int				t_label_isexist(t_label *tlabel, char const *src);
 int				t_label_put(t_label *tlabel, char const *src, int idx);
+void			t_label_destroy(t_label *tlabel);
 
 #endif

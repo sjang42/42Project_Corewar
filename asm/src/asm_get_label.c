@@ -22,7 +22,8 @@ void		fill_one_arg(char *command, char *arg, t_inst *tinst, t_label *tlabel)
 	t_inst_put(tinst, mem, num_byte);
 }
 
-void		fill_command(char *command, char **arg, t_inst *tinst, t_label *tlabel)
+int			fill_command(char *command, char **arg,
+						t_inst *tinst, t_label *tlabel)
 {
 	int		i;
 	char	opcode;
@@ -30,7 +31,7 @@ void		fill_command(char *command, char **arg, t_inst *tinst, t_label *tlabel)
 
 	zero = 0;
 	if (check_command(command, arg))
-		ft_exit_error("1");
+		return (-1);
 	opcode = (char)switch_inst(command);
 	t_inst_put(tinst, &zero, 1);
 	if (op_tab[opcode - 1].num_bytecode)
@@ -41,6 +42,7 @@ void		fill_command(char *command, char **arg, t_inst *tinst, t_label *tlabel)
 		fill_one_arg(command, arg[i], tinst, tlabel);
 		i++;
 	}
+	return (0);
 }
 
 t_label		*get_label(t_strs *tstrs)
@@ -66,20 +68,35 @@ t_label		*get_label(t_strs *tstrs)
 			*tmp = 0;
 			arg = ft_strsplit(tmp + 1, SEPARATOR_CHAR);
 			j = 0;
-			while (arg[j])
+			while (arg && arg[j])
 			{
 				tmp = ft_strtrim(arg[j]);
 				free(arg[j]);
 				arg[j] = tmp;
 				j++;
 			}
-			fill_command(first, arg, tinst, tlabel);
+			if (!arg ||
+				fill_command(first, arg, tinst, tlabel) == -1)
+			{
+				free(first);
+				ft_destroy_strsplit(arg);
+				strs_destroy(tstrs);
+				t_label_destroy(tlabel);
+				t_inst_destroy(&tinst);
+				ft_exit_error("Syntax error1");
+			}
+			ft_destroy_strsplit(arg);
 		}
 		else
 		{
-			printf("%s\n", tstrs->strarr[i]);
-			ft_exit_error("5");
+			free(first);
+			ft_destroy_strsplit(arg);
+			strs_destroy(tstrs);
+			t_label_destroy(tlabel);
+			t_inst_destroy(&tinst);
+			ft_exit_error("Syntax error2");
 		}
+		free(first);
 		i++;
 	}
 	t_inst_destroy(&tinst);

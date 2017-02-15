@@ -84,3 +84,26 @@ int			t_label_get_idx(t_label *tlabel, char const *name)
 	}
 	return (-1);
 }
+
+void		t_label_destroy(t_label *tlabel)
+{
+	int i;
+
+	i = 0;
+	while (i < tlabel->size_label)
+	{
+		free(tlabel->label[i].name);
+		i++;
+	}
+	free(tlabel->label);
+	free(tlabel);
+}
+
+
+
+
+
+
+
+
+

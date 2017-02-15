@@ -68,3 +68,18 @@ void	ft_destroy_strsplit(char **str)
 	free(str[i]);
 	free(str);
 }
+
+void	ft_exit_error_free(char *error)
+{
+	write(2, "Error", 5);
+	if (error)
+	{
+		write(2, " : ", 3);
+		write(2, error, ft_strlen(error));
+	}
+	write(2, "\n", 1);
+	free(error);
+	exit(-1);
+}
+
+

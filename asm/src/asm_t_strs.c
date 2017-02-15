@@ -38,3 +38,17 @@ int			strs_addone(t_strs *strs, char *str)
 	strs->size_strarr += 1;
 	return (0);
 }
+
+void		strs_destroy(t_strs *strs)
+{
+	int i;
+
+	i = 0;
+	while (i < strs->size_strarr)
+	{
+		free(strs->strarr[i]);
+		i++;
+	}
+	free(strs->strarr);
+	free(strs);
+}

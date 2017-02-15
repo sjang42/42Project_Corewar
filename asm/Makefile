@@ -27,8 +27,6 @@ OBJECTS					=	op.o\
 							asm_asm.o\
 							asm_error.o\
 
-
-
 SRC						=	./src/
 OP						=	../op/
 ICL						=	./include/
@@ -44,12 +42,16 @@ HEADERS					=	$(ICL)asm.h\
 
 LIBFT					=	-L../libft -lft
 
+ifdef ALLOCWRAP
+	LDFLAGS += $(HOME)/lib/alloc_wrap.c -ldl
+endif 
+
 .PHONY					:	clean fclean re
 
 all						:	$(TARGET)
 
 $(TARGET)				:	$(OBJECTS) $(HEADERS) ../libft/libft.a
-							$(CC) $(CFLAG) -o $@ $(OBJECTS) $(LIBFT)
+							$(CC) $(LDFLAGS) $(CFLAG) -o $@ $(OBJECTS) $(LIBFT)
 
 %.o						:	$(SRC)%.c
 							$(CC) -c $(CFLAG) $< -I../libft/include -I$(ICL) -I$(OP)
@@ -57,6 +59,9 @@ $(TARGET)				:	$(OBJECTS) $(HEADERS) ../libft/libft.a
 %.o						:	$(OP)%.c
 							$(CC) -c $(CFLAG) $< -I$(OP)
 							
+
+
+
 op.o					:	$(OP)op.c $(HEADERS)
 main.o					:	$(SRC)main.c $(HEADERS)
 file_to_strs.o			:	$(SRC)file_to_strs.c $(HEADERS)

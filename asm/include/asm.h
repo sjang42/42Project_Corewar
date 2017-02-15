@@ -71,4 +71,8 @@ void			show_usage_exit(char *filename);
 int				check_argv(int argc, char *argv[]);
 int				ft_asm(char *file);
 
+
+void	ft_exit_error_free(char *error);
+
+
 #endif

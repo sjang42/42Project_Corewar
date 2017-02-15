@@ -12,7 +12,7 @@
 
 #include <asm.h>
 
-int			get_grog_name(char prog_name[], t_strs *strs)
+int			get_prog_name(char prog_name[], t_strs *strs, char **error)
 {
 	char	*begin;
 	char	*end;
@@ -27,16 +27,23 @@ int			get_grog_name(char prog_name[], t_strs *strs)
 		begin = ft_strchr(tmp, '"');
 		*begin = 0;
 		if (ft_strlen(tmp) > PROG_NAME_LENGTH)
-			printf("%s\n", "error : too long name");
+		{
+			free(tmp);
+			*error = ft_strdup("Name is too long");
+			return (-1);
+		}
 		ft_strcpy(prog_name, tmp);
 		free(tmp);
 	}
 	else
-		printf("%s\n", "error : no name");
+	{
+		*error = ft_strdup("Name should be at the first line");
+		return (-1);
+	}
 	return (0);
 }
 
-int			get_comment(char comment[], t_strs *strs)
+int			get_comment(char comment[], t_strs *strs, char **error)
 {
 	char	*begin;
 	char	*end;
@@ -51,25 +58,43 @@ int			get_comment(char comment[], t_strs *strs)
 		begin = ft_strchr(tmp, '"');
 		*begin = 0;
 		if (ft_strlen(tmp) > COMMENT_LENGTH)
-			printf("%s\n", "error : too long cooment");
+		{
+			free(tmp);
+			*error = ft_strdup("Name is too long");
+			return (-1);
+		}
 		ft_strcpy(comment, tmp);
 		free(tmp);
 	}
 	else
-		printf("%s\n", "error : no comment");
+	{
+		*error = ft_strdup("Comment should be at the second line");
+		return (-1);
+	}
 	return (0);
 }
 
 header_t	*get_header(t_strs *strs)
 {
 	header_t	*header;
+	char		*error;
 
 	header = (header_t*)malloc(sizeof(header_t));
 	ft_bzero(header->prog_name, PROG_NAME_LENGTH + 1);
 	ft_bzero(header->comment, COMMENT_LENGTH + 1);
 	header->magic = COREWAR_EXEC_MAGIC;
 	ft_endian_ltob(&(header->magic), 4);
-	get_grog_name(header->prog_name, strs);
-	get_comment(header->comment, strs);
+	if (get_prog_name(header->prog_name, strs, &error))
+	{
+		strs_destroy(strs);
+		free(header);
+		ft_exit_error_free(error);
+	}
+	if (get_comment(header->comment, strs, &error))
+	{
+		strs_destroy(strs);
+		free(header);
+		ft_exit_error_free(error);
+	}
 	return (header);
 }

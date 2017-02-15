@@ -6,8 +6,9 @@ start:
 zjmp %:start
 
 sti r1, %:start, %1
-ld %0, r3;
+ld %0, r16;
 
+# fork %:cray
 fork %:start
 
 zjmp1:

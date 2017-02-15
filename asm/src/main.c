@@ -14,10 +14,6 @@
 
 int		main(int argc, char *argv[])
 {
-	int			fd;
-	int			fd2;
-	int			zero;
-
 	if (check_argv(argc, argv))
 		show_usage_exit(argv[0]);
 	ft_asm(argv[1]);

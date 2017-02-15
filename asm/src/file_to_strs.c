@@ -12,7 +12,7 @@
 
 #include <asm.h>
 
-void		ft_remove_tabs(char **str)
+static void			ft_remove_tabs(char **str)
 {
 	int i;
 
@@ -28,7 +28,7 @@ void		ft_remove_tabs(char **str)
 	ft_remove_overlap(str, ' ');
 }
 
-int			ft_devide_label(char *str, t_strs *strs)
+static int			ft_devide_label(char *str, t_strs *strs)
 {
 	char *label;
 	int		i;
@@ -47,12 +47,12 @@ int			ft_devide_label(char *str, t_strs *strs)
 	return (i);
 }
 
-t_strs		*file_to_strs(int fd)
+t_strs				*file_to_strs(int fd)
 {
-	t_strs *strs;
-	char *line;
-	char *adr_comment;
-	char *trimed;
+	t_strs	*strs;
+	char	*line;
+	char	*adr_comment;
+	char	*trimed;
 	int		label_char;
 
 	strs = strs_new(100);
@@ -60,9 +60,6 @@ t_strs		*file_to_strs(int fd)
 	{
 		if (line[0] != COMMENT_CHAR && line[0] != 0)
 		{
-			//debug
-				// printf("line : %s\n", line);
-			//debug
 			adr_comment = ft_strchr(line, ';');
 			if (adr_comment)
 				*adr_comment = 0;
@@ -74,6 +71,8 @@ t_strs		*file_to_strs(int fd)
 			//debug
 				if (trimed[0] == '\0')
 				{
+					free(line);
+					free(trimed);
 					continue ;
 				}
 				// printf("trim : %s\n", trimed);

@@ -19,18 +19,65 @@ static int		get_fd_write(char *file_origin)
 	int			fd_write;
 
 	if (!file_origin)
-		ft_exit_error("Fail to make file");
-	out_name = ft_strdup(file_origin);
+		return (-1);
+	out_name = (char*)malloc(ft_strlen(file_origin) + 3);
+	ft_strcpy(out_name, file_origin);
 	tmp = ft_strstr(out_name, ".s");
 	if (tmp)
 		*tmp = 0;
 	ft_strcat(out_name, ".jex");
 	// ft_strcat(out_name, ".cor");
-	fd_write = open(out_name, O_WRONLY | O_CREAT,
-					S_IRWXU | S_IRWXG | S_IRWXO);
+	fd_write = open(out_name, O_WRONLY | O_CREAT | O_TRUNC, 0777);
+	free(out_name);
 	if (fd_write < 0)
-		ft_exit_error("Fail to make file");
+		return (-1);
 	return (fd_write);
+}
+
+void		destroy_process(t_process process)
+{
+	strs_destroy(process.tstrs);
+	t_label_destroy(process.tlabel);
+	t_inst_destroy(&(process.tinst));
+	free(process.header);
+}
+
+int				ft_asm(char *file)
+{
+	int			fd_read;
+	int			fd_write;
+	t_process	process;
+
+	fd_read = open(file, O_RDONLY);
+	if (fd_read == -1)
+		ft_exit_error("Failed to open file");
+	process.tstrs = file_to_strs(fd_read);
+	process.tlabel = get_label(process.tstrs);
+	process.tinst = get_inst(process.tstrs, process.tlabel);
+	process.header = get_header(process.tstrs);
+	process.zero = 0;
+	process.header->prog_size = process.tinst->size_inst;
+	ft_endian_ltob(&(process.header->prog_size), 4);
+	if (process.tinst->size_inst > CHAMP_MAX_SIZE)
+	{
+		destroy_process(process);
+		ft_exit_error("Champion size is too big");
+	}
+	fd_write = get_fd_write(file);
+	if (fd_write < 0)
+	{
+		destroy_process(process);
+		ft_exit_error("Failed to make file");
+	}
+	write(fd_write, &(process.header->magic), 4);
+	write(fd_write, process.header->prog_name, PROG_NAME_LENGTH);
+	write(fd_write, &(process.zero), 4);
+	write(fd_write, &(process.header->prog_size), 4);
+	write(fd_write, process.header->comment, COMMENT_LENGTH);
+	write(fd_write, &(process.zero), 4);
+	write(fd_write, process.tinst->inst, process.tinst->size_inst);
+	destroy_process(process);
+	return (0);
 }
 
 // // 실험용.. 실전에선 지우고 밑에 ft_asm함수 쓰길.
@@ -70,36 +117,6 @@ static int		get_fd_write(char *file_origin)
 // 	return (0);
 // }
 
-int				ft_asm(char *file)
-{
-	int			fd_read;
-	int			fd_write;
-	t_process	process;
-
-	fd_read = open(file, O_RDONLY);
-
-	process.tstrs = file_to_strs(fd_read);
-	process.header = get_header(process.tstrs);
-	process.tlabel = get_label(process.tstrs);
-	process.tinst = get_inst(process.tstrs, process.tlabel);
-	process.zero = 0;
-	process.header->prog_size = process.tinst->size_inst;
-	ft_endian_ltob(&(process.header->prog_size), 4);
-	fd_write = get_fd_write(file);
-
-	// write(fd_write, process.tinst->inst, process.tinst->size_inst);
-	// ft_print_memory(process.tinst->inst, process.tinst->size_inst);
-
-	write(fd_write, &(process.header->magic), 4);
-	write(fd_write, process.header->prog_name, PROG_NAME_LENGTH);
-	write(fd_write, &(process.zero), 4);
-	write(fd_write, &(process.header->prog_size), 4);
-	write(fd_write, process.header->comment, COMMENT_LENGTH);
-	write(fd_write, &(process.zero), 4);
-	write(fd_write, process.tinst->inst, process.tinst->size_inst);
-	return (0);
-}
-
 // int				ft_asm(char *file)
 // {
 // 	int			fd_read;
@@ -116,6 +133,10 @@ int				ft_asm(char *file)
 // 	process.header->prog_size = process.tinst->size_inst;
 // 	ft_endian_ltob(&(process.header->prog_size), 4);
 // 	fd_write = get_fd_write(file);
+
+// 	// write(fd_write, process.tinst->inst, process.tinst->size_inst);
+// 	// ft_print_memory(process.tinst->inst, process.tinst->size_inst);
+
 // 	write(fd_write, &(process.header->magic), 4);
 // 	write(fd_write, process.header->prog_name, PROG_NAME_LENGTH);
 // 	write(fd_write, &(process.zero), 4);

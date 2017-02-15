@@ -12,7 +12,7 @@
 
 #include <asm.h>
 
-int			check_command(char *command, char **arg)
+int					check_command(char *command, char **arg)
 {
 	char opcode;
 	int i;
@@ -39,7 +39,7 @@ int			check_command(char *command, char **arg)
 	return (0);
 }
 
-int				decide_num_byte(char *command, char *arg)
+int					decide_num_byte(char *command, char *arg)
 {
 	int type;
 	char opcode;
@@ -83,7 +83,11 @@ unsigned char		get_bytecode(char **arg)
 	return (ret);
 }
 
-void		put_one_arg(t_command tcommand, char *arg,
+/*
+**	if (is_direct(arg) == 1) || if (is_direct(arg) == 1) --> just number
+**	if (is_direct(arg) == 2) || if (is_direct(arg) == 2) --> label
+*/
+int		put_one_arg(t_command tcommand, char *arg,
 						t_inst *tinst, t_label *tlabel)
 {
 	char	*mem;
@@ -102,13 +106,16 @@ void		put_one_arg(t_command tcommand, char *arg,
 		mem[0] = (char)is_register(arg);
 	if (type == T_DIR)
 	{
-		if (is_direct(arg) == 1)		//just number
+		if (is_direct(arg) == 1)
 			tmp = ft_atoi(arg + 1);
-		else							//label
+		else
 		{
 			tmp = t_label_get_idx(tlabel, arg + 2);
 			if (tmp == -1)
-				ft_exit_error("3");
+			{
+				free(mem);
+				return (-1);
+			}
 			tmp = tmp - tcommand.idx;
 		}
 		ft_memcpy(mem, &tmp, num_byte);
@@ -116,13 +123,16 @@ void		put_one_arg(t_command tcommand, char *arg,
 	}
 	if (type == T_IND)
 	{
-		if (is_indirect(arg) == 1)		//just number
+		if (is_indirect(arg) == 1)
 			tmp = ft_atoi(arg);
-		else							//label
+		else
 		{
 			tmp = t_label_get_idx(tlabel, arg + 1);
 			if (tmp == -1)
-				ft_exit_error("2");
+			{
+				free(mem);
+				return (-1);
+			}
 			tmp = tmp - tcommand.idx;
 		}
 		ft_memcpy(mem, &tmp, 2);
@@ -130,9 +140,10 @@ void		put_one_arg(t_command tcommand, char *arg,
 	}
 	t_inst_put(tinst, mem, num_byte);
 	free(mem);
+	return (0);
 }
 
-void		deal_command(char *command, char **arg,
+int			deal_command(char *command, char **arg,
 						t_inst *tinst, t_label *tlabel)
 {
 	int			i;
@@ -140,8 +151,6 @@ void		deal_command(char *command, char **arg,
 	char		bytecode;
 	t_command	tcommand;
 
-	if (check_command(command, arg))
-		ft_exit_error("1");
 	tcommand.command = command;
 	tcommand.idx = tinst->size_inst;
 	opcode = (char)switch_inst(command);
@@ -154,11 +163,18 @@ void		deal_command(char *command, char **arg,
 	i = 0;
 	while (i < op_tab[opcode - 1].num_arg)
 	{
-		put_one_arg(tcommand, arg[i], tinst, tlabel);
+		if (put_one_arg(tcommand, arg[i], tinst, tlabel))
+			return (-1);
 		i++;
 	}
+	return (0);
 }
 
+/*
+**	I already checked the rightness
+**	in the get_label.c
+**	So I don't have to check again.
+*/
 t_inst			*get_inst(t_strs *strs, t_label *tlabel)
 {
 	t_inst	*tinst;
@@ -174,7 +190,7 @@ t_inst			*get_inst(t_strs *strs, t_label *tlabel)
 	{
 		first = ft_strdup(strs->strarr[i]);
 		if (switch_type(first) == T_LAB)
-			t_label_put(tlabel, first, tinst->size_inst);
+			;
 		else if ((tmp = ft_strchr(first, ' ')))
 		{
 			*tmp = 0;
@@ -187,11 +203,18 @@ t_inst			*get_inst(t_strs *strs, t_label *tlabel)
 				arg[j] = tmp;
 				j++;
 			}
-			deal_command(first, arg, tinst, tlabel);
+			if (deal_command(first, arg, tinst, tlabel))
+			{
+				free(first);
+				// ft_destroy_strsplit(arg);
+				strs_destroy(strs);
+				t_label_destroy(tlabel);
+				t_inst_destroy(&tinst);
+				ft_exit_error("Syntax error3");
+			}
 			ft_destroy_strsplit(arg);
 		}
-		else
-			ft_exit_error("4");
+		free(first);
 		i++;
 	}
 	return (tinst);
