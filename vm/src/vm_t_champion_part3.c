@@ -48,17 +48,6 @@ void			t_champion_add_proc(t_champion *tcham, int idx_proc, int pc, int proc_num
 				tcham->tproc[idx_proc].registry);
 	(tcham->tproc[tcham->num_tproc]).number = proc_num;
 	tcham->num_tproc += 1;
-	//debug
-	// if (proc_num + 1 == 7)
-	// {
-	// 	int i;
-
-	// 	i = 0;
-	// 	while (i < 16)
-	// 		ft_print_memory(tcham->tproc[idx_proc].registry[i++], 4);
-	// }
-	//debug
-	
 }
 
 int				t_champion_kill_proc(t_champion *tcham, int idx_proc)

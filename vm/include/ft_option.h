@@ -22,7 +22,7 @@
 
 # define OPTION1_STR "-dump"
 # define OPTION2_STR "-v"
-# define OPTION3_STR "-c"
+# define OPTION3_STR "-commands"
 # define OPTION4_STR "-cycle"
 # define OPTION5_STR "add"
 

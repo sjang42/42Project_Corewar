@@ -112,7 +112,7 @@ void		play_one_period(t_arena *tarena)
 		if (tarena->option & DUMP && tarena->cycle > tarena->dump)
 			break ;
 		if (tarena->option & CYCLE)
-			printf("It is now cycle %d\n", tarena->cycle);
+			printf("It is now cycle %lld\n", tarena->cycle);
 		idx_cham = tarena->num_cham - 1;
 		if (tarena->option & NCURSES)
 		{
@@ -174,21 +174,19 @@ void		t_arena_play(t_arena *tarena)
 		delete_period_born(tarena);
 		play_one_period(tarena);
 		tarena->num_period += 1;
-		if ((tarena->option & DUMP) &&
-			tarena->cycle == (tarena->dump + 1))
+		if ((tarena->option & DUMP) && tarena->cycle == (tarena->dump + 1))
 			break ;
 		cycle_to_die = tarena->cycle_to_die;
 		checkup_nbr_live(tarena);
 		checkup_max_checks(tarena);
 		checkup_proc(tarena);
 		if (tarena->option & CYCLE)
-			printf("Period is : %d\n", tarena->num_period);
+			printf("Period is       : %d\n", tarena->num_period);
 		if ((tarena->option & CYCLE) && tarena->cycle_to_die != cycle_to_die)
 			printf("Cycle to die is now : %d\n", tarena->cycle_to_die);
 		if (tarena->option & NCURSES)
 		{
 			info_show_cycle_die_period(tarena->twin->win_info, tarena);
-			// getch();
 		}
 		if (count_alive_cham(tarena) <= 0)
 		{

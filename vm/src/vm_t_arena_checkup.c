@@ -46,6 +46,7 @@ void		checkup_proc(t_arena *tarena)
 			else
 			{
 				tarena->tcham[idx_cham]->tproc[idx_proc].period_live = 0;
+				tarena->tcham[idx_cham]->tproc[idx_proc].period_born = 0;
 				idx_proc++;
 			}
 			i++;
@@ -67,26 +68,11 @@ void		checkup_nbr_live(t_arena *tarena)
 	idx_cham = 0;
 	while (idx_cham < tarena->num_cham)
 	{
-		//try;
-		// sum_live += tarena->tcham[idx_cham]->current_live;
-		//try;
 		idx_proc = 0;
 		while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
 		{
-			// if (tarena->tcham[idx_cham]->tproc[idx_proc].period_born)
-			// {
-			// 	sum_live += tarena->
-			// 				tcham[idx_cham]->
-			// 				tproc[idx_proc].
-			// 				period_live - 1;
-			// }
-			// else
-			// {
-				sum_live += tarena->
-							tcham[idx_cham]->
-							tproc[idx_proc].
-							period_live;
-			// }
+			sum_live += tarena->tcham[idx_cham]->
+						tproc[idx_proc].period_live;
 			idx_proc++;
 		}
 		idx_cham++;
@@ -100,7 +86,7 @@ void		checkup_nbr_live(t_arena *tarena)
 
 void		checkup_max_checks(t_arena *tarena)
 {
-	if (tarena->num_period - tarena->last_reduce >= 10)//9?
+	if (tarena->num_period - tarena->last_reduce >= MAX_CHECKS)
 	{
 		tarena->cycle_to_die -= CYCLE_DELTA;
 		tarena->last_reduce = tarena->num_period;

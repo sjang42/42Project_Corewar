@@ -49,6 +49,8 @@ int		deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 				+ op_tab[OP_LIVE].num_bytecode
 				+ 1;
 	tarena->tcham[idx_cham]->tproc[idx_proc].period_live += 1;
+	//debug
+	//debug
 	targ = t_arg_new(tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, OP_LIVE + 1);
 	if (targ == NULL)
 	{
