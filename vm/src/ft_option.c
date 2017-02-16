@@ -28,7 +28,7 @@ static int			ft_decide_option(char *str)
 	return (OPTION_NOTHING);
 }
 
-int						jump_arg(int tmp)
+int					jump_arg(int tmp)
 {
 	int ret;
 
@@ -46,9 +46,7 @@ int						jump_arg(int tmp)
 	else
 		return (1);
 }
-int						ft_get_option(
-						int argc, char *argv[],
-						int *option)
+int					ft_get_option(int argc, char *argv[], int *option)
 {
 	int			tmp;
 	int			i;

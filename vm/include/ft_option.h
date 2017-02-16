@@ -18,13 +18,13 @@
 # define OPTION2 NCURSES
 # define OPTION3 COMMANDS
 # define OPTION4 CYCLE
-# define OPTION5 ADD5
+# define OPTION5 LIVE
 
 # define OPTION1_STR "-dump"
 # define OPTION2_STR "-v"
 # define OPTION3_STR "-commands"
 # define OPTION4_STR "-cycle"
-# define OPTION5_STR "add"
+# define OPTION5_STR "-live"
 
 # define OPTION1_ARG 1
 # define OPTION2_ARG 0
@@ -32,7 +32,7 @@
 # define OPTION4_ARG 0
 # define OPTION5_ARG 0
 
-# define MAX_OP 4
+# define MAX_OP 5
 
 enum
 {

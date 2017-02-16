@@ -44,7 +44,6 @@ typedef struct	s_proc
 	int		once_lived;
 	int		number;
 	int		just_born;
-	int		period_born;
 	int		belong_idx_cham;
 }				t_proc;
 
@@ -52,7 +51,6 @@ typedef struct		s_map
 {
 	char	*map;
 	char	*possession;
-	char	*color;
 	int		size_map;
 	int		num_cham;
 }					t_map;
@@ -112,5 +110,22 @@ typedef struct	s_type_arg
 	TYPE_IND		adr_ind[4];
 	TYPE_DIR_ADR	adr_dir[4];
 }				t_type_arg;
+
+typedef struct	s_execute_variable
+{
+	t_arg		*targ;
+	t_type_arg	*type_arg;
+	t_proc		*tproc;
+	t_map		*tmap;
+	int			pc_command;
+}				t_execute_variable;
+
+
+
+
+
+
+
+
 
 #endif

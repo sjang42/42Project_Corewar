@@ -12,14 +12,8 @@
 
 #include <vm_corewar.h>
 
-
-int		count_bytecode_cycle(t_map *tmap, int opcode, int pc_command)
+static int		return_constant(int opcode)
 {
-	int 			i;
-	int 			cycle;
-	int 			*part;
-	unsigned char	bytecode;
-
 	if (opcode - 1 == OP_LIVE)
 		return (4);
 	else if (opcode - 1 == OP_ZJMP)
@@ -28,6 +22,13 @@ int		count_bytecode_cycle(t_map *tmap, int opcode, int pc_command)
 		return (2);
 	else if (opcode - 1 == OP_LFORK)
 		return (2);
+	return (0);
+}	
+
+static int		*devide_bytecode(t_map *tmap, int opcode, int pc_command)
+{
+	int				*part;
+	unsigned char	bytecode;
 
 	bytecode = read_current_byte(tmap, pc_command + 1);
 	part = (int*)malloc(sizeof(int) * op_tab[opcode - 1].num_arg);
@@ -37,9 +38,16 @@ int		count_bytecode_cycle(t_map *tmap, int opcode, int pc_command)
 		part[1] = bytecode % (0b1000000) / 0b10000;
 	if (op_tab[opcode - 1].num_arg >= 3)
 		part[2] = bytecode % (0b10000) / 0b100;
+	return (part);
+}
 
-	cycle = 0;
+static int		calculate_cycle(int opcode, int part[])
+{
+	int cycle;
+	int i;
+
 	i = 0;
+	cycle = 0;
 	while (i < op_tab[opcode - 1].num_arg)
 	{
 		if (part[i] == 0b01)
@@ -55,23 +63,16 @@ int		count_bytecode_cycle(t_map *tmap, int opcode, int pc_command)
 	return (cycle);
 }
 
+int				count_bytecode_cycle(t_map *tmap, int opcode, int pc_command)
+{
+	int 	cycle;
+	int 	*part;
 
-// int		deal_ld(t_map *tmap, int opcode, int pc_command, t_proc *tproc)
-// {
-// 	void			*arg;
-// 	int				i;
-
-	
-// 	i = 0;
-// 	while (i < op_tab[opcode - 1].num_arg)
-// 	{
-// 		if (arg_byte[i] == T_DIR)
-// 		{
-
-// 		}
-// 	}
-
-
-
-
-// }
+	if (opcode - 1 == OP_LIVE || opcode - 1 == OP_ZJMP ||
+		opcode - 1 == OP_FORK || opcode - 1 == OP_LFORK)
+		return (return_constant(opcode));
+	part = devide_bytecode(tmap, opcode, pc_command);
+	cycle = calculate_cycle(opcode, part);
+	free(part);
+	return (cycle);
+}

@@ -11,7 +11,7 @@
 
 #include <vm_corewar.h>
 
-int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
+int		deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 {
 	t_arg		*targ;
 	t_type_arg	type_arg;
@@ -23,10 +23,6 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 	TYPE_IND	val_ind;
 	int			ret;
 
-	//debug
-		// printf("st pc : %x\n", tarena->tcham[idx_cham]->tproc[idx_proc].pc);
-		// printf("cycle : %d\n", tarena->cycle);
-	//debug
 	ft_bzero(&type_arg, sizeof(t_type_arg));
 	ret = count_bytecode_cycle(tarena->tmap, OP_ST + 1,
 			tarena->tcham[idx_cham]->tproc[idx_proc].pc)
@@ -34,12 +30,7 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 				+ 1;
 	targ = t_arg_new(tarena->tmap, tarena->tcham[idx_cham]->tproc[idx_proc].pc, OP_ST + 1);
 	if (targ == NULL)
-	{
-		#ifdef __DEBUG_JEX
-			printf("%s\n", "wrong exit");
-		#endif
 		return (ret);
-	}
 
 	/*
 	** get 1st arg : type_arg.val_reg[0]
@@ -48,9 +39,6 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 		((char*)(targ->arg))[0],
 		&(type_arg.val_reg[0])))
 	{
-		#ifdef __DEBUG_JEX
-			printf("%s\n", "wrong exit");
-		#endif
 		t_arg_destroy(targ);
 		return (ret);
 	}
@@ -67,7 +55,6 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 			t_arg_destroy(targ);
 			return (ret);
 		}
-
 	}
 	else //(targ->bytecode[1] == T_IND)
 	{
@@ -75,37 +62,12 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 		ft_endian_convert(&(type_arg.adr_ind[1]), IND_SIZE);
 		where = tarena->tcham[idx_cham]->tproc[idx_proc].pc +
 				(type_arg.adr_ind[1] % IDX_MOD);
-		#ifdef __DEBUG_JEX
-			if (tarena->cycle > 4380)
-			{
-				printf("((char*)(targ->arg))[0] : %d\n", ((char*)(targ->arg))[0]);
-				printf("type_arg.val_reg[0] : %d\n", type_arg.val_reg[0]);
-			}
-		#endif
 		w_sti_reg_to_map(tarena, idx_cham, where, &(type_arg.val_reg[0]));
 		if (tarena->option & NCURSES)
 			ncur_map_update(tarena, where, REG_SIZE);
 	}
 	if (tarena->option & COMMANDS)
 		show_commands_st(&(tarena->tcham[idx_cham]->tproc[idx_proc]), targ, type_arg.adr_ind[1]);
-	
-	//debug
-		// if (tarena->tcham[idx_cham]->tproc[idx_proc].number + 1 == 2880)
-		// {
-		// 	printf("p num : %d\n", tarena->tcham[idx_cham]->tproc[idx_proc].number + 1);
-		// 	printf("pc_command : %x\n", tarena->tcham[idx_cham]->tproc[idx_proc].pc);			
-		// 	if (targ->bytecode[1] == T_REG)
-		// 		printf("bytecode[1] == T_REG\n");
-		// 	else if (targ->bytecode[1] == T_IND)
-		// 		printf("bytecode[1] == T_IND\n");
-		// 	else if (targ->bytecode[1] == T_DIR)
-		// 		printf("bytecode[1] == T_DIR\n");
-		// 	else
-		// 		printf("bytecode[1] : %d\n", targ->bytecode[1]);
-		// 	printf("It is r%d\n", type_arg.adr_reg[1]);
-		// }
-	//debug
-
 
 	t_arg_destroy(targ);
 	return (ret);

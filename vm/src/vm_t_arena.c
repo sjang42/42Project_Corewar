@@ -12,7 +12,7 @@
 
 #include <vm_t_arena.h>
 
-int			decide_number(t_arena *tarena)
+static int		decide_number(t_arena *tarena)
 {
 	int i;
 	int min;
@@ -39,15 +39,41 @@ int			decide_number(t_arena *tarena)
 	return (min);
 }
 
-t_arena 	*t_arena_new(int argc, char *argv[])
+static void		sort_champions(t_arena *tarena, int idx_cham, int count, int max)
 {
-	t_arena		*tarena;
-	int			i;
-	int 		idx_argv;
-	int 		cham_num;
-	int			color;
+	int			min[2];
+	t_champion	**tcham_sort;
 
-	tarena = (t_arena*)malloc(sizeof(t_arena));
+	tcham_sort = (t_champion**)malloc(sizeof(t_champion*) * tarena->num_cham);
+	while (count < tarena->num_cham)
+	{
+		min[0] = 10000;
+		idx_cham = 0;
+		while (idx_cham < tarena->num_cham)
+		{
+			if (min[0] > tarena->tcham[idx_cham]->number &&
+				max < tarena->tcham[idx_cham]->number)
+			{
+				min[1] = idx_cham;
+				min[0] = tarena->tcham[idx_cham]->number;
+			}
+			idx_cham++;
+		}
+		max = tarena->tcham[min[1]]->number;
+		tcham_sort[count] = tarena->tcham[min[1]];
+		tcham_sort[count]->tproc[0].number = count;
+		count++;
+	}
+	free(tarena->tcham);
+	tarena->tcham = tcham_sort;
+}
+
+
+
+static void		fill_tarena_basic(t_arena *tarena, int argc, char *argv[])
+{
+	int idx_argv;
+
 	tarena->tmap = t_map_new(MEM_SIZE);
 	tarena->num_period = 0;
 	tarena->last_reduce = 0;
@@ -55,25 +81,32 @@ t_arena 	*t_arena_new(int argc, char *argv[])
 	tarena->game_done = 0;
 	tarena->used_proc_num = 0;
 	tarena->last_alive_cham = -1;
-	i = 1;
-	while (i < argc - 1)
+	idx_argv = 1;
+	while (idx_argv < argc - 1)
 	{
-		if (!ft_strcmp(argv[i], "-dump") &&
-			ft_isonly_digit(argv[i + 1]))
+		if (!ft_strcmp(argv[idx_argv], "-dump") &&
+			ft_isonly_digit(argv[idx_argv + 1]))
 		{
-			tarena->dump = ft_atoi(argv[i + 1]);
+			tarena->dump = ft_atoi(argv[idx_argv + 1]);
 			break ;
 		}
-		i++;
+		idx_argv++;
 	}
+}
+
+static void		fill_tarena_champions(t_arena *tarena, int argc, char *argv[])
+{
+	int idx_argv;
+	int color;
+	int 		cham_num;
+
 	idx_argv = ft_get_option(argc, argv, &(tarena->option));
 	tarena->tcham = (t_champion**)malloc(sizeof(t_champion*) * (argc - 1));
 	tarena->num_cham = 0;
 	color = 1;
 	while (idx_argv < argc)
 	{
-		if (idx_argv + 2 < argc &&
-			!ft_strcmp(argv[idx_argv], "-n") &&
+		if (idx_argv + 2 < argc && !ft_strcmp(argv[idx_argv], "-n") &&
 			ft_isonly_digit(argv[idx_argv + 1]))
 		{
 			cham_num = ft_atoi(argv[idx_argv + 1]);
@@ -88,177 +121,22 @@ t_arena 	*t_arena_new(int argc, char *argv[])
 		color++;
 		idx_argv++;
 	}
+	sort_champions(tarena, 0, 0, -1);
+}
+
+t_arena 	*t_arena_new(int argc, char *argv[])
+{
+	t_arena		*tarena;
+	int 		idx_argv;
+	int 		cham_num;
+	int			color;
+
+	tarena = (t_arena*)malloc(sizeof(t_arena));
+	fill_tarena_basic(tarena, argc, argv);
+	fill_tarena_champions(tarena, argc, argv);
 	tarena->num_process = tarena->num_cham;
 	t_map_put_chams(tarena->tmap, tarena->tcham, tarena->num_cham);
 	tarena->cycle = 1;
 	tarena->cycle_to_die = CYCLE_TO_DIE;
 	return (tarena);
 }
-
-void		play_one_period(t_arena *tarena)
-{
-	int		cycle;
-	int		idx_cham;
-	int		idx_proc;
-	int		key;
-	int		total_tproc;
-	int		proc_num;
-	int		max;
-	t_proc *tproc_min;
-
-	cycle = 0;
-	while (cycle < tarena->cycle_to_die)
-	{
-		if (tarena->option & DUMP && tarena->cycle > tarena->dump)
-			break ;
-		if (tarena->option & CYCLE)
-			printf("It is now cycle %lld\n", tarena->cycle);
-		idx_cham = tarena->num_cham - 1;
-		if (tarena->option & NCURSES)
-		{
-			info_show_cycle(tarena->twin->win_info, tarena->cycle);
-			if (cycle % 20 == 0)
-			{
-				halfdelay(1);
-				key = getch();
-				if (key == ' ')
-				{
-					info_show_status(tarena->twin->win_info, 1);
-					while (1)
-					{
-						key = getch();
-						if (key == ' ')
-							break ;
-					}
-					info_show_status(tarena->twin->win_info, 0);
-				}
-			}
-		}
-		proc_num = 0;
-		max = tarena->used_proc_num;
-		total_tproc = tarena->num_process;
-		delete_just_born(tarena);
-		while (proc_num < total_tproc)
-		{
-			max = t_proc_find_maxproc(tarena, max, &idx_cham, &idx_proc);			
-			if (tarena->option & NCURSES)
-					ncur_unhighlight_pc(tarena->twin->win_arena, tarena->tmap,
-					&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
-			tarena->tcham[idx_cham]->tproc[idx_proc].pc =
-			(vm_execute_proc(tarena->tmap,
-							idx_cham,
-							tarena,
-							idx_proc)
-			+ tarena->tcham[idx_cham]->tproc[idx_proc].pc)
-			% MEM_SIZE;
-			if (tarena->option & NCURSES)
-				ncur_highlight_pc(tarena->twin->win_arena, tarena->tmap,
-				&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
-			proc_num++;
-		}
-		tarena->cycle += 1;
-		cycle++;
-	}
-	if (tarena->option & NCURSES)
-		info_show_cycle(tarena->twin->win_info, tarena->cycle);
-}
-
-void		t_arena_play(t_arena *tarena)
-{
-	int cycle_to_die;
-
-	if (tarena->option & NCURSES)
-		info_show_status(tarena->twin->win_info, 0);
-	while (1)
-	{
-		delete_period_born(tarena);
-		play_one_period(tarena);
-		tarena->num_period += 1;
-		if ((tarena->option & DUMP) && tarena->cycle == (tarena->dump + 1))
-			break ;
-		cycle_to_die = tarena->cycle_to_die;
-		checkup_nbr_live(tarena);
-		checkup_max_checks(tarena);
-		checkup_proc(tarena);
-		if (tarena->option & CYCLE)
-			printf("Period is       : %d\n", tarena->num_period);
-		if ((tarena->option & CYCLE) && tarena->cycle_to_die != cycle_to_die)
-			printf("Cycle to die is now %d\n", tarena->cycle_to_die);
-		if (count_alive_cham(tarena) <= 0)
-		{
-			tarena->game_done = 1;
-			break;
-		}
-		if (tarena->option & NCURSES)
-		{
-			info_show_cycle_die_period(tarena->twin->win_info, tarena);
-		}
-	}
-}
-
-void			t_arena_showinfo(t_arena *tarena)
-{
-	int i;
-
-	i = 0;
-
-	ft_putstr("----------------------------------\n");
-	ft_putstr("Cycle : ");
-	ft_putnbr(tarena->cycle - 1);
-	ft_putstr("\n");
-
-	ft_putstr("Period : ");
-	ft_putnbr(tarena->num_period);
-	ft_putstr("\n");
-
-	printf("num p : %d\n", tarena->num_process);
-	ft_putstr("Number of Process : ");
-	ft_putnbr(tarena->num_process);
-	ft_putstr("\n");
-
-	ft_putstr("Cycle to die : ");
-	ft_putnbr(tarena->cycle_to_die);
-	ft_putstr("\n");
-
-	ft_putstr("Last alive cham : ");
-	ft_putnbr(tarena->tcham[tarena->last_alive_cham]->number);
-	ft_putstr("\n");
-	ft_putstr("----------------------------------\n");
-}
-
-void		display_winner(t_arena *tarena)
-{
-	int			idx_cham;
-	int			idx_winner;
-	long long	most_last_live;
-
-	idx_cham = 0;
-	idx_winner = 0;
-	most_last_live = 0;
-	while (idx_cham < tarena->num_cham)
-	{
-		if (tarena->tcham[idx_cham]->last_live >= most_last_live)
-		{
-			idx_winner = idx_cham;
-			most_last_live = tarena->tcham[idx_cham]->last_live;
-		}
-		idx_cham++;
-	}
-	ft_putstr("“Player ");
-	ft_putnbr(tarena->tcham[idx_winner]->number);
-	ft_putstr(" (");
-	ft_putstr(tarena->tcham[idx_winner]->theader.prog_name);
-	ft_putstr(") won”\n");
-}
-
-
-
-
-
-
-
-
-
-
-
-

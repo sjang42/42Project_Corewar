@@ -37,6 +37,7 @@
 
 t_arena 	*t_arena_new(int argc, char *argv[]);
 void		t_arena_play(t_arena *tarena);
+void			play_one_period(t_arena *tarena);
 
 void			checkup_proc(t_arena *tarena);
 void			checkup_nbr_live(t_arena *tarena);

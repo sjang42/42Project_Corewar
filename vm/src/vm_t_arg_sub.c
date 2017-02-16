@@ -73,8 +73,7 @@ void		*read_arg(t_map *tmap, int pc_command,
 	return (arg);
 }
 
-static int	*read_bytecode(
-			t_map *tmap, int pc_command, int num_arg)
+int			*read_bytecode(t_map *tmap, int pc_command, int num_arg)
 {
 	int 			*ret;
 	unsigned char	bytecode;
@@ -103,28 +102,6 @@ static int	*read_bytecode(
 	return (ret);
 }
 
-int			*get_bytecode(t_map *tmap, int pc_command, int opcode)
-{
-	int		*bytecode;
-	int		i;
-
-	if (op_tab[opcode - 1].num_bytecode == 0)
-	{
-		bytecode = (int*)malloc(sizeof(int) * op_tab[opcode - 1].num_arg);
-		i = 0;
-		while (i < op_tab[opcode - 1].num_arg)
-		{
-			bytecode[i] = op_tab[opcode - 1].argument[i];
-			i++;
-		}
-	}
-	else
-		bytecode = read_bytecode(
-					tmap, pc_command,
-					op_tab[opcode - 1].num_arg);
-	return (bytecode);
-}
-
 int		check_bytecode(int opcode, int *bytecode)
 {
 	int i;
@@ -144,14 +121,3 @@ int		check_bytecode(int opcode, int *bytecode)
 	}
 	return (0);
 }
-
-
-
-
-
-
-
-
-
-
-

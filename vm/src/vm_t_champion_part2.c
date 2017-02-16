@@ -12,58 +12,63 @@
 
 #include <vm_t_champion.h>
 
-void			t_champion_showinfo(t_champion *tcham)
+void			t_champion_destroy(t_champion *tcham)
+{
+	int idx_proc;
+
+	free(tcham->tfile.fname);
+	free(tcham->tinst.inst);
+	idx_proc = 0;
+	while (idx_proc < tcham->num_tproc)
+	{
+		free(tcham->tproc[idx_proc].registry);
+		idx_proc++;
+	}
+	free(tcham->tproc);
+	free(tcham);
+}
+
+void			t_champion_destroy_exit(t_champion *tcham)
+{
+	t_champion_destroy(tcham);
+	ft_exit_error(NULL);
+}
+
+void			t_champion_add_proc(t_champion *tcham, int idx_proc, int pc, int proc_num)
+{
+	if (tcham->num_tproc + 10 >= tcham->mem_tproc)
+	{
+		tcham->tproc = (t_proc*)ft_realloc(tcham->tproc,
+			sizeof(t_proc) * tcham->mem_tproc,
+			sizeof(t_proc) * (tcham->mem_tproc + 15));
+		tcham->mem_tproc += 15;
+	}
+	t_proc_put(&(tcham->tproc[tcham->num_tproc]), pc,
+				tcham->tproc[idx_proc].carry,
+				tcham->tproc[idx_proc].registry);
+	tcham->tproc[tcham->num_tproc].number = proc_num;
+	tcham->tproc[tcham->num_tproc].once_lived = tcham->tproc[idx_proc].once_lived;
+	tcham->num_tproc += 1;
+}
+
+int				t_champion_kill_proc(t_champion *tcham, int idx_proc)
 {
 	int i;
-	int j;
-	int num;
 
-	ft_putstr("Champion Number :\t");
-	ft_putnbr(tcham->number);
-	ft_putstr("\n");
-	
-	ft_putstr("Filename :\t\t");
-	ft_putstr(tcham->tfile.fname);
-	ft_putstr("\n");
-	
-	ft_putstr("Size :\t\t\t");
-	ft_putnbr(tcham->theader.prog_size);
-	ft_putstr("\n");
-	
-	ft_putstr("Name :\t\t\t");
-	ft_putstr(tcham->theader.prog_name);
-	ft_putstr("\n");
-	
-	ft_putstr("Comment :\t\t");
-	ft_putstr(tcham->theader.comment);
-	ft_putstr("\n");
-	ft_putstr("\n");
-
+	if (idx_proc >= tcham->num_tproc)
+		return (-1);
 	i = 0;
-	while (i < tcham->num_tproc)
+	while (i < REG_NUMBER)
 	{
-		ft_putstr("proc num : ");
-		ft_putnbr(i);
-		ft_putstr("\n");
-		ft_putstr("pc :\t");
-		ft_putnbr(tcham->tproc[i].pc);
-		ft_putstr("\n");
-		ft_putstr("carry :\t");
-		ft_putnbr(tcham->tproc[i].carry);
-		ft_putstr("\n");
-		j = 0;
-		while (j < REG_NUMBER)
-		{
-			ft_memcpy(&num, (tcham->tproc[i]).registry[j], REG_SIZE);
-			ft_putstr("[r");
-			ft_putnbr(j + 1);
-			ft_putstr("] : ");
-			ft_putnbr(num);
-			ft_putstr(" ");
-			j++;
-		}
-		ft_putstr("\n");
-		ft_putstr("\n");
+		free(tcham->tproc[idx_proc].registry[i]);
 		i++;
 	}
+	free(tcham->tproc[idx_proc].registry);
+	if (idx_proc + 1 != tcham->num_tproc)
+		ft_memmove(&(tcham->tproc[idx_proc]),
+					&(tcham->tproc[idx_proc + 1]),
+					sizeof(t_proc) * (tcham->num_tproc - (idx_proc + 1)));
+	(tcham->num_tproc) -= 1;
+	return (0);
 }
+

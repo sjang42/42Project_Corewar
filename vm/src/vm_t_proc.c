@@ -13,16 +13,6 @@
 #include <vm_t_proc.h>
 #include <op.h>
 
-t_proc			*t_proc_new(int pc, int carry, char **registry, int proc_num)
-{
-	t_proc	*tproc;
-
-	tproc = (t_proc*)malloc(sizeof(t_proc));
-	t_proc_put(tproc, pc, carry, registry);
-	tproc->number = proc_num;
-	return (tproc);
-}
-
 void			t_proc_put(t_proc *tproc, int pc, int carry, char **registry)
 {
 	int		i;
@@ -33,12 +23,8 @@ void			t_proc_put(t_proc *tproc, int pc, int carry, char **registry)
 	tproc->on_command = 0;
 	tproc->wait_cycle = 0;
 	tproc->just_born = 1;
-	tproc->period_born = 1;
 	tproc->once_lived = 0;
-	// if (registry)
-	// 	tproc->period_live = 1;
-	// else
-		tproc->period_live = 0;
+	tproc->period_live = 0;
 	i = 0;
 	while (i < REG_NUMBER)
 	{
@@ -49,6 +35,16 @@ void			t_proc_put(t_proc *tproc, int pc, int carry, char **registry)
 			ft_bzero(tproc->registry[i], REG_SIZE);
 		i++;
 	}
+}
+
+t_proc			*t_proc_new(int pc, int carry, char **registry, int proc_num)
+{
+	t_proc	*tproc;
+
+	tproc = (t_proc*)malloc(sizeof(t_proc));
+	t_proc_put(tproc, pc, carry, registry);
+	tproc->number = proc_num;
+	return (tproc);
 }
 
 void			t_proc_destroy(t_proc *tproc)
@@ -65,39 +61,19 @@ void			t_proc_destroy(t_proc *tproc)
 	free(tproc);
 }
 
-int 			t_proc_find_minproc(t_arena *tarena, int min,
-									int *idx_cham_store, int *idx_proc_store)
+static int		have_max(t_champion *tcham, int max)
 {
-	int success;
-	int idx_cham;
 	int idx_proc;
-	int num_proc;
 
-	success = 0;
-	while (!success)
+	idx_proc = 0;
+	while (idx_proc < tcham->num_tproc)
 	{
-		idx_cham = 0;
-		while (idx_cham < tarena->num_cham)
-		{
-			idx_proc = 0;
-			while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
-			{
-				if (tarena->tcham[idx_cham]->tproc[idx_proc].number == min)
-				{
-					success = 1;
-					break ;
-				}
-				idx_proc++;
-			}
-			if (success)
-				break ;
-			idx_cham++;
-		}
-		min++;
+		if (tcham->tproc[idx_proc].number == max &&
+			tcham->tproc[idx_proc].just_born != 1)
+			return (idx_proc);
+		idx_proc++;
 	}
-	*idx_cham_store = idx_cham;
-	*idx_proc_store = idx_proc;
-	return (min);
+	return (-1);
 }
 
 int 			t_proc_find_maxproc(t_arena *tarena, int max,
@@ -114,19 +90,11 @@ int 			t_proc_find_maxproc(t_arena *tarena, int max,
 		idx_cham = 0;
 		while (idx_cham < tarena->num_cham)
 		{
-			idx_proc = 0;
-			while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
+			if ((idx_proc = have_max(tarena->tcham[idx_cham], max)) != -1)
 			{
-				if (tarena->tcham[idx_cham]->tproc[idx_proc].number == max &&
-					tarena->tcham[idx_cham]->tproc[idx_proc].just_born != 1)
-				{
-					success = 1;
-					break ;
-				}
-				idx_proc++;
-			}
-			if (success)
+				success = 1;
 				break ;
+			}
 			idx_cham++;
 		}
 		max--;
@@ -135,26 +103,3 @@ int 			t_proc_find_maxproc(t_arena *tarena, int max,
 	*idx_proc_store = idx_proc;
 	return (max);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

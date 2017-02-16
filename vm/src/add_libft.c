@@ -10,22 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <vm_corewar.h>
+// #include <vm_corewar.h>
 
-int		ft_endian_convert(void *src, size_t size)
-{
-	size_t	i;
-	char	*src_cp;
-	char	tmp;
+// int		ft_endian_convert(void *src, size_t size)
+// {
+// 	size_t	i;
+// 	char	*src_cp;
+// 	char	tmp;
 
-	src_cp = (char*)src;
-	i = 0;
-	while (i < size / 2)
-	{
-		tmp = src_cp[size - 1 - i];
-		src_cp[size - 1 - i] = src_cp[i];
-		src_cp[i] = tmp;
-		i++;
-	}
-	return (0);
-}
+// 	src_cp = (char*)src;
+// 	i = 0;
+// 	while (i < size / 2)
+// 	{
+// 		tmp = src_cp[size - 1 - i];
+// 		src_cp[size - 1 - i] = src_cp[i];
+// 		src_cp[i] = tmp;
+// 		i++;
+// 	}
+// 	return (0);
+// }

@@ -136,6 +136,13 @@ void		show_commands_add(t_proc *tproc, t_arg *targ)
 	printf("and r%d r%d r%d\n", ((char*)(targ->arg))[0], ((char*)(targ->arg))[1], ((char*)(targ->arg))[2]);
 }
 
+void		show_commands_aff(t_proc *tproc, t_arg *targ)
+{
+	printf("P%5d | ", tproc->number + 1);
+	printf("aff r%d\n", ((char*)(targ->arg))[0]);
+}
+
+
 void		show_commands_or(t_proc *tproc, t_arg *targ, t_type_arg type_arg)
 {
 	int num1;
