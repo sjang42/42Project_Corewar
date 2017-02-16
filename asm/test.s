@@ -1,17 +1,9 @@
-.name "jex"
-.comment "Ha, Ha, Ha, stayiiiiin' aliiiiiiiiiive"
+#by zaz, it's not very good, but what did you expect, rainbowdash is way better
+#2013
 
-start:
-	live %42
-zjmp %:start
+.name		"fluttershyfluttershyfluttershyfluttershyfluttershyfluttershyfluttershyfluttershyfluttershy"
+.comment	"oh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projectoh, my, what a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet a scary projet t a scary projet a scary projet sssct"
 
-sti r1, %:start, %1
-ld %0, r16;
-
-# fork %:cray
-fork %:start
-
-zjmp1:
-	ld %0, r6
-	ld %0, r6
-	zjmp %:zjmp1
+ld %42, r3
+st r3, r4
+aff r4

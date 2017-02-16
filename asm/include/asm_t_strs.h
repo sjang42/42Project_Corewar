@@ -22,8 +22,8 @@ typedef struct	s_strs
 	int		size_strarr;
 }				t_strs;
 
-t_strs		*strs_new(size_t size_mem);
-int			strs_addone(t_strs *strs, char *str);
-void		strs_destroy(t_strs *strs);
+t_strs			*strs_new(size_t size_mem);
+int				strs_addone(t_strs *strs, char *str);
+void			strs_destroy(t_strs *strs);
 
 #endif

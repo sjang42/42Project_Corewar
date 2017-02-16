@@ -18,7 +18,7 @@ t_inst		*t_inst_new(int size)
 
 	tinst = (t_inst*)malloc(sizeof(t_inst));
 	tinst->inst = (char*)malloc(sizeof(char) * size);
-	ft_bzero(tinst->inst, size);	
+	ft_bzero(tinst->inst, size);
 	tinst->mem_inst = size;
 	tinst->size_inst = 0;
 	return (tinst);
@@ -34,7 +34,7 @@ void		t_inst_put(t_inst *tinst, void const *src, int size)
 		(char*)ft_realloc(tinst->inst,
 			sizeof(char) * tinst->mem_inst,
 			sizeof(char) * (tinst->mem_inst + 100 + size));
-		ft_bzero(tinst->inst + tinst->mem_inst, 100 + size);	
+		ft_bzero(tinst->inst + tinst->mem_inst, 100 + size);
 		tinst->mem_inst += 100 + size;
 	}
 	ft_memcpy(tinst->inst + tinst->size_inst, src, (size_t)size);

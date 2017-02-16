@@ -14,8 +14,6 @@
 
 int		switch_inst(char *src)
 {
-	char	*str;
-	int		ret;
 	int		i;
 
 	i = 0;

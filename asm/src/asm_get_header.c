@@ -12,15 +12,13 @@
 
 #include <asm.h>
 
-int			get_prog_name(char prog_name[], t_strs *strs, char **error)
+static int	get_prog_name(char prog_name[], t_strs *strs, char **error)
 {
 	char	*begin;
-	char	*end;
 	char	*tmp;
 
 	if (strs->strarr[0] == ft_strstr(strs->strarr[0], NAME_CMD_STRING)
-		&&
-		ft_count_strch(strs->strarr[0], '"') == 2)
+		&& ft_count_strch(strs->strarr[0], '"') == 2)
 	{
 		begin = ft_strchr(strs->strarr[0], '"') + 1;
 		tmp = ft_strdup(begin);
@@ -43,15 +41,13 @@ int			get_prog_name(char prog_name[], t_strs *strs, char **error)
 	return (0);
 }
 
-int			get_comment(char comment[], t_strs *strs, char **error)
+static int	get_comment(char comment[], t_strs *strs, char **error)
 {
 	char	*begin;
-	char	*end;
 	char	*tmp;
 
 	if (strs->strarr[1] == ft_strstr(strs->strarr[1], COMMENT_CMD_STRING)
-		&&
-		ft_count_strch(strs->strarr[1], '"') == 2)
+		&& ft_count_strch(strs->strarr[1], '"') == 2)
 	{
 		begin = ft_strchr(strs->strarr[1], '"') + 1;
 		tmp = ft_strdup(begin);
@@ -83,7 +79,7 @@ header_t	*get_header(t_strs *strs)
 	ft_bzero(header->prog_name, PROG_NAME_LENGTH + 1);
 	ft_bzero(header->comment, COMMENT_LENGTH + 1);
 	header->magic = COREWAR_EXEC_MAGIC;
-	ft_endian_ltob(&(header->magic), 4);
+	ft_endian_convert(&(header->magic), 4);
 	if (get_prog_name(header->prog_name, strs, &error))
 	{
 		strs_destroy(strs);

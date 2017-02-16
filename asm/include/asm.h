@@ -24,7 +24,7 @@
 # include <asm_t_label.h>
 # include <asm_t_inst.h>
 
-typedef struct  s_command
+typedef struct	s_command
 {
 	char	*command;
 	int		idx;
@@ -49,10 +49,6 @@ t_strs			*file_to_strs(int fd);
 header_t		*get_header(t_strs *strs);
 t_label			*get_label(t_strs *tstrs);
 
-void			ft_remove_overlap(char **str, char ch);
-int				ft_endian_ltob(void *src, size_t size);
-void			ft_destroy_strsplit(char **str);
-
 int				switch_inst(char *str);
 int				switch_type(char *str);
 
@@ -67,12 +63,15 @@ int				check_command(char *command, char **arg);
 int				decide_num_byte(char *command, char *arg);
 t_inst			*get_inst(t_strs *strs, t_label *tlabel);
 
+char			**asm_get_trim_arg(char *tmp);
+void			asm_get_destroy_exit(char **arg, t_strs *strs,
+										t_label *tlabel, t_inst	*tinst);
+
 void			show_usage_exit(char *filename);
 int				check_argv(int argc, char *argv[]);
 int				ft_asm(char *file);
 
-
-void	ft_exit_error_free(char *error);
-
+int				put_one_arg(t_command tcommand, char *arg,
+							t_inst *tinst, t_label *tlabel);
 
 #endif

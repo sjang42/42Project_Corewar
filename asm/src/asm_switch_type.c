@@ -38,9 +38,9 @@ int		is_direct(char *str)
 
 	if (!str || str[0] != DIRECT_CHAR)
 		return (0);
-	if (ft_isonly_digit(str + 1))	//num
+	if (ft_isonly_digit(str + 1))
 		return (1);
-	if (str[1] == LABEL_CHAR)		//label
+	if (str[1] == LABEL_CHAR)
 	{
 		i = 2;
 		while (str[i])
@@ -62,7 +62,7 @@ int		is_indirect(char *str)
 		return (0);
 	if (ft_isonly_digit(str))
 		return (1);
-	if (str[0] == LABEL_CHAR)		//label
+	if (str[0] == LABEL_CHAR)
 	{
 		i = 1;
 		while (str[i])

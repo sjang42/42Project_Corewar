@@ -98,12 +98,3 @@ void		t_label_destroy(t_label *tlabel)
 	free(tlabel->label);
 	free(tlabel);
 }
-
-
-
-
-
-
-
-
-

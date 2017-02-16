@@ -19,19 +19,21 @@ OBJECTS					=	op.o\
 							asm_t_label.o\
 							main.o\
 							asm_get_header.o\
-							add_libft.o\
 							asm_switch.o\
 							asm_switch_type.o\
 							asm_get_inst.o\
+							asm_get_inst_sub.o\
 							asm_get_label.o\
+							asm_get_sub.o\
 							asm_asm.o\
 							asm_error.o\
+
 
 SRC						=	./src/
 OP						=	../op/
 ICL						=	./include/
 CC						=	gcc
-CFLAG					=	
+CFLAG					=	-Wall -Wextra -Werror
 RM						=	/bin/rm -f
 
 HEADERS					=	$(ICL)asm.h\
@@ -58,7 +60,6 @@ $(TARGET)				:	$(OBJECTS) $(HEADERS) ../libft/libft.a
 
 %.o						:	$(OP)%.c
 							$(CC) -c $(CFLAG) $< -I$(OP)
-							
 
 
 
@@ -69,13 +70,14 @@ asm_t_strs.o			:	$(SRC)asm_t_strs.c $(HEADERS)
 asm_t_inst.o			:	$(SRC)asm_t_inst.c $(HEADERS)
 asm_t_label.o			:	$(SRC)asm_t_label.c $(HEADERS)
 asm_get_header.o		:	$(SRC)asm_get_header.c $(HEADERS)
-add_libft.o				:	$(SRC)add_libft.c $(HEADERS)
 asm_switch.o			:	$(SRC)asm_switch.c $(HEADERS)
 asm_switch_type.o		:	$(SRC)asm_switch_type.c $(HEADERS)
-asm_get_inst.o	m		:	$(SRC)asm_get_inst.c $(HEADERS)
-asm_get_label.o	m		:	$(SRC)asm_get_label.c $(HEADERS)
-asm_asm.o	m			:	$(SRC)asm_asm.c $(HEADERS)
-asm_error.o	m			:	$(SRC)asm_error.c $(HEADERS)
+asm_get_inst.o			:	$(SRC)asm_get_inst.c $(HEADERS)
+asm_get_inst_sub.o		:	$(SRC)asm_get_inst_sub.c $(HEADERS)
+asm_get_label.o			:	$(SRC)asm_get_label.c $(HEADERS)
+asm_get_sub.o			:	$(SRC)asm_get_sub.c $(HEADERS)
+asm_asm.o				:	$(SRC)asm_asm.c $(HEADERS)
+asm_error.o				:	$(SRC)asm_error.c $(HEADERS)
 
 clean					:
 							$(RM) $(OBJECTS)
