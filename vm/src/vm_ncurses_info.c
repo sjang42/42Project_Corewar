@@ -185,6 +185,34 @@ void			ncur_show_live(WINDOW *win_arena, t_arena *tarena,
 	idx++;
 }
 
+void			ncur_show_winner(WINDOW *win_arena, t_arena *tarena)
+{
+	int			idx_cham;
+	int			idx_winner;
+	long long	most_last_live;
+
+	idx_cham = 0;
+	idx_winner = 0;
+	while (idx_cham < tarena->num_cham)
+	{
+		if (tarena->tcham[idx_cham]->last_live >= most_last_live)
+		{
+			idx_winner = idx_cham;
+			most_last_live = tarena->tcham[idx_cham]->last_live;
+		}
+		idx_cham++;
+	}
+	ncur_erase_termsays(win_arena);
+	wattron(win_arena, COLOR_PAIR(idx_winner + 1) | A_BOLD | A_REVERSE);
+	mvwprintw(win_arena,
+			TERM_SAYS_Y, TERM_SAYS_X + TERM_SAYS_MASSAGE_LEN,
+			"Player %d (%s) won",
+			tarena->tcham[idx_winner]->number,
+			tarena->tcham[idx_winner]->theader.prog_name);
+	wrefresh(win_arena);
+	wattroff(win_arena, COLOR_PAIR(idx_winner + 1) | A_BOLD | A_REVERSE);
+}
+
 void			ncur_show_aff(WINDOW *win_arena, int idx_cham, char byte)
 {
 	static int idx = 0;
@@ -238,23 +266,3 @@ void			info_show_cham_init(WINDOW *win_info, t_arena *tarena)
 	}
 	wrefresh(win_info);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

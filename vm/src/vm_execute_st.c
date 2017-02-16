@@ -1,4 +1,3 @@
-/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   vm_execute_st.c                                    :+:      :+:    :+:   */
@@ -62,8 +61,13 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 	if (targ->bytecode[1] == T_REG)
 	{
 		type_arg.adr_reg[1] = ((char*)(targ->arg))[1];
-		put_registry(tarena->tcham[idx_cham]->tproc[idx_proc].registry,
-						type_arg.adr_reg[1], &(type_arg.val_reg[0]));
+		if (put_registry(tarena->tcham[idx_cham]->tproc[idx_proc].registry,
+			type_arg.adr_reg[1], &(type_arg.val_reg[0])))
+		{
+			t_arg_destroy(targ);
+			return (ret);
+		}
+
 	}
 	else //(targ->bytecode[1] == T_IND)
 	{
@@ -84,6 +88,25 @@ int		w_deal_st(t_arena *tarena, int idx_cham, int idx_proc)
 	}
 	if (tarena->option & COMMANDS)
 		show_commands_st(&(tarena->tcham[idx_cham]->tproc[idx_proc]), targ, type_arg.adr_ind[1]);
+	
+	//debug
+		// if (tarena->tcham[idx_cham]->tproc[idx_proc].number + 1 == 2880)
+		// {
+		// 	printf("p num : %d\n", tarena->tcham[idx_cham]->tproc[idx_proc].number + 1);
+		// 	printf("pc_command : %x\n", tarena->tcham[idx_cham]->tproc[idx_proc].pc);			
+		// 	if (targ->bytecode[1] == T_REG)
+		// 		printf("bytecode[1] == T_REG\n");
+		// 	else if (targ->bytecode[1] == T_IND)
+		// 		printf("bytecode[1] == T_IND\n");
+		// 	else if (targ->bytecode[1] == T_DIR)
+		// 		printf("bytecode[1] == T_DIR\n");
+		// 	else
+		// 		printf("bytecode[1] : %d\n", targ->bytecode[1]);
+		// 	printf("It is r%d\n", type_arg.adr_reg[1]);
+		// }
+	//debug
+
+
 	t_arg_destroy(targ);
 	return (ret);
 }

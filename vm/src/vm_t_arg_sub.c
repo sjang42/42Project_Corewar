@@ -136,6 +136,8 @@ int		check_bytecode(int opcode, int *bytecode)
 	{
 		if (!(bytecode + i))
 			return (-1);
+		if (bytecode[i] == 0)
+			return (-1);
 		if ((bytecode[i] & op_tab[opcode - 1].argument[i]) != bytecode[i])
 			return (-1);
 		i++;

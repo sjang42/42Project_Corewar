@@ -44,14 +44,13 @@ int		main(int argc, char *argv[])
 		curs_set(0);
 		getch();
 	}
-
 	t_arena_play(tarena);
 	if (tarena->game_done)
 	{
-		//debug
-		printf("win cycle : %lld\n", tarena->cycle);
-		//debug
-		display_winner(tarena);
+		if (tarena->option & NCURSES)
+			ncur_show_winner(tarena->twin->win_arena, tarena);
+		else
+			display_winner(tarena);
 	}
 	else if (tarena->option & DUMP)
 	{
@@ -62,10 +61,10 @@ int		main(int argc, char *argv[])
 	#endif
 	if (tarena->option & NCURSES)
 	{
+		nocbreak();
 		getch();
+		curs_set(1);
 		ncur_finish(tarena->twin);
-		curs_set(0);
-		wrefresh(twin->win_arena);
 	}
 	t_arena_destroy(tarena);
 }

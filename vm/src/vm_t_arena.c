@@ -184,14 +184,14 @@ void		t_arena_play(t_arena *tarena)
 			printf("Period is       : %d\n", tarena->num_period);
 		if ((tarena->option & CYCLE) && tarena->cycle_to_die != cycle_to_die)
 			printf("Cycle to die is now %d\n", tarena->cycle_to_die);
-		if (tarena->option & NCURSES)
-		{
-			info_show_cycle_die_period(tarena->twin->win_info, tarena);
-		}
 		if (count_alive_cham(tarena) <= 0)
 		{
 			tarena->game_done = 1;
 			break;
+		}
+		if (tarena->option & NCURSES)
+		{
+			info_show_cycle_die_period(tarena->twin->win_info, tarena);
 		}
 	}
 }
@@ -228,8 +228,8 @@ void			t_arena_showinfo(t_arena *tarena)
 
 void		display_winner(t_arena *tarena)
 {
-	int idx_cham;
-	int idx_winner;
+	int			idx_cham;
+	int			idx_winner;
 	long long	most_last_live;
 
 	idx_cham = 0;

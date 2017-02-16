@@ -16,6 +16,7 @@ void		ncur_finish(t_windows *twin)
 {
 	delwin(twin->win_arena);
 	delwin(twin->win_info);
+	refresh();
 	endwin();
 }
 
