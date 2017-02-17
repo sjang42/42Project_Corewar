@@ -115,7 +115,6 @@
 # define RGB_CHAM6						0, 255, 255
 
 void			ncur_box(WINDOW *win);
-void			ncur_map_init(WINDOW *win, t_map *tmap, t_arena *tarena);
 
 t_windows		*ncur_new(t_arena *tarena);
 

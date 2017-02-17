@@ -227,6 +227,42 @@ int 	*fill_fds(int argc, char *argv[])
 	return (fd);
 }
 
+static void			ncur_make_black(t_windows *twin)
+{
+	int i;
+	int j;
+
+	i = 0;
+	wattron(twin->win_arena, COLOR_PAIR(9) | A_BOLD);
+	wattron(twin->win_info, COLOR_PAIR(9) | A_BOLD);
+	while (i < CONTENTS_TOTAL_LINES)
+	{
+		j = 0;
+		wmove(twin->win_arena, i, 0);
+		while (j < CONTENTS_TOTAL_COLS)
+		{
+			waddch(twin->win_arena, ' ');
+			j++;
+		}
+		i++;
+	}
+	i = 0;
+	while (i < INFO_TOTAL_LINES)
+	{
+		j = 0;
+		wmove(twin->win_arena, i, 0);
+		while (j < INFO_TOTAL_COLS)
+		{
+			waddch(twin->win_info, ' ');
+			j++;
+		}
+		i++;
+	}
+	wattroff(twin->win_arena, COLOR_PAIR(9) | A_BOLD);
+	wattroff(twin->win_info, COLOR_PAIR(9) | A_BOLD);
+	wrefresh(twin->win_arena);
+	wrefresh(twin->win_info);
+}
 
 // int		w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 // {

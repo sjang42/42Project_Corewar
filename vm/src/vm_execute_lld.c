@@ -12,75 +12,60 @@
 
 #include <vm_corewar.h>
 
-int		deal_lld(t_map *tmap, int pc_command, t_proc *tproc)
+
+static int		get_first_arg(t_arg *targ, t_type_arg *type_arg,
+								t_map *tmap, int pc_command)
+{
+	if (targ->bytecode[0] == T_DIR)
+	{
+		ft_memcpy(&(type_arg->val_dir[0]),
+					(char*)(targ->arg),
+					DIR_SIZE);
+		ft_endian_convert(&(type_arg->val_dir[0]), DIR_SIZE);
+		return (4);
+	}
+	else
+	{
+		ft_memcpy(&(type_arg->adr_ind[0]), (char*)(targ->arg), IND_SIZE);
+		ft_endian_convert(&(type_arg->adr_ind[0]), IND_SIZE);
+		type_arg->val_ind[0] = (TYPE_IND)read_indirect_data(
+							tmap, pc_command,
+							type_arg->adr_ind[0]);
+		return (2);
+	}
+}
+
+static int		get_second_arg(t_arg *targ, t_type_arg *type_arg, int point)
+{
+	type_arg->adr_reg[3] = *((char*)targ->arg + point);
+	type_arg->val_reg[3] = (targ->bytecode[0] == T_DIR) ?
+							type_arg->val_dir[0] :
+							type_arg->val_ind[0];
+	return (1);
+}
+
+int				deal_lld(t_arena *tarena, t_map *tmap,
+							int pc_command, t_proc *tproc)
 {
 	t_arg			*targ;
 	t_type_arg		type_arg;
-	int				ret;
 	int				point;
+	int				ret;
 
-	ret = count_bytecode_cycle(tmap, OP_LLD + 1, pc_command)
-				+ op_tab[OP_LLD].num_bytecode
-				+ 1;
-	ft_bzero(&type_arg, sizeof(t_type_arg));
-	targ = t_arg_new(tmap, pc_command, OP_LLD + 1);
-	if (targ == NULL)
-	{
-		#ifdef __DEBUG_JEX
-			printf("%s\n", "wrong exit");
-		#endif
-		return (ret);//틀렸을 때 몇 개 반환하는지 보기
-	}
-	point = 0;
-
-	/*
-	** get 1st arg
-	*/
-	if (targ->bytecode[0] == T_DIR)				//get : type_arg.val_dir[0]
-	{
-		ft_memcpy(&(type_arg.val_dir[0]),
-					(char*)(targ->arg),
-					DIR_SIZE);
-		ft_endian_convert(&(type_arg.val_dir[0]), DIR_SIZE);
-		point += 4;
-	}
-	else//(targ->bytecode[0] == T_IND)			//get : type_arg.val_ind[0]
-	{
-		ft_memcpy(&(type_arg.adr_ind[0]), (char*)(targ->arg), IND_SIZE);
-		ft_endian_convert(&(type_arg.adr_ind[0]), IND_SIZE);
-		type_arg.val_ind[0] = (TYPE_IND)read_indirect_data(
-							tmap, pc_command,
-							type_arg.adr_ind[0]);
-		point += 2;
-	}
-
-	/*
-	** get 2nd arg
-	*/
-	type_arg.adr_reg[3] = *((char*)targ->arg + point);
-	type_arg.val_reg[3] = (targ->bytecode[0] == T_DIR) ?
-							type_arg.val_dir[0] :
-							type_arg.val_ind[0];
-	point += 1;
-
-	/*
-	** process ld
-	*/
-	if (put_registry(tproc->registry,
-					type_arg.adr_reg[3],
+	if ((targ = get_ret_targ(tarena->tmap, &ret,
+				OP_LLD + 1, pc_command)) == NULL)
+		return (ret);
+	point = get_first_arg(targ, &type_arg, tmap, pc_command);
+	point += get_second_arg(targ, &type_arg, point);
+	if (put_registry(tproc->registry, type_arg.adr_reg[3],
 					&type_arg.val_reg[3]))
 	{
-		#ifdef __DEBUG_JEX
-			printf("%s\n", "wrong exit");
-		#endif
 		t_arg_destroy(targ);
 		return (ret);
 	}
-	if (type_arg.val_reg[3] == 0)
-		tproc->carry = 1;
-	else
-		tproc->carry = 1;
+	tproc->carry = (type_arg.val_reg[3] == 0) ? 1 : 0;
+	if (tarena->option & COMMANDS)
+		show_commands_lld(tproc, type_arg);
 	t_arg_destroy(targ);
 	return (ret);
 }
-

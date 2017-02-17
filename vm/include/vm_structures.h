@@ -114,9 +114,10 @@ typedef struct	s_type_arg
 typedef struct	s_execute_variable
 {
 	t_arg		*targ;
-	t_type_arg	*type_arg;
+	t_type_arg	type_arg;
 	t_proc		*tproc;
 	t_map		*tmap;
+	int			point;
 	int			pc_command;
 }				t_execute_variable;
 

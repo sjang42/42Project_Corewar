@@ -12,8 +12,7 @@
 
 #include <vm_corewar.h>
 
-int		and_arg1_reg_dir(t_proc *tproc, t_arg *targ,
-						t_type_arg *type_arg)
+int		and_arg1_reg_dir(t_proc *tproc, t_arg *targ, t_type_arg *type_arg)
 {
 	if (targ->bytecode[0] == T_REG)			//get : type_arg.val_reg[i]
 	{
@@ -96,20 +95,20 @@ int		and_arg123(t_execute_variable *var)
 
 	if (var->targ->bytecode[0] == T_REG ||
 		var->targ->bytecode[0] == T_DIR)
-		point[0] = and_arg1_reg_dir(var->tproc, var->targ, var->type_arg);
+		point[0] = and_arg1_reg_dir(var->tproc, var->targ, &(var->type_arg));
 	else
-		point[0] = and_arg1_ind(var->targ, var->type_arg, var->tmap, var->pc_command);
+		point[0] = and_arg1_ind(var->targ, &(var->type_arg), var->tmap, var->pc_command);
 	if (point[0] == -1)
 		return (-1);
 	if (var->targ->bytecode[1] == T_REG ||
 		var->targ->bytecode[1] == T_DIR)
-		point[1] = and_arg2_reg_dir(var->tproc, var->targ, var->type_arg, point[0]);
+		point[1] = and_arg2_reg_dir(var->tproc, var->targ, &(var->type_arg), point[0]);
 	else
-		point[1] = and_arg2_ind(var->targ, var->type_arg, var->tmap, var->pc_command);
+		point[1] = and_arg2_ind(var->targ, &(var->type_arg), var->tmap, var->pc_command);
 	if (point[1] == -1)
 		return (-1);
 	point[2] = point[0] + point[1];
-	var->type_arg->adr_reg[2] = *(((char*)(var->targ->arg)) + point[2]);
+	var->type_arg.adr_reg[2] = *(((char*)(var->targ->arg)) + point[2]);
 	point[2] += 1;
 	return (point[2]);
 }

@@ -12,47 +12,6 @@
 
 #include <vm_ncurses.h>
 
-void			ncur_erase_termsays(WINDOW *win)
-{
-	int i;
-
-	i = 0;
-	wattron(win, COLOR_PAIR(7) | A_BOLD);
-	wmove(win, TERM_SAYS_Y, TERM_SAYS_X + TERM_SAYS_MASSAGE_LEN);
-	while (i < 181)
-	{
-		wprintw(win, " ");
-		i++;
-	}
-	wrefresh(win);
-	wattroff(win, COLOR_PAIR(7) | A_BOLD);
-}
-
-void			ncur_erase_aff(WINDOW *win)
-{
-	int i;
-
-	i = 0;
-	wattron(win, COLOR_PAIR(7) | A_BOLD);
-	wmove(win, AFF_Y, AFF_X + AFF_MASSAGE_LEN);
-	while (i < 181)
-	{
-		wprintw(win, " ");
-		i++;
-	}
-	wrefresh(win);
-	wattroff(win, COLOR_PAIR(7) | A_BOLD);
-}
-
-
-void			ncur_show_termsays(WINDOW *win_arena)
-{
-	wattron(win_arena, COLOR_PAIR(7) | A_BOLD);
-	mvwprintw(win_arena, TERM_SAYS_Y, TERM_SAYS_X, TERM_SAYS_MASSAGE);
-	wrefresh(win_arena);
-	wattroff(win_arena, COLOR_PAIR(7) | A_BOLD);
-}
-
 void			info_show_status(WINDOW *win_info, int stop)
 {
 	wattron(win_info, COLOR_PAIR(7) | A_BOLD);
@@ -100,47 +59,6 @@ void			info_show_cham_lastlive(WINDOW *win_info, t_arena *tarena,
 	wattroff(win_info, COLOR_PAIR(7) | A_BOLD);
 }
 
-void			info_show_cycle_die_period(WINDOW *win_info, t_arena *tarena)
-{
-	int x;
-	int y;
-
-	x = INFO_CYCLE_DIE_X;
-	y = INFO_NAME_CHAM1_Y + (4 * tarena->num_cham) + 2;
-	wattron(win_info, COLOR_PAIR(7) | A_BOLD);
-	mvwprintw(win_info, y, x, "                               ");
-	mvwprintw(win_info, y, x, "Period : %d",
-				tarena->num_period + 1);
-	y += 2;
-	mvwprintw(win_info, y, x, "                               ");
-	mvwprintw(win_info, y, x, "Cycle to die : %d",
-				tarena->cycle_to_die);
-	wrefresh(win_info);
-	wattroff(win_info, COLOR_PAIR(7) | A_BOLD);
-}
-
-void			info_show_constants(WINDOW *win_info, t_arena *tarena)
-{
-	int x;
-	int y;
-
-	x = INFO_CYCLE_DIE_X;
-	y = INFO_NAME_CHAM1_Y + (4 * tarena->num_cham) + 6;
-	wattron(win_info, COLOR_PAIR(7) | A_BOLD);
-	mvwprintw(win_info, y, x, "                               ");
-	mvwprintw(win_info, y, x, "CYCLE_DELTA : %d", CYCLE_DELTA);
-	y += 2;
-	mvwprintw(win_info, y, x, "                               ");
-	mvwprintw(win_info, y, x, "NBR_LIVE : %d", NBR_LIVE);
-	y += 2;
-	mvwprintw(win_info, y, x, "                               ");
-	mvwprintw(win_info, y, x, "MAX_CHECKS : %d", NBR_LIVE);
-	wrefresh(win_info);
-	wattroff(win_info, COLOR_PAIR(7) | A_BOLD);
-}
-
-
-
 void			info_show_cham_live_current(WINDOW *win_info, t_arena *tarena,
 										int idx_cham)
 {
@@ -150,13 +68,6 @@ void			info_show_cham_live_current(WINDOW *win_info, t_arena *tarena,
 	int sum;
 
 	wattron(win_info, COLOR_PAIR(7) | A_BOLD);
-	// i = 0;
-	// sum = 0;
-	// while (i < tarena->tcham[idx_cham]->num_tproc)
-	// {
-	// 	sum += tarena->tcham[idx_cham]->tproc[i].period_live;
-	// 	i++;
-	// }
 	x = INFO_NAME_NUM_X;
 	y = INFO_NAME_CHAM1_Y + (4 * idx_cham) + 2;
 	mvwprintw(win_info, y, x, "      ");
@@ -165,104 +76,3 @@ void			info_show_cham_live_current(WINDOW *win_info, t_arena *tarena,
 	wattroff(win_info, COLOR_PAIR(7) | A_BOLD);
 }
 
-void			ncur_show_live(WINDOW *win_arena, t_arena *tarena,
-				int idx_cham, int live_cham)
-{
-	static int idx = 0;
-
-	ncur_erase_termsays(win_arena);
-	if (idx >= 10)
-		idx = 0;
-	if (idx % 2 == 0)
-		wattron(win_arena, COLOR_PAIR(idx_cham + 1) | A_BOLD);
-	else
-		wattron(win_arena, COLOR_PAIR(idx_cham + 1) | A_BOLD | A_REVERSE);
-	mvwprintw(win_arena,
-			TERM_SAYS_Y, TERM_SAYS_X + TERM_SAYS_MASSAGE_LEN,
-			"A process shows that player %d is alive", live_cham);
-	wrefresh(win_arena);
-	wattroff(win_arena, COLOR_PAIR(idx_cham + 1) | A_BOLD | A_REVERSE);
-	idx++;
-}
-
-void			ncur_show_winner(WINDOW *win_arena, t_arena *tarena)
-{
-	int			idx_cham;
-	int			idx_winner;
-	long long	most_last_live;
-
-	idx_cham = 0;
-	idx_winner = 0;
-	while (idx_cham < tarena->num_cham)
-	{
-		if (tarena->tcham[idx_cham]->last_live >= most_last_live)
-		{
-			idx_winner = idx_cham;
-			most_last_live = tarena->tcham[idx_cham]->last_live;
-		}
-		idx_cham++;
-	}
-	ncur_erase_termsays(win_arena);
-	wattron(win_arena, COLOR_PAIR(idx_winner + 1) | A_BOLD | A_REVERSE);
-	mvwprintw(win_arena,
-			TERM_SAYS_Y, TERM_SAYS_X + TERM_SAYS_MASSAGE_LEN,
-			"Player %d (%s) won",
-			tarena->tcham[idx_winner]->number,
-			tarena->tcham[idx_winner]->theader.prog_name);
-	wrefresh(win_arena);
-	wattroff(win_arena, COLOR_PAIR(idx_winner + 1) | A_BOLD | A_REVERSE);
-}
-
-void			ncur_show_aff(WINDOW *win_arena, int idx_cham, char byte)
-{
-	static int idx = 0;
-
-	ncur_erase_aff(win_arena);
-	if (idx >= 10)
-		idx = 0;
-	wattron(win_arena, COLOR_PAIR(7) | A_BOLD);
-	mvwprintw(win_arena, AFF_Y, AFF_X, "AFF : ", byte);
-	wattroff(win_arena, COLOR_PAIR(7) | A_BOLD);
-	if (idx % 2 == 0)
-		wattron(win_arena, COLOR_PAIR(idx_cham + 1) | A_BOLD);
-	else
-		wattron(win_arena, COLOR_PAIR(idx_cham + 1) | A_BOLD | A_REVERSE);
-	mvwprintw(win_arena, AFF_Y, AFF_X + AFF_MASSAGE_LEN, "%c", byte);
-	wrefresh(win_arena);
-	wattroff(win_arena, COLOR_PAIR(idx_cham + 1) | A_BOLD | A_REVERSE);
-	idx++;
-}
-
-void			info_show_cham_init(WINDOW *win_info, t_arena *tarena)
-{
-	int i;
-	int x;
-	int y;
-
-	i = 0;
-	x = INFO_NAME_CHAM1_X;
-	y = INFO_NAME_CHAM1_Y;
-	while (i < tarena->num_cham)
-	{
-		wattron(win_info, COLOR_PAIR(7) | A_BOLD);
-		mvwprintw(win_info, y, x,
-				"Player -%d : ", i + 1);
-		wattron(win_info, COLOR_PAIR(tarena->tcham[i]->color) | A_BOLD);
-		mvwprintw(win_info, y, x + 12,
-				"%s", tarena->tcham[i]->theader.prog_name);
-		wattroff(win_info, COLOR_PAIR(tarena->tcham[i]->color) | A_BOLD);
-		wattron(win_info, COLOR_PAIR(7) | A_BOLD);
-		mvwprintw(win_info, y + 1, x + 2,
-				"Last Live : ");
-		mvwprintw(win_info, y + 2, x + 2,
-				"Lives in current period : ");
-		mvwprintw(win_info, y + 1, INFO_NAME_NUM_X,
-				"0");
-		mvwprintw(win_info, y + 2, INFO_NAME_NUM_X,
-				"0");
-		wattroff(win_info, COLOR_PAIR(7) | A_BOLD);
-		i++;
-		y += 4;
-	}
-	wrefresh(win_info);
-}

@@ -63,16 +63,22 @@ OBJECTS					=	op.o\
 							\
 							vm_ncurses.o\
 							vm_ncurses_show_map.o\
+							vm_ncurses_show_map_part2.o\
 							vm_ncurses_colors.o\
 							\
+							vm_ncurses_arena.o\
+							vm_ncurses_arena_part2.o\
 							vm_ncurses_info.o\
+							vm_ncurses_info_part2.o\
 							\
 							ft_option.o\
 							\
 							vm_show_commands.o\
+							vm_show_commands_part2.o\
+							vm_show_commands_part3.o\
+							vm_show_commands_part4.o\
 							vm_display.o\
 							\
-							add_libft.o\
 
 
 SRC						=	./src/
@@ -138,8 +144,6 @@ vm_t_arena_checkup_part2.o	:	$(SRC)vm_t_arena_checkup_part2.c $(HEADERS)
 vm_t_arena_play.o			:	$(SRC)vm_t_arena_play.c $(HEADERS)
 vm_t_arena_play_period.o	:	$(SRC)vm_t_arena_play_period.c $(HEADERS)
 
-add_libft.o					:	$(SRC)add_libft.c $(HEADERS)
-
 vm_execute_live.o			:	$(SRC)vm_execute_live.c $(HEADERS)
 vm_execute_ld.o				:	$(SRC)vm_execute_ld.c $(HEADERS)
 vm_execute_st.o				:	$(SRC)vm_execute_st.c $(HEADERS)
@@ -159,15 +163,20 @@ vm_execute_fork.o			:	$(SRC)vm_execute_fork.c $(HEADERS)
 vm_execute_lfork.o			:	$(SRC)vm_execute_lfork.c $(HEADERS)
 
 vm_show_commands.o			:	$(SRC)vm_show_commands.c $(HEADERS)
+vm_show_commands_part2.o	:	$(SRC)vm_show_commands_part2.c $(HEADERS)
+vm_show_commands_part3.o	:	$(SRC)vm_show_commands_part3.c $(HEADERS)
+vm_show_commands_part4.o	:	$(SRC)vm_show_commands_part4.c $(HEADERS)
 vm_display.o				:	$(SRC)vm_display.c $(HEADERS)
-
 
 vm_ncurses.o				:	$(SRC)vm_ncurses.c $(HEADERS)
 vm_ncurses_show_map.o		:	$(SRC)vm_ncurses_show_map.c $(HEADERS)
+vm_ncurses_show_map_part2.o	:	$(SRC)vm_ncurses_show_map_part2.c $(HEADERS)
 vm_ncurses_colors.o			:	$(SRC)vm_ncurses_colors.c $(HEADERS)
 
 vm_ncurses_info.o			:	$(SRC)vm_ncurses_info.c $(HEADERS)
-
+vm_ncurses_info_part2.o		:	$(SRC)vm_ncurses_info_part2.c $(HEADERS)
+vm_ncurses_arena.o			:	$(SRC)vm_ncurses_arena.c $(HEADERS)
+vm_ncurses_arena_part2.o	:	$(SRC)vm_ncurses_arena_part2.c $(HEADERS)
 
 
 ft_option.o					:	$(SRC)ft_option.c $(HEADERS)

@@ -12,7 +12,7 @@
 
 #include <vm_ncurses.h>
 
-void		ncur_finish(t_windows *twin)
+void			ncur_finish(t_windows *twin)
 {
 	delwin(twin->win_arena);
 	delwin(twin->win_info);
@@ -20,7 +20,7 @@ void		ncur_finish(t_windows *twin)
 	endwin();
 }
 
-void		t_arena_destroy(t_arena *tarena)
+void			t_arena_destroy(t_arena *tarena)
 {
 	int idx_cham;
 
@@ -35,10 +35,18 @@ void		t_arena_destroy(t_arena *tarena)
 	free(tarena);
 }
 
-void		ncur_map_update(t_arena *tarena, int pc, int size)
+static void		xy_init(t_xy *xy)
 {
-	int i;
-	t_xy xy;
+	xy->x = CONTENTS_START_X;
+	xy->y += 1;
+	if (MEM_SIZE / CONTENTS_BYTES_PER_LINE + CONTENTS_START_Y == xy->y)
+		xy->y = (CONTENTS_START_Y);
+}
+
+void			ncur_map_update(t_arena *tarena, int pc, int size)
+{
+	int		i;
+	t_xy	xy;
 
 	if (pc < 0)
 		pc += MEM_SIZE;
@@ -46,11 +54,6 @@ void		ncur_map_update(t_arena *tarena, int pc, int size)
 	xy.y = (CONTENTS_START_Y) + (pc / (CONTENTS_BYTES_PER_LINE));
 	if (MEM_SIZE / CONTENTS_BYTES_PER_LINE + CONTENTS_START_Y <= xy.y)
 				xy.y = (CONTENTS_START_Y);
-	//debug
-		// wattron(tarena->twin->win_info, COLOR_PAIR(7) | A_BOLD);
-		// mvwprintw(tarena->twin->win_info, 30, 4, "x : %d, y : %d\n", xy.x, xy.y);
-		// wattroff(tarena->twin->win_info, COLOR_PAIR(7) | A_BOLD);
-	//debug
 	i = 0;
 	while (i < size)
 	{
@@ -58,27 +61,10 @@ void		ncur_map_update(t_arena *tarena, int pc, int size)
 		w_ft_displaybyte(tarena->twin->win_arena, xy.y, xy.x, tarena->tmap->map[pc]);
 		xy.x += 3;
 		if (((pc + 1) % CONTENTS_BYTES_PER_LINE) == 0)
-		{
-			xy.x = CONTENTS_START_X;
-			xy.y += 1;
-			if (MEM_SIZE / CONTENTS_BYTES_PER_LINE + CONTENTS_START_Y == xy.y)
-				xy.y = (CONTENTS_START_Y);
-		}
+			xy_init(&xy);
 		colors_off_pc(tarena->twin->win_arena, tarena, pc);
 		pc++;
 		i++;
 	}
 	wrefresh(tarena->twin->win_arena);
 }
-
-
-// void	ncur_box(WINDOW *win)
-// {
-// 	attrset(COLOR_PAIR(8) | A_BOLD);
-// 	draw_repeat_ch_hor(win, '*', TOTAL_COLS, DIVIDE_HOR_FIRST, 0);
-// 	draw_repeat_ch_hor(win, '*', TOTAL_COLS, DIVIDE_HOR_SECOND, 0);
-// 	draw_repeat_ch_ver(win, '*', TOTAL_LINES - 2, 1, DIVIDE_VER_FIRST);
-// 	draw_repeat_ch_ver(win, '*', TOTAL_LINES - 2, 1, DIVIDE_VER_SECOND);
-// 	draw_repeat_ch_ver(win, '*', TOTAL_LINES - 2, 1, DIVIDE_VER_THIRD);
-// 	attrset(COLOR_PAIR(7));
-// }

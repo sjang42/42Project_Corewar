@@ -27,17 +27,17 @@ static int		deal_command_sub(t_arena *tarena, t_map *tmap,
 	else if (opcode == op_tab[OP_LDI].opcode)
 		return (deal_ldi(tarena, tmap, pc_command, tproc));
 	else if (opcode == op_tab[OP_STI].opcode)
-		return (deal_sti(tarena, idx_cham, idx_proc));
+		return (deal_sti(tarena, tmap, idx_cham, idx_proc));
 	else if (opcode == op_tab[OP_LLD].opcode)
-		return (deal_lld(tmap, pc_command, tproc));
+		return (deal_lld(tarena, tmap, pc_command, tproc));
 	else if (opcode == op_tab[OP_LLDI].opcode)
-		return (deal_lldi(tmap, pc_command, tproc));
+		return (deal_lldi(tarena, tmap, pc_command, tproc));
 	else if (opcode == op_tab[OP_AFF].opcode)
 		return (deal_aff(tarena, idx_cham, idx_proc));
 	else if (opcode == op_tab[OP_FORK].opcode)
-		return (w_deal_fork(tarena, idx_cham, idx_proc, pc_command));
+		return (deal_fork(tarena, idx_cham, idx_proc, pc_command));
 	else if (opcode == op_tab[OP_LFORK].opcode)
-		return (w_deal_lfork(tarena, idx_cham, idx_proc, pc_command));
+		return (deal_lfork(tarena, idx_cham, idx_proc, pc_command));
 	return (0);
 }
 
@@ -56,17 +56,17 @@ int				deal_command(t_map *tmap, int idx_cham,
 	else if (opcode == op_tab[OP_LD].opcode)
 		return (deal_ld(tarena, tmap, pc_command, tproc));
 	else if (opcode == op_tab[OP_ST].opcode)
-		return (deal_st(tarena, idx_cham, idx_proc));
+		return (deal_st(tarena, tmap, idx_cham, idx_proc));
 	else if (opcode == op_tab[OP_ADD].opcode)
 		return (deal_add(tarena, tmap, pc_command, tproc));
 	else if (opcode == op_tab[OP_SUB].opcode)
 		return (deal_sub(tarena, tmap, pc_command, tproc));
 	else if (opcode == op_tab[OP_AND].opcode)
-		return (deal_and(tmap, pc_command, tproc));
+		return (deal_and(tarena, tmap, pc_command, tproc));
 	else if (opcode == op_tab[OP_OR].opcode)
 		return (deal_or(tarena, tmap, pc_command, tproc));
 	else if (opcode == op_tab[OP_XOR].opcode)
-		return (deal_xor(tmap, pc_command, tproc));
+		return (deal_xor(tarena, tmap, pc_command, tproc));
 	else
 		return (deal_command_sub(tarena, tmap, idx_cham, idx_proc));
 }
