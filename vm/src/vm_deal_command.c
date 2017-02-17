@@ -15,8 +15,8 @@
 static int		deal_command_sub(t_arena *tarena, t_map *tmap,
 									int idx_cham, int idx_proc)
 {
-	int 	opcode;
-	int 	pc_command;
+	int		opcode;
+	int		pc_command;
 	t_proc	*tproc;
 
 	opcode = tarena->tcham[idx_cham]->tproc[idx_proc].on_command;
@@ -44,9 +44,9 @@ static int		deal_command_sub(t_arena *tarena, t_map *tmap,
 int				deal_command(t_map *tmap, int idx_cham,
 								int idx_proc, t_arena *tarena)
 {
-	int opcode;
-	int pc_command;
-	t_proc *tproc;
+	int		opcode;
+	int		pc_command;
+	t_proc	*tproc;
 
 	opcode = tarena->tcham[idx_cham]->tproc[idx_proc].on_command;
 	pc_command = tarena->tcham[idx_cham]->tproc[idx_proc].pc;

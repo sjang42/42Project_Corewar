@@ -29,8 +29,9 @@ typedef struct	s_xy
 
 typedef struct	s_windows
 {
+	// WINDOW *win_base;
 	WINDOW *win_arena;
-	WINDOW *win_info;		
+	WINDOW *win_info;
 }				t_windows;
 
 typedef struct	s_proc
@@ -52,6 +53,7 @@ typedef struct		s_map
 	char	*map;
 	char	*possession;
 	int		size_map;
+	char	*color;
 	int		num_cham;
 }					t_map;
 

@@ -143,7 +143,7 @@ void			info_show_cham_live_current(WINDOW *win_info, t_arena *tarena, int idx_ch
 
 void			ncur_show_winner(WINDOW *win_arena, t_arena *tarena);
 void			ncur_show_aff(WINDOW *win_arena, int idx_cham, char byte);
-void			ncur_show_live(WINDOW *win_arena, t_arena *tarena, int idx_cham, int live_cham);
+void			ncur_show_live(WINDOW *win_arena, int idx_cham, int live_cham);
 
 void		w_ft_displaybyte(WINDOW *win, int y, int x, unsigned char ptr);
 

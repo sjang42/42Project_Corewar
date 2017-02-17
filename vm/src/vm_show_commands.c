@@ -25,7 +25,7 @@ static void		sti_get_num12(t_arg *targ, t_type_arg type_arg,
 			*num1 = type_arg.val_ind[1];
 		*num2 = type_arg.val_reg[2];
 	}
-	else //T_DIR
+	else
 	{
 		if (targ->bytecode[1] == T_REG)
 			*num1 = type_arg.val_reg[1];
@@ -64,7 +64,7 @@ static void		ldi_get_num12(t_arg *targ, t_type_arg type_arg,
 			*num1 = type_arg.val_ind[0];
 		*num2 = type_arg.val_reg[1];
 	}
-	else //(targ->bytecode[1] == T_DIR)
+	else
 	{
 		if (targ->bytecode[0] == T_REG)
 			*num1 = type_arg.val_reg[0];
@@ -76,7 +76,7 @@ static void		ldi_get_num12(t_arg *targ, t_type_arg type_arg,
 	}
 }
 
-void		show_commands_ldi(t_arg *targ, t_type_arg type_arg,
+void			show_commands_ldi(t_arg *targ, t_type_arg type_arg,
 								t_proc *tproc, int where)
 {
 	int num1;
@@ -90,7 +90,7 @@ void		show_commands_ldi(t_arg *targ, t_type_arg type_arg,
 			num1, num2, num1 + num2, where);
 }
 
-void		show_commands_lldi(t_arg *targ, t_type_arg type_arg,
+void			show_commands_lldi(t_arg *targ, t_type_arg type_arg,
 								t_proc *tproc, int where)
 {
 	int num1;

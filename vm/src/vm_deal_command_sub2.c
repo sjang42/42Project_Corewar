@@ -23,7 +23,7 @@ static int		return_constant(int opcode)
 	else if (opcode - 1 == OP_LFORK)
 		return (2);
 	return (0);
-}	
+}
 
 static int		*devide_bytecode(t_map *tmap, int opcode, int pc_command)
 {
@@ -65,8 +65,8 @@ static int		calculate_cycle(int opcode, int part[])
 
 int				count_bytecode_cycle(t_map *tmap, int opcode, int pc_command)
 {
-	int 	cycle;
-	int 	*part;
+	int		cycle;
+	int		*part;
 
 	if (opcode - 1 == OP_LIVE || opcode - 1 == OP_ZJMP ||
 		opcode - 1 == OP_FORK || opcode - 1 == OP_LFORK)

@@ -31,7 +31,7 @@ int		deal_lfork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command)
 	where = (pc_command + type_arg.adr_dir[0]) % MEM_SIZE;
 	where += (where < 0) ? MEM_SIZE : 0;
 	tarena->num_process += 1;
-	t_champion_add_proc(tarena->tcham[idx_cham], idx_proc,  where,
+	t_champion_add_proc(tarena->tcham[idx_cham], idx_proc, where,
 						tarena->used_proc_num);
 	tarena->used_proc_num += 1;
 	if (tarena->option & NCURSES)

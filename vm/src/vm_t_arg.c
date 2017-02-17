@@ -35,7 +35,7 @@ int			*get_bytecodes(t_map *tmap, int pc_command, int opcode)
 	return (bytecode);
 }
 
-t_arg			*t_arg_new(t_map *tmap, int pc_command, int opcode)
+t_arg		*t_arg_new(t_map *tmap, int pc_command, int opcode)
 {
 	t_arg		*targ;
 
@@ -51,7 +51,7 @@ t_arg			*t_arg_new(t_map *tmap, int pc_command, int opcode)
 	if (check_bytecode(opcode, targ->bytecode))
 	{
 		t_arg_destroy(targ);
-		return (NULL);// 바이트코드가 틀릴 때 몇 개를 건너 뛰는지 알아보기
+		return (NULL);
 	}
 	targ->arg = read_arg(
 				tmap, pc_command,
@@ -59,7 +59,7 @@ t_arg			*t_arg_new(t_map *tmap, int pc_command, int opcode)
 	return (targ);
 }
 
-void			t_arg_destroy(t_arg *targ)
+void		t_arg_destroy(t_arg *targ)
 {
 	if ((targ)->arg)
 		free((targ)->arg);

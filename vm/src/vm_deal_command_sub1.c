@@ -12,7 +12,7 @@
 
 #include <vm_corewar.h>
 
-void	*read_data(t_map *tmap, int pc, size_t size)
+void			*read_data(t_map *tmap, int pc, size_t size)
 {
 	char		*ret;
 	size_t		i;
@@ -29,7 +29,7 @@ void	*read_data(t_map *tmap, int pc, size_t size)
 	return ((void*)ret);
 }
 
-int		read_registry(char **registry, int idx, void *dest)
+int				read_registry(char **registry, int idx, void *dest)
 {
 	if (idx < 1 || idx > REG_NUMBER)
 		return (-1);
@@ -37,7 +37,7 @@ int		read_registry(char **registry, int idx, void *dest)
 	return (0);
 }
 
-int		put_registry(char **registry, int idx, void *src)
+int				put_registry(char **registry, int idx, void *src)
 {
 	if (!registry || !*registry ||
 		idx < 1 || idx > REG_NUMBER)
@@ -46,7 +46,7 @@ int		put_registry(char **registry, int idx, void *src)
 	return (0);
 }
 
-unsigned char 	read_current_byte(t_map *tmap, int pc)
+unsigned char	read_current_byte(t_map *tmap, int pc)
 {
 	int where;
 
@@ -63,8 +63,5 @@ char			read_indirect_data(t_map *tmap, int pc_command, int idx)
 	where = (pc_command + idx) % (MEM_SIZE);
 	if (where < 0)
 		where += MEM_SIZE;
-	//debug
-		// printf("read_current_byte(tmap, where) : %d\n", read_current_byte(tmap, where));
-	//debug
 	return (read_current_byte(tmap, where));
 }

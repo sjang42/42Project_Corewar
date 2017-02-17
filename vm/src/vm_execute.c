@@ -46,7 +46,6 @@ static int		start_command(t_map *tmap, int idx_cham,
 static int		finish_command(t_map *tmap, int idx_cham,
 								t_arena *tarena, int idx_proc)
 {
-	int cur_byte;
 	int ret;
 
 	if (tarena->tcham[idx_cham]->tproc[idx_proc].wait_cycle == 1)

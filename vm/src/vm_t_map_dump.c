@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <vm_t_map.h>
+#include <vm_t_map.h>
 
 static void		ft_displaybyte(unsigned char ptr)
 {
@@ -31,25 +31,10 @@ static void		ft_displaybyte(unsigned char ptr)
 	write(1, &mod, 1);
 }
 
-static void		ft_displayspaces(size_t j)
-{
-	char	spaces[128];
-	size_t	total;
-	int		i;
-
-	i = 0;
-	while (i < 128)
-		spaces[i++] = ' ';
-	total = 128;
-	total -= j * 2;
-	total -= j / 2;
-	write(1, spaces, total);
-}
-
 void			t_map_dump(t_map *tmap)
 {
 	int				i;
-	char 			*str;
+	char			*str;
 	char			zeros[4];
 
 	i = 0;

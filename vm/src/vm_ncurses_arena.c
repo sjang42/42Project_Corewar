@@ -36,9 +36,7 @@ void			ncur_show_termsays(WINDOW *win_arena)
 	wattroff(win_arena, COLOR_PAIR(7) | A_BOLD);
 }
 
-
-void			ncur_show_live(WINDOW *win_arena, t_arena *tarena,
-				int idx_cham, int live_cham)
+void			ncur_show_live(WINDOW *win_arena, int idx_cham, int live_cham)
 {
 	static int idx = 0;
 

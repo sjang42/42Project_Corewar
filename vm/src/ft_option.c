@@ -46,6 +46,7 @@ int					jump_arg(int tmp)
 	else
 		return (1);
 }
+
 int					ft_get_option(int argc, char *argv[], int *option)
 {
 	int			tmp;

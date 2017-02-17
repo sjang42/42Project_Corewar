@@ -52,9 +52,9 @@ static int		get_second_arg(t_execute_variable *var, t_arena *tarena)
 	return (0);
 }
 
-static int		get_third_arg(t_execute_variable *var, t_arena *tarena)
+static int		get_third_arg(t_execute_variable *var)
 {
-	if (var->targ->bytecode[2] == T_REG)			//get : type_arg.val_reg[2]
+	if (var->targ->bytecode[2] == T_REG)
 	{
 		if (read_registry(var->tproc->registry,
 			*(((char*)(var->targ->arg)) + var->point),
@@ -64,7 +64,7 @@ static int		get_third_arg(t_execute_variable *var, t_arena *tarena)
 		}
 		var->point += 1;
 	}
-	else						//T_DIR		//get : type_arg.adr_dir[2]
+	else
 	{
 		ft_memcpy(&(var->type_arg.adr_dir[2]),
 					(char*)(var->targ->arg) + var->point,
@@ -87,7 +87,6 @@ static int		get_val_dir_where(t_execute_variable *var)
 		num1 = var->type_arg.adr_dir[1];
 	else
 		num1 = var->type_arg.val_ind[1];
-
 	if (var->targ->bytecode[2] == T_REG)
 		num2 = var->type_arg.val_reg[2];
 	else
@@ -99,13 +98,12 @@ static int		get_val_dir_where(t_execute_variable *var)
 	return (where);
 }
 
-
-int		deal_sti(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
-
+int				deal_sti(t_arena *tarena, t_map *tmap,
+							int idx_cham, int idx_proc)
 {
 	t_execute_variable	var;
 	int					ret;
-	int 				where;
+	int					where;
 
 	if ((var.targ = get_ret_targ(tmap, &ret, OP_STI + 1,
 		tarena->tcham[idx_cham]->tproc[idx_proc].pc)) == NULL)
@@ -115,7 +113,7 @@ int		deal_sti(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 	var.tmap = tmap;
 	var.point = 0;
 	if (get_first_arg(&var) == -1 || get_second_arg(&var, tarena) == -1 ||
-		get_third_arg(&var, tarena) == -1)
+		get_third_arg(&var) == -1)
 	{
 		t_arg_destroy(var.targ);
 		return (ret);

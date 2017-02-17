@@ -25,10 +25,9 @@ static void		show_cycle(t_arena *tarena, int origin)
 		printf("Period is         : %d\n", tarena->num_period);
 	if ((tarena->option & CYCLE) && tarena->cycle_to_die != origin)
 		printf("Cycle to die is now %d\n", tarena->cycle_to_die);
-
 }
 
-void		t_arena_play(t_arena *tarena)
+void			t_arena_play(t_arena *tarena)
 {
 	int origin;
 
@@ -46,7 +45,7 @@ void		t_arena_play(t_arena *tarena)
 		if (count_alive_cham(tarena) <= 0)
 		{
 			tarena->game_done = 1;
-			break;
+			break ;
 		}
 		if (tarena->option & NCURSES)
 		{

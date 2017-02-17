@@ -1,3 +1,4 @@
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   vm_execute_st.c                                    :+:      :+:    :+:   */
@@ -11,7 +12,7 @@
 
 #include <vm_corewar.h>
 
-static int	get_first_arg(t_arena *tarena, t_execute_variable *var)
+static int	get_first_arg(t_execute_variable *var)
 {
 	if (read_registry(var->tproc->registry,
 		((char*)(var->targ->arg))[0], &(var->type_arg.val_reg[0])))
@@ -60,8 +61,8 @@ int			deal_st(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 	var.tproc = &(tarena->tcham[idx_cham]->tproc[idx_proc]);
 	var.tmap = tmap;
 	var.pc_command = tarena->tcham[idx_cham]->tproc[idx_proc].pc;
-	if (get_first_arg(tarena, &var) == -1 ||
-		get_second_arg(tarena, &var, idx_cham) == -1) 
+	if (get_first_arg(&var) == -1 ||
+		get_second_arg(tarena, &var, idx_cham) == -1)
 	{
 		t_arg_destroy(var.targ);
 		return (ret);

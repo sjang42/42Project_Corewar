@@ -76,13 +76,12 @@ static int		have_max(t_champion *tcham, int max)
 	return (-1);
 }
 
-int 			t_proc_find_maxproc(t_arena *tarena, int max,
+int				t_proc_find_maxproc(t_arena *tarena, int max,
 									int *idx_cham_store, int *idx_proc_store)
 {
 	int success;
 	int idx_cham;
 	int idx_proc;
-	int num_proc;
 
 	success = 0;
 	while (!success)

@@ -14,9 +14,9 @@
 
 int		t_map_put_chams(t_map *tmap, t_champion **tcham, int num_cham)
 {
-	int 	i;
-	int		where;
-	int		j;
+	int				i;
+	int				where;
+	unsigned int	j;
 
 	i = 0;
 	tmap->num_cham = num_cham;
@@ -42,9 +42,8 @@ int		t_map_put_bytes(t_map *tmap, int where, void *bytes, int size)
 {
 	char	*to_put;
 	int		i;
-	
-	to_put = (char*)bytes;
 
+	to_put = (char*)bytes;
 	i = 0;
 	while (i < size)
 	{
@@ -61,7 +60,7 @@ void	w_sti_reg_to_map(t_arena *tarena, int idx_cham, int where, void *bytes)
 {
 	char	*to_put;
 	int		i;
-	char *dup_bytes;
+	char	*dup_bytes;
 
 	to_put = (char*)bytes;
 	if (where < 0)

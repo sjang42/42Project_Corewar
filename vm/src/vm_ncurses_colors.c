@@ -27,7 +27,7 @@ void		colors_init(WINDOW *win)
 	wrefresh(win);
 }
 
-int 		colors_set_pc(WINDOW *win, t_arena *tarena, int pc)
+int			colors_set_pc(WINDOW *win, t_arena *tarena, int pc)
 {
 	int idx_cham;
 
@@ -43,7 +43,7 @@ int 		colors_set_pc(WINDOW *win, t_arena *tarena, int pc)
 	return (idx_cham);
 }
 
-int 		colors_off_pc(WINDOW *win, t_arena *tarena, int pc)
+int			colors_off_pc(WINDOW *win, t_arena *tarena, int pc)
 {
 	int idx_cham;
 
@@ -58,4 +58,3 @@ int 		colors_off_pc(WINDOW *win, t_arena *tarena, int pc)
 	}
 	return (idx_cham);
 }
-

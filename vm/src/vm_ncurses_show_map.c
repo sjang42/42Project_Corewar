@@ -12,13 +12,29 @@
 
 #include <vm_ncurses.h>
 
+static void		set_basic(t_windows *twin)
+{
+	initscr();
+	noecho();
+	refresh();
+	twin->win_arena =
+		newwin(CONTENTS_TOTAL_LINES, CONTENTS_TOTAL_COLS, 0, 0);
+	twin->win_info =
+		newwin(INFO_TOTAL_LINES, INFO_TOTAL_COLS, 0, CONTENTS_TOTAL_COLS - 1);
+	colors_init(twin->win_arena);
+	colors_init(twin->win_info);
+	bkgd(COLOR_PAIR(9));
+	refresh();
+	wbkgd(twin->win_arena, COLOR_PAIR(9));
+	wbkgd(twin->win_info, COLOR_PAIR(9));
+	wattroff(twin->win_arena, COLOR_PAIR(9));
+	wattroff(twin->win_info, COLOR_PAIR(9));
+}
+
 static void		ncur_map_init(WINDOW *win, t_map *tmap, t_arena *tarena)
 {
-	size_t			i;
-	size_t			j;
 	int				pc;
-	t_xy 			idx;
-	unsigned char	*ptr;
+	t_xy			idx;
 
 	idx.x = CONTENTS_START_X;
 	idx.y = CONTENTS_START_Y;
@@ -38,25 +54,6 @@ static void		ncur_map_init(WINDOW *win, t_map *tmap, t_arena *tarena)
 	}
 	wrefresh(win);
 	colors_off_pc(win, tarena, pc);
-}
-
-static void		set_basic(t_windows *twin)
-{
-	initscr();
-	noecho();
-	refresh();
-	twin->win_arena =
-	newwin(CONTENTS_TOTAL_LINES, CONTENTS_TOTAL_COLS, 0, 0);
-	twin->win_info =
-	newwin(INFO_TOTAL_LINES, INFO_TOTAL_COLS, 0, CONTENTS_TOTAL_COLS - 1);
-	colors_init(twin->win_arena);
-	colors_init(twin->win_info);
-	bkgd(COLOR_PAIR(9));
-	refresh();
-	wbkgd(twin->win_arena, COLOR_PAIR(9));
-	wbkgd(twin->win_info, COLOR_PAIR(9));
-	wattroff(twin->win_arena, COLOR_PAIR(9));
-	wattroff(twin->win_info, COLOR_PAIR(9));
 }
 
 static void		set_boder(t_windows *twin)
@@ -87,6 +84,7 @@ t_windows		*ncur_new(t_arena *tarena)
 {
 	t_windows	*twin;
 
+	twin = (t_windows*)malloc(sizeof(t_windows));
 	set_basic(twin);
 	set_boder(twin);
 	set_info(twin, tarena);

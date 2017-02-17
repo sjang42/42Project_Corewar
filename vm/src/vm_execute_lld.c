@@ -12,7 +12,6 @@
 
 #include <vm_corewar.h>
 
-
 static int		get_first_arg(t_arg *targ, t_type_arg *type_arg,
 								t_map *tmap, int pc_command)
 {

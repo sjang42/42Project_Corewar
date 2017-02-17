@@ -83,29 +83,19 @@ int				read_registry(char **registry, int idx, void *dest);
 int				deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);
 int				deal_ld(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
 int				deal_st(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);
-
 int				deal_add(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
 int				deal_sub(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
-
-
-int		deal_sti(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);
-
-int				and_arg123(t_execute_variable *var);
+int				deal_sti(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);
 int				deal_and(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
 int				deal_or(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
 int				deal_xor(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
-
 int				deal_zjmp(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
-
 int				deal_ldi(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
-
-int		deal_lld(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
-int		deal_lldi(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
-
+int				deal_lld(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
+int				deal_lldi(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc);
 int				deal_aff(t_arena *tarena, int idx_cham, int idx_proc);
-
-int		deal_fork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command);
-int		deal_lfork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command);
+int				deal_fork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command);
+int				deal_lfork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command);
 
 
 int				w_deal_live(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc);

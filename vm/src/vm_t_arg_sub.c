@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <vm_t_arg.h>
-#include <stdio.h>//
 
 static int		get_size_arg(int opcode, int *arg_byte)
 {
@@ -35,35 +34,12 @@ static int		get_size_arg(int opcode, int *arg_byte)
 	return (ret);
 }
 
-static int		*get_bytes_arg(int opcode, int *bytecode, int num_arg)
-{
-	int *bytes_arg;
-	int	i;
-
-	bytes_arg = (int*)malloc(sizeof(int) * num_arg);
-	i = 0;
-	while (i < num_arg)
-	{
-		if (bytecode[i] == T_DIR && !(op_tab[opcode - 1].as_address))
-			bytes_arg[i] = 4;
-		else if (bytecode[i] == T_DIR)
-			bytes_arg[i] = 2;
-		else if (bytecode[i] == T_IND)
-			bytes_arg[i] = 2;
-		else if (bytecode[i] == T_REG)
-			bytes_arg[i] = 1;
-		i++;
-	}
-	return (bytes_arg);
-}
-
-void		*read_arg(t_map *tmap, int pc_command,
+void			*read_arg(t_map *tmap, int pc_command,
 									int opcode, int *bytecode)
 {
 	void	*arg;
 	int		where;
 	int		size_arg;
-	int		i;
 
 	where = 0;
 	size_arg = get_size_arg(opcode, bytecode);
@@ -73,9 +49,9 @@ void		*read_arg(t_map *tmap, int pc_command,
 	return (arg);
 }
 
-int			*read_bytecode(t_map *tmap, int pc_command, int num_arg)
+int				*read_bytecode(t_map *tmap, int pc_command, int num_arg)
 {
-	int 			*ret;
+	int				*ret;
 	unsigned char	bytecode;
 	int				i;
 
@@ -87,7 +63,6 @@ int			*read_bytecode(t_map *tmap, int pc_command, int num_arg)
 		ret[1] = bytecode % (0b1000000) / 0b10000;
 	if (num_arg >= 3)
 		ret[2] = bytecode % (0b10000) / 0b100;
-
 	i = 0;
 	while (i < num_arg)
 	{
@@ -102,7 +77,7 @@ int			*read_bytecode(t_map *tmap, int pc_command, int num_arg)
 	return (ret);
 }
 
-int		check_bytecode(int opcode, int *bytecode)
+int				check_bytecode(int opcode, int *bytecode)
 {
 	int i;
 

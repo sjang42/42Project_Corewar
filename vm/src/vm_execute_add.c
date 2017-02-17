@@ -12,7 +12,6 @@
 
 #include <vm_corewar.h>
 
-
 t_arg		*get_ret_targ(t_map *tmap, int *ret, int opcode, int pc_command)
 {
 	t_arg	*targ;
@@ -38,8 +37,7 @@ int			read_rgies(t_proc *tproc, t_arg *targ, t_type_arg *type_arg)
 		||
 		read_registry(tproc->registry,
 						((char*)(targ->arg))[2],
-						&(type_arg->val_reg[2]))
-		)
+						&(type_arg->val_reg[2])))
 	{
 		return (-1);
 	}
@@ -47,7 +45,8 @@ int			read_rgies(t_proc *tproc, t_arg *targ, t_type_arg *type_arg)
 		return (0);
 }
 
-int		deal_add(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc)
+int			deal_add(t_arena *tarena, t_map *tmap,
+						int pc_command, t_proc *tproc)
 {
 	t_arg			*targ;
 	t_type_arg		type_arg;

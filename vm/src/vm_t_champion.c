@@ -55,7 +55,7 @@ t_champion		*t_champion_new(char *fname, int num, int color, int proc_num)
 	size_str = ft_read_all(tcham->tfile.fd, &str);
 	if (size_str == -1 || size_str < LENGTH_BEFORE_INST)
 		ft_exit_error("Wrong file");
-	vm_read_header(&(tcham->theader), tcham->tfile.fd, str, size_str);
+	vm_read_header(&(tcham->theader), str, size_str);
 	t_cham_get_inst(&(tcham->tinst), tcham->theader.prog_size, str);
 	tcham->tproc = (t_proc*)malloc(sizeof(t_proc) * 5);
 	tcham->mem_tproc = 5;

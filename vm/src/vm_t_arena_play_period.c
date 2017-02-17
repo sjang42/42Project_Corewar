@@ -46,7 +46,7 @@ static void		op_ncurses_status(t_arena *tarena, int cycle)
 
 static void		play_one_cycle(t_arena *tarena, int proc_num, int total_tproc)
 {
-	int 	max;
+	int		max;
 	int		idx_cham;
 	int		idx_proc;
 
@@ -55,10 +55,10 @@ static void		play_one_cycle(t_arena *tarena, int proc_num, int total_tproc)
 	total_tproc = tarena->num_process;
 	while (proc_num < total_tproc)
 	{
-		max = t_proc_find_maxproc(tarena, max, &idx_cham, &idx_proc);			
+		max = t_proc_find_maxproc(tarena, max, &idx_cham, &idx_proc);
 		if (tarena->option & NCURSES)
-				ncur_unhighlight_pc(tarena->twin->win_arena, tarena->tmap,
-					&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
+			ncur_unhighlight_pc(tarena->twin->win_arena, tarena->tmap,
+				&(tarena->tcham[idx_cham]->tproc[idx_proc]), tarena);
 		tarena->tcham[idx_cham]->tproc[idx_proc].pc =
 		(vm_execute_proc(tarena->tmap,
 			idx_cham,

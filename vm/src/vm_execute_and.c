@@ -12,7 +12,7 @@
 
 #include <vm_corewar.h>
 
-static int	get_first_second_arg(t_execute_variable *var, int i)
+static int		get_first_second_arg(t_execute_variable *var, int i)
 {
 	if (var->targ->bytecode[i] == T_REG)
 	{
@@ -34,21 +34,21 @@ static int	get_first_second_arg(t_execute_variable *var, int i)
 		ft_memcpy(&(var->type_arg.adr_ind[i]),
 					(char*)(var->targ->arg) + var->point, IND_SIZE);
 		ft_endian_convert(&(var->type_arg.adr_ind[i]), IND_SIZE);
-		var->type_arg.val_ind[i] =(TYPE_IND)read_indirect_data(
+		var->type_arg.val_ind[i] = (TYPE_IND)read_indirect_data(
 			var->tmap, var->pc_command, var->type_arg.adr_ind[i] % IDX_MOD);
 		var->point += 2;
 	}
 	return (0);
 }
 
-static int	get_third_arg(t_execute_variable *var)
+static int		get_third_arg(t_execute_variable *var)
 {
 	var->type_arg.adr_reg[2] = *(((char*)(var->targ->arg)) + var->point);
 	var->point += 1;
 	return (0);
 }
 
-static int	and_process(t_arg *targ, t_type_arg *type_arg)
+static int		and_process(t_arg *targ, t_type_arg *type_arg)
 {
 	int num1;
 	int num2;
@@ -68,7 +68,8 @@ static int	and_process(t_arg *targ, t_type_arg *type_arg)
 	return (num1 & num2);
 }
 
-static void		fill_var(t_execute_variable *var, int pc_command, t_proc *tproc, t_map *tmap)
+static void		fill_var(t_execute_variable *var, int pc_command,
+							t_proc *tproc, t_map *tmap)
 {
 	var->pc_command = pc_command;
 	var->tproc = tproc;
@@ -76,7 +77,8 @@ static void		fill_var(t_execute_variable *var, int pc_command, t_proc *tproc, t_
 	var->point = 0;
 }
 
-int		deal_and(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc)
+int				deal_and(t_arena *tarena, t_map *tmap,
+							int pc_command, t_proc *tproc)
 {
 	t_execute_variable	var;
 	int					ret;

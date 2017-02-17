@@ -39,7 +39,8 @@ void			info_show_cycle(WINDOW *win_info, int cycle)
 void			info_show_process(WINDOW *win_info, int num_process)
 {
 	wattron(win_info, COLOR_PAIR(7) | A_BOLD);
-	mvwprintw(win_info, INFO_PROCESSES_Y, INFO_PROCESSES_X, "Processes : %d", num_process);
+	mvwprintw(win_info, INFO_PROCESSES_Y,
+				INFO_PROCESSES_X, "Processes : %d", num_process);
 	wrefresh(win_info);
 	wattroff(win_info, COLOR_PAIR(7) | A_BOLD);
 }
@@ -64,8 +65,6 @@ void			info_show_cham_live_current(WINDOW *win_info, t_arena *tarena,
 {
 	int x;
 	int y;
-	int i;
-	int sum;
 
 	wattron(win_info, COLOR_PAIR(7) | A_BOLD);
 	x = INFO_NAME_NUM_X;
@@ -75,4 +74,3 @@ void			info_show_cham_live_current(WINDOW *win_info, t_arena *tarena,
 	wrefresh(win_info);
 	wattroff(win_info, COLOR_PAIR(7) | A_BOLD);
 }
-

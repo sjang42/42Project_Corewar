@@ -39,7 +39,8 @@ static int		decide_number(t_arena *tarena)
 	return (min);
 }
 
-static void		sort_champions(t_arena *tarena, int idx_cham, int count, int max)
+static void		sort_champions(t_arena *tarena, int idx_cham,
+								int count, int max)
 {
 	int			min[2];
 	t_champion	**tcham_sort;
@@ -68,8 +69,6 @@ static void		sort_champions(t_arena *tarena, int idx_cham, int count, int max)
 	tarena->tcham = tcham_sort;
 }
 
-
-
 static void		fill_tarena_basic(t_arena *tarena, int argc, char *argv[])
 {
 	int idx_argv;
@@ -94,19 +93,19 @@ static void		fill_tarena_basic(t_arena *tarena, int argc, char *argv[])
 	}
 }
 
-static void		fill_tarena_champions(t_arena *tarena, int argc, char *argv[])
+static void		fill_tarena_champions(t_arena *tarena, int argc,
+										char *argv[], int color)
 {
-	int idx_argv;
-	int color;
-	int 		cham_num;
+	int		idx_argv;
+	int		cham_num;
 
 	idx_argv = ft_get_option(argc, argv, &(tarena->option));
 	tarena->tcham = (t_champion**)malloc(sizeof(t_champion*) * (argc - 1));
 	tarena->num_cham = 0;
-	color = 1;
 	while (idx_argv < argc)
 	{
-		if (idx_argv + 2 < argc && !ft_strcmp(argv[idx_argv], "-n") &&
+		if (idx_argv + 2 < argc &&
+			!ft_strcmp(argv[idx_argv], "-n") &&
 			ft_isonly_digit(argv[idx_argv + 1]))
 		{
 			cham_num = ft_atoi(argv[idx_argv + 1]);
@@ -124,16 +123,13 @@ static void		fill_tarena_champions(t_arena *tarena, int argc, char *argv[])
 	sort_champions(tarena, 0, 0, -1);
 }
 
-t_arena 	*t_arena_new(int argc, char *argv[])
+t_arena			*t_arena_new(int argc, char *argv[])
 {
 	t_arena		*tarena;
-	int 		idx_argv;
-	int 		cham_num;
-	int			color;
 
 	tarena = (t_arena*)malloc(sizeof(t_arena));
 	fill_tarena_basic(tarena, argc, argv);
-	fill_tarena_champions(tarena, argc, argv);
+	fill_tarena_champions(tarena, argc, argv, 1);
 	tarena->num_process = tarena->num_cham;
 	t_map_put_chams(tarena->tmap, tarena->tcham, tarena->num_cham);
 	tarena->cycle = 1;

@@ -50,7 +50,6 @@ OBJECTS					=	op.o\
 							vm_execute_sub.o\
 							vm_execute_sti.o\
 							vm_execute_and.o\
-							vm_execute_and_arg12.o\
 							vm_execute_or.o\
 							vm_execute_xor.o\
 							vm_execute_zjmp.o\
@@ -151,7 +150,6 @@ vm_execute_add.o			:	$(SRC)vm_execute_add.c $(HEADERS)
 vm_execute_sub.o			:	$(SRC)vm_execute_sub.c $(HEADERS)
 vm_execute_sti.o			:	$(SRC)vm_execute_sti.c $(HEADERS)
 vm_execute_and.o			:	$(SRC)vm_execute_and.c $(HEADERS)
-vm_execute_and_arg12.o		:	$(SRC)vm_execute_and_arg12.c $(HEADERS)
 vm_execute_or.o				:	$(SRC)vm_execute_or.c $(HEADERS)
 vm_execute_xor.o			:	$(SRC)vm_execute_xor.c $(HEADERS)
 vm_execute_zjmp.o			:	$(SRC)vm_execute_zjmp.c $(HEADERS)

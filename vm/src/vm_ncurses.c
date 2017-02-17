@@ -53,12 +53,13 @@ void			ncur_map_update(t_arena *tarena, int pc, int size)
 	xy.x = (CONTENTS_START_X) + (((pc % (CONTENTS_BYTES_PER_LINE)) * 3));
 	xy.y = (CONTENTS_START_Y) + (pc / (CONTENTS_BYTES_PER_LINE));
 	if (MEM_SIZE / CONTENTS_BYTES_PER_LINE + CONTENTS_START_Y <= xy.y)
-				xy.y = (CONTENTS_START_Y);
+		xy.y = (CONTENTS_START_Y);
 	i = 0;
 	while (i < size)
 	{
 		colors_set_pc(tarena->twin->win_arena, tarena, pc);
-		w_ft_displaybyte(tarena->twin->win_arena, xy.y, xy.x, tarena->tmap->map[pc]);
+		w_ft_displaybyte(tarena->twin->win_arena,
+							xy.y, xy.x, tarena->tmap->map[pc]);
 		xy.x += 3;
 		if (((pc + 1) % CONTENTS_BYTES_PER_LINE) == 0)
 			xy_init(&xy);

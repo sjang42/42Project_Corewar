@@ -12,6 +12,10 @@
 
 #include <vm_corewar.h>
 
+/*
+** getch(); why it makes bus error?
+*/
+
 static void		op_ncurses_init(t_arena *tarena)
 {
 	if (!(tarena->option & NCURSES))
@@ -19,7 +23,7 @@ static void		op_ncurses_init(t_arena *tarena)
 	tarena->twin = ncur_new(tarena);
 	wrefresh(tarena->twin->win_arena);
 	curs_set(0);
-	// getch(); why it makes bus error?
+	getch();
 }
 
 static void		op_ncurses_end(t_arena *tarena)

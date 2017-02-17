@@ -43,7 +43,8 @@ static int		get_second_arg(t_arg *targ, t_type_arg *type_arg, int point)
 	return (1);
 }
 
-int		deal_ld(t_arena *tarena, t_map *tmap, int pc_command, t_proc *tproc)
+int				deal_ld(t_arena *tarena, t_map *tmap,
+						int pc_command, t_proc *tproc)
 {
 	t_arg			*targ;
 	t_type_arg		type_arg;
