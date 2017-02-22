@@ -22,6 +22,8 @@ OBJECTS					=	op.o\
 							vm_t_map_part2.o\
 							vm_t_map_dump.o\
 							\
+							vm_t_order.o\
+							\
 							vm_t_proc.o\
 							\
 							vm_t_champion.o\
@@ -130,6 +132,8 @@ vm_corewar.o				:	$(SRC)vm_corewar.c $(HEADERS)
 vm_t_map.o					:	$(SRC)vm_t_map.c $(HEADERS)
 vm_t_map_part2.o			:	$(SRC)vm_t_map_part2.c $(HEADERS)
 vm_t_map_dump.o				:	$(SRC)vm_t_map_dump.c $(HEADERS)
+
+vm_t_order.o				:	$(SRC)vm_t_map.c $(HEADERS)
 
 vm_t_proc.o					:	$(SRC)vm_t_proc.c $(HEADERS)
 vm_t_champion.o				:	$(SRC)vm_t_champion.c $(HEADERS)

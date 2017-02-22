@@ -26,7 +26,7 @@ void		checkup_nbr_live(t_arena *tarena)
 		while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
 		{
 			sum_live += tarena->tcham[idx_cham]->
-						tproc[idx_proc].period_live;
+						tproc[idx_proc]->period_live;
 			idx_proc++;
 		}
 		idx_cham++;
@@ -74,8 +74,8 @@ void		delete_just_born(t_arena *tarena)
 		idx_proc = 0;
 		while (idx_proc < tarena->tcham[idx_cham]->num_tproc)
 		{
-			if (tarena->tcham[idx_cham]->tproc[idx_proc].just_born)
-				tarena->tcham[idx_cham]->tproc[idx_proc].just_born = 0;
+			if (tarena->tcham[idx_cham]->tproc[idx_proc]->just_born)
+				tarena->tcham[idx_cham]->tproc[idx_proc]->just_born = 0;
 			idx_proc++;
 		}
 		idx_cham++;

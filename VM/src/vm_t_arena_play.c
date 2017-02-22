@@ -42,6 +42,7 @@ void			t_arena_play(t_arena *tarena)
 		origin = tarena->cycle_to_die;
 		do_checkups(tarena);
 		show_cycle(tarena, origin);
+		
 		if (count_alive_cham(tarena) <= 0)
 		{
 			tarena->game_done = 1;

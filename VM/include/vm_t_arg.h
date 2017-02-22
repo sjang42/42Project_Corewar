@@ -20,10 +20,11 @@
 # include <vm_t_map.h>
 
 /*
-**	sizeof(byte_arg) == num_arg;
+**				sizeof(byte_arg) == num_arg;
 */
 
-void			*read_arg(t_map *tmap, int pc_command, int opcode, int *bytecode);
+void			*read_arg(t_map *tmap, int pc_command,
+							int opcode, int *bytecode);
 int				*get_bytecode(t_map *tmap, int pc_command, int opcode);
 
 void			t_arg_destroy(t_arg *targ);

@@ -34,11 +34,11 @@ int				deal_aff(t_arena *tarena, int idx_cham, int idx_proc)
 	int				ret;
 	int				pc_command;
 
-	pc_command = tarena->tcham[idx_cham]->tproc[idx_proc].pc;
+	pc_command = tarena->tcham[idx_cham]->tproc[idx_proc]->pc;
 	if ((targ = get_ret_targ(tarena->tmap, &ret,
 				OP_AFF + 1, pc_command)) == NULL)
 		return (ret);
-	if (read_registry(tarena->tcham[idx_cham]->tproc[idx_proc].registry,
+	if (read_registry(tarena->tcham[idx_cham]->tproc[idx_proc]->registry,
 		((char*)(targ->arg))[0],
 		&(type_arg.val_reg[0])))
 	{

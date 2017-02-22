@@ -19,16 +19,17 @@ static void		kill_proc(t_arena *tarena, int idx_cham, int idx_proc)
 	{
 		info_show_process(tarena->twin->win_info, tarena->num_process);
 		ncur_unhighlight_pc(tarena->twin->win_arena, tarena->tmap,
-			&(tarena->tcham[idx_cham]->tproc[idx_proc]),
+			tarena->tcham[idx_cham]->tproc[idx_proc],
 			tarena);
 	}
 	t_champion_kill_proc(tarena->tcham[idx_cham], idx_proc);
+	t_order_delete(tarena->torder, idx_cham, idx_proc);
 }
 
 static int		init_proc(t_arena *tarena, int idx_cham, int idx_proc)
 {
-	tarena->tcham[idx_cham]->tproc[idx_proc].period_live = 0;
-	tarena->tcham[idx_cham]->tproc[idx_proc].once_lived = 0;
+	tarena->tcham[idx_cham]->tproc[idx_proc]->period_live = 0;
+	tarena->tcham[idx_cham]->tproc[idx_proc]->once_lived = 0;
 	return (1);
 }
 
@@ -47,7 +48,7 @@ void			checkup_proc(t_arena *tarena)
 		num_tproc = tarena->tcham[idx_cham]->num_tproc;
 		while (i < num_tproc)
 		{
-			if (tarena->tcham[idx_cham]->tproc[idx_proc].once_lived == 0)
+			if (tarena->tcham[idx_cham]->tproc[idx_proc]->once_lived == 0)
 				kill_proc(tarena, idx_cham, idx_proc);
 			else
 				idx_proc += init_proc(tarena, idx_cham, idx_proc);

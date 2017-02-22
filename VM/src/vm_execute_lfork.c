@@ -25,12 +25,14 @@ int		deal_lfork(t_arena *tarena, int idx_cham, int idx_proc, int pc_command)
 	ft_memcpy(&(type_arg.adr_dir[0]), (char*)(targ->arg), DIR_ADR_SIZE);
 	ft_endian_convert(&(type_arg.adr_dir[0]), DIR_ADR_SIZE);
 	if (tarena->option & COMMANDS)
-		show_commands_lfork(&(tarena->tcham[idx_cham]->tproc[idx_proc]),
+		show_commands_lfork(tarena->tcham[idx_cham]->tproc[idx_proc],
 				type_arg,
 				(pc_command + type_arg.adr_dir[0]) % MEM_SIZE);
 	where = (pc_command + type_arg.adr_dir[0]) % MEM_SIZE;
 	where += (where < 0) ? MEM_SIZE : 0;
 	tarena->num_process += 1;
+	t_order_store(tarena->torder, idx_cham,
+					tarena->tcham[idx_cham]->num_tproc);
 	t_champion_add_proc(tarena->tcham[idx_cham], idx_proc, where,
 						tarena->used_proc_num);
 	tarena->used_proc_num += 1;

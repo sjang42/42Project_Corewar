@@ -21,6 +21,7 @@
 # include <vm_t_proc.h>
 # include <vm_t_arg.h>
 # include <vm_t_map.h>
+# include <vm_t_order.h>
 # include <op.h>
 # include <vm_t_arena.h>
 # include <vm_ncurses.h>
@@ -51,13 +52,12 @@ enum
 
 # define DIR_ADR_SIZE				(IND_SIZE)
 
-# define MIN_OPCODE 1
-# define MAX_OPCODE 16
+# define MIN_OPCODE 				1
+# define MAX_OPCODE 				16
 
 
 
-void			corewar(int argc, char *argv[]);
-
+void				corewar(int argc, char *argv[]);
 
 int					ft_endian_convert(void *src, size_t size);
 

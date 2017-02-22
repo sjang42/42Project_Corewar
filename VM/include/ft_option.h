@@ -44,8 +44,6 @@ enum
 	OPTION5 = 16,
 };
 
-int					ft_get_option(
-					int argc, char *argv[],
-					int *option);
+int	ft_get_option(int argc, char *argv[], int *option);
 
 #endif

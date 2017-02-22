@@ -23,7 +23,7 @@ int		t_map_put_chams(t_map *tmap, t_champion **tcham, int num_cham)
 	while (i < num_cham)
 	{
 		where = ((MEM_SIZE) / num_cham * i);
-		tcham[i]->tproc[0].pc = where;
+		tcham[i]->tproc[0]->pc = where;
 		ft_memcpy(tmap->map + where,
 			((tcham[i])->tinst).inst,
 			((tcham[i])->theader).prog_size);

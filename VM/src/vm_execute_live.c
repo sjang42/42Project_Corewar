@@ -62,16 +62,16 @@ int				deal_live(t_arena *tarena, t_map *tmap,
 	int		ret;
 	int		live_cham;
 
-	tarena->tcham[idx_cham]->tproc[idx_proc].period_live += 1;
-	tarena->tcham[idx_cham]->tproc[idx_proc].once_lived = 1;
+	tarena->tcham[idx_cham]->tproc[idx_proc]->period_live += 1;
+	tarena->tcham[idx_cham]->tproc[idx_proc]->once_lived = 1;
 	if ((targ = get_ret_targ(tmap, &ret, OP_LIVE + 1,
-			tarena->tcham[idx_cham]->tproc[idx_proc].pc)) == NULL)
+			tarena->tcham[idx_cham]->tproc[idx_proc]->pc)) == NULL)
 		return (ret);
 	ft_memcpy(&num, targ->arg, 4);
 	ft_endian_convert(&num, 4);
 	num *= -1;
 	if (tarena->option & COMMANDS)
-		show_commands_live(&(tarena->tcham[idx_cham]->tproc[idx_proc]),
+		show_commands_live(tarena->tcham[idx_cham]->tproc[idx_proc],
 							num * -1);
 	if (num < 0 || num > tarena->num_cham)
 	{

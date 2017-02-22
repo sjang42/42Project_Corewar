@@ -106,10 +106,10 @@ int				deal_sti(t_arena *tarena, t_map *tmap,
 	int					where;
 
 	if ((var.targ = get_ret_targ(tmap, &ret, OP_STI + 1,
-		tarena->tcham[idx_cham]->tproc[idx_proc].pc)) == NULL)
+		tarena->tcham[idx_cham]->tproc[idx_proc]->pc)) == NULL)
 		return (ret);
-	var.pc_command = tarena->tcham[idx_cham]->tproc[idx_proc].pc;
-	var.tproc = &(tarena->tcham[idx_cham]->tproc[idx_proc]);
+	var.pc_command = tarena->tcham[idx_cham]->tproc[idx_proc]->pc;
+	var.tproc = tarena->tcham[idx_cham]->tproc[idx_proc];
 	var.tmap = tmap;
 	var.point = 0;
 	if (get_first_arg(&var) == -1 || get_second_arg(&var, tarena) == -1 ||

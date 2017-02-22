@@ -19,9 +19,9 @@ static int		deal_command_sub(t_arena *tarena, t_map *tmap,
 	int		pc_command;
 	t_proc	*tproc;
 
-	opcode = tarena->tcham[idx_cham]->tproc[idx_proc].on_command;
-	pc_command = tarena->tcham[idx_cham]->tproc[idx_proc].pc;
-	tproc = &(tarena->tcham[idx_cham]->tproc[idx_proc]);
+	opcode = tarena->tcham[idx_cham]->tproc[idx_proc]->on_command;
+	pc_command = tarena->tcham[idx_cham]->tproc[idx_proc]->pc;
+	tproc = tarena->tcham[idx_cham]->tproc[idx_proc];
 	if (opcode == op_tab[OP_ZJMP].opcode)
 		return (deal_zjmp(tarena, tmap, pc_command, tproc));
 	else if (opcode == op_tab[OP_LDI].opcode)
@@ -48,9 +48,9 @@ int				deal_command(t_map *tmap, int idx_cham,
 	int		pc_command;
 	t_proc	*tproc;
 
-	opcode = tarena->tcham[idx_cham]->tproc[idx_proc].on_command;
-	pc_command = tarena->tcham[idx_cham]->tproc[idx_proc].pc;
-	tproc = &(tarena->tcham[idx_cham]->tproc[idx_proc]);
+	opcode = tarena->tcham[idx_cham]->tproc[idx_proc]->on_command;
+	pc_command = tarena->tcham[idx_cham]->tproc[idx_proc]->pc;
+	tproc = tarena->tcham[idx_cham]->tproc[idx_proc];
 	if (opcode == op_tab[OP_LIVE].opcode)
 		return (deal_live(tarena, tmap, idx_cham, idx_proc));
 	else if (opcode == op_tab[OP_LD].opcode)

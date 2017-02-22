@@ -65,13 +65,11 @@ int				put_one_arg(t_command tcommand, char *arg,
 	char	*mem;
 	int		num_byte;
 	int		type;
-	int		opcode;
 
 	num_byte = decide_num_byte(tcommand.command, arg);
 	mem = (char*)malloc(sizeof(char) * num_byte);
 	ft_bzero(mem, num_byte);
 	type = switch_type(arg);
-	opcode = switch_inst(tcommand.command);
 	if (type == T_REG)
 		mem[0] = (char)is_register(arg);
 	if ((type == T_DIR && deal_t_dir(arg, mem, tlabel, tcommand) == -1) ||

@@ -31,11 +31,11 @@ static int		start_command(t_map *tmap, int idx_cham,
 	int		cur_byte;
 
 	cur_byte = read_current_byte(tmap,
-					tarena->tcham[idx_cham]->tproc[idx_proc].pc);
+					tarena->tcham[idx_cham]->tproc[idx_proc]->pc);
 	if (is_opcode(cur_byte))
 	{
-		tarena->tcham[idx_cham]->tproc[idx_proc].on_command = cur_byte;
-		tarena->tcham[idx_cham]->tproc[idx_proc].wait_cycle =
+		tarena->tcham[idx_cham]->tproc[idx_proc]->on_command = cur_byte;
+		tarena->tcham[idx_cham]->tproc[idx_proc]->wait_cycle =
 												get_cycle(cur_byte) - 1;
 		return (0);
 	}
@@ -48,15 +48,15 @@ static int		finish_command(t_map *tmap, int idx_cham,
 {
 	int ret;
 
-	if (tarena->tcham[idx_cham]->tproc[idx_proc].wait_cycle == 1)
-	{
+	if (tarena->tcham[idx_cham]->tproc[idx_proc]->wait_cycle == 1)
+{
 		ret = deal_command(tmap, idx_cham, idx_proc, tarena);
-		tarena->tcham[idx_cham]->tproc[idx_proc].on_command = 0;
+		tarena->tcham[idx_cham]->tproc[idx_proc]->on_command = 0;
 		return (ret);
 	}
 	else
 	{
-		(tarena->tcham[idx_cham]->tproc[idx_proc].wait_cycle) -= 1;
+		(tarena->tcham[idx_cham]->tproc[idx_proc]->wait_cycle) -= 1;
 		return (0);
 	}
 }
@@ -64,7 +64,7 @@ static int		finish_command(t_map *tmap, int idx_cham,
 int				vm_execute_proc(t_map *tmap, int idx_cham,
 								t_arena *tarena, int idx_proc)
 {
-	if (!(tarena->tcham[idx_cham]->tproc[idx_proc].on_command))
+	if (!(tarena->tcham[idx_cham]->tproc[idx_proc]->on_command))
 	{
 		return (start_command(tmap, idx_cham, tarena, idx_proc));
 	}

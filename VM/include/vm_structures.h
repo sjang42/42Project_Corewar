@@ -15,6 +15,7 @@
 
 # include <ncurses.h>
 # include <asm_t_inst.h>
+# include <op.h>
 
 typedef int		TYPE_DIR;
 typedef int		TYPE_REG;
@@ -29,7 +30,6 @@ typedef struct	s_xy
 
 typedef struct	s_windows
 {
-	// WINDOW *win_base;
 	WINDOW *win_arena;
 	WINDOW *win_info;
 }				t_windows;
@@ -47,6 +47,14 @@ typedef struct	s_proc
 	int		just_born;
 	int		belong_idx_cham;
 }				t_proc;
+
+typedef struct		s_order
+{
+	int		*idx_cham;
+	int		*idx_tproc;
+	int		mem_order;
+	int		size_order;
+}					t_order;
 
 typedef struct		s_map
 {
@@ -69,7 +77,7 @@ typedef struct	s_champion
 	t_file		tfile;
 	header_t	theader;
 	t_inst		tinst;
-	t_proc		*tproc;
+	t_proc		**tproc; //-> need to be fix to **
 	int			mem_tproc;
 	int			num_tproc;
 	int			color;
@@ -89,6 +97,7 @@ typedef	struct	s_arena
 {
 	t_map		*tmap;
 	t_champion	**tcham;
+	t_order		*torder;
 	int			num_cham;
 	long long	cycle;
 	int			cycle_to_die;
@@ -122,13 +131,5 @@ typedef struct	s_execute_variable
 	int			point;
 	int			pc_command;
 }				t_execute_variable;
-
-
-
-
-
-
-
-
 
 #endif

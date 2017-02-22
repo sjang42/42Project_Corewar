@@ -62,7 +62,7 @@ static void		sort_champions(t_arena *tarena, int idx_cham,
 		}
 		max = tarena->tcham[min[1]]->number;
 		tcham_sort[count] = tarena->tcham[min[1]];
-		tcham_sort[count]->tproc[0].number = count;
+		tcham_sort[count]->tproc[0]->number = count;
 		count++;
 	}
 	free(tarena->tcham);
@@ -127,6 +127,19 @@ static int		fill_tarena_champions(t_arena *tarena, int argc,
 	return (0);
 }
 
+static void		fill_torder(t_arena *tarena)
+{
+	int		i;
+
+	tarena->torder = t_order_new(100);
+	i = 0;
+	while (i < tarena->num_cham)
+	{
+		t_order_store(tarena->torder, i, 0);
+		i++;
+	}
+}
+
 t_arena			*t_arena_new(int argc, char *argv[])
 {
 	t_arena		*tarena;
@@ -145,6 +158,7 @@ t_arena			*t_arena_new(int argc, char *argv[])
 		msg_error_store("Too many champions");
 		return (NULL);
 	}
+	fill_torder(tarena);
 	tarena->num_process = tarena->num_cham;
 	t_map_put_chams(tarena->tmap, tarena->tcham, tarena->num_cham);
 	tarena->cycle = 1;

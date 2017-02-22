@@ -56,11 +56,11 @@ int			deal_st(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 	int					ret;
 
 	if ((var.targ = get_ret_targ(tmap, &ret, OP_ST + 1,
-		tarena->tcham[idx_cham]->tproc[idx_proc].pc)) == NULL)
+		tarena->tcham[idx_cham]->tproc[idx_proc]->pc)) == NULL)
 		return (ret);
-	var.tproc = &(tarena->tcham[idx_cham]->tproc[idx_proc]);
+	var.tproc = tarena->tcham[idx_cham]->tproc[idx_proc];
 	var.tmap = tmap;
-	var.pc_command = tarena->tcham[idx_cham]->tproc[idx_proc].pc;
+	var.pc_command = tarena->tcham[idx_cham]->tproc[idx_proc]->pc;
 	if (get_first_arg(&var) == -1 ||
 		get_second_arg(tarena, &var, idx_cham) == -1)
 	{
@@ -68,7 +68,7 @@ int			deal_st(t_arena *tarena, t_map *tmap, int idx_cham, int idx_proc)
 		return (ret);
 	}
 	if (tarena->option & COMMANDS)
-		show_commands_st(&(tarena->tcham[idx_cham]->tproc[idx_proc]),
+		show_commands_st(tarena->tcham[idx_cham]->tproc[idx_proc],
 						var.targ, var.type_arg.adr_ind[1]);
 	t_arg_destroy(var.targ);
 	return (ret);

@@ -68,8 +68,8 @@ static int		have_max(t_champion *tcham, int max)
 	idx_proc = 0;
 	while (idx_proc < tcham->num_tproc)
 	{
-		if (tcham->tproc[idx_proc].number == max &&
-			tcham->tproc[idx_proc].just_born != 1)
+		if (tcham->tproc[idx_proc]->number == max &&
+			tcham->tproc[idx_proc]->just_born != 1)
 			return (idx_proc);
 		idx_proc++;
 	}

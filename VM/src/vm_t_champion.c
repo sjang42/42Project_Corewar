@@ -33,13 +33,14 @@ static int		t_cham_get_file(t_file *tfile, char *fname)
 	return (0);
 }
 
-static int		t_cham_get_proc(t_proc *tproc, int num, int proc_num)
+static int		t_cham_get_proc(t_proc **tproc, int num, int proc_num)
 {
-	t_proc_put(tproc, 0, 0, NULL);
-	tproc->number = proc_num;
-	tproc->just_born = 0;
+	*tproc = t_proc_new(0, 0, NULL, proc_num);
+	// t_proc_put(tproc, 0, 0, NULL);
+	// tproc->number = proc_num;
+	(*tproc)->just_born = 0;
 	num *= -1;
-	ft_memcpy(tproc->registry[0], &(num), REG_SIZE);
+	ft_memcpy((*tproc)->registry[0], &(num), REG_SIZE);
 	return (0);
 }
 
@@ -73,8 +74,8 @@ t_champion		*t_champion_new(char *fname, int num, int color, int proc_num)
 		return (NULL);
 	}
 	t_cham_get_inst(&(tcham->tinst), tcham->theader.prog_size, str);
-	tcham->tproc = (t_proc*)malloc(sizeof(t_proc) * 5);
-	tcham->mem_tproc = 5;
+	tcham->tproc = (t_proc**)malloc(sizeof(t_proc*) * 15);
+	tcham->mem_tproc = 15;
 	tcham->num_tproc = 1;
 	t_cham_get_proc(&(tcham->tproc[0]), num, proc_num);
 	free(str);
