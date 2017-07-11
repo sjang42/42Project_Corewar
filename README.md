@@ -7,7 +7,8 @@
 * [챔피언](#챔피언)
 * [빌드 방법](#빌드-방법)
 * [사용 방법](#사용-방법)
-* [참고](#참고)
+* [스크린샷](#스크린샷)
+* [구동 영상](#구동-영상)
 
 ## 개요
 
@@ -133,7 +134,21 @@ ncurses 라이브러리가 설치되어있어야 합니다.
 
 	./corewar -v bee_gees.jex bee_gees.jex
 
-## 참고
+## 스크린샷
+
+챔피언 프로그램(어셈블리어 변환 전)
+![챔피언 프로그램](./img/champions.png)
+
+게임 시작
+![게임 시작](./img/game_begin.jpg)
+
+게임 진행
+![게임 진행](./img/game_ongoing.jpg)
+
+게임 종료
+![게임 종료](./img/game_end.jpg)
+
+## 구동 영상
 
 [1]: https://github.com/sjang42/42Project_Corewar/blob/master/corewar.en.pdf
 [2]: https://en.wikipedia.org/wiki/Core_War
