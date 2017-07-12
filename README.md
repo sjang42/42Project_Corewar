@@ -150,8 +150,11 @@ ncurses 라이브러리가 설치되어있어야 합니다.
 
 ## 구동 영상
 
+**영상링크**: [https://www.youtube.com/watch?v=XrAqsfI-FSQ][5]
+
 [1]: https://github.com/sjang42/42Project_Corewar/blob/master/corewar.en.pdf
 [2]: https://en.wikipedia.org/wiki/Core_War
 [3]: http://42.us.org "42 USA"
 [4]: https://github.com/sjang42/42Project_Libft.git
+[5]: https://www.youtube.com/watch?v=XrAqsfI-FSQ
 [5]: https://github.com/sjang42/42Project_Printf.git
