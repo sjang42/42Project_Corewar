@@ -15,8 +15,8 @@
 
 # include <libft.h>
 
-char	*msg_error_get(void);
-void	msg_error_store(char *str);
-void	msg_error_exit(void);
+char    *msg_error_get(void);
+void    msg_error_store(char *str);
+void    msg_error_exit(void);
 
 #endif

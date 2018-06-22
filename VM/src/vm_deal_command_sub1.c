@@ -12,56 +12,56 @@
 
 #include <vm_corewar.h>
 
-void			*read_data(t_map *tmap, int pc, size_t size)
+void            *read_data(t_map *tmap, int pc, size_t size)
 {
-	char		*ret;
-	size_t		i;
+    char        *ret;
+    size_t      i;
 
-	ret = (char*)malloc(sizeof(char) * size);
-	if (pc < 0)
-		pc += MEM_SIZE;
-	i = 0;
-	while (i < size)
-	{
-		ret[i] = read_current_byte(tmap, pc + i);
-		i++;
-	}
-	return ((void*)ret);
+    ret = (char*)malloc(sizeof(char) * size);
+    if (pc < 0)
+        pc += MEM_SIZE;
+    i = 0;
+    while (i < size)
+    {
+        ret[i] = read_current_byte(tmap, pc + i);
+        i++;
+    }
+    return ((void*)ret);
 }
 
-int				read_registry(char **registry, int idx, void *dest)
+int             read_registry(char **registry, int idx, void *dest)
 {
-	if (idx < 1 || idx > REG_NUMBER)
-		return (-1);
-	ft_memcpy(dest, registry[idx - 1], REG_SIZE);
-	return (0);
+    if (idx < 1 || idx > REG_NUMBER)
+        return (-1);
+    ft_memcpy(dest, registry[idx - 1], REG_SIZE);
+    return (0);
 }
 
-int				put_registry(char **registry, int idx, void *src)
+int             put_registry(char **registry, int idx, void *src)
 {
-	if (!registry || !*registry ||
-		idx < 1 || idx > REG_NUMBER)
-		return (-1);
-	ft_memcpy(registry[idx - 1], src, REG_SIZE);
-	return (0);
+    if (!registry || !*registry ||
+        idx < 1 || idx > REG_NUMBER)
+        return (-1);
+    ft_memcpy(registry[idx - 1], src, REG_SIZE);
+    return (0);
 }
 
-unsigned char	read_current_byte(t_map *tmap, int pc)
+unsigned char   read_current_byte(t_map *tmap, int pc)
 {
-	int where;
+    int where;
 
-	where = pc % (MEM_SIZE);
-	if (where < 0)
-		where += MEM_SIZE;
-	return (tmap->map[pc % (MEM_SIZE)]);
+    where = pc % (MEM_SIZE);
+    if (where < 0)
+        where += MEM_SIZE;
+    return (tmap->map[pc % (MEM_SIZE)]);
 }
 
-char			read_indirect_data(t_map *tmap, int pc_command, int idx)
+char            read_indirect_data(t_map *tmap, int pc_command, int idx)
 {
-	int where;
+    int where;
 
-	where = (pc_command + idx) % (MEM_SIZE);
-	if (where < 0)
-		where += MEM_SIZE;
-	return (read_current_byte(tmap, where));
+    where = (pc_command + idx) % (MEM_SIZE);
+    if (where < 0)
+        where += MEM_SIZE;
+    return (read_current_byte(tmap, where));
 }

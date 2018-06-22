@@ -16,8 +16,8 @@
 # include <vm_structures.h>
 # include <libft.h>
 
-t_order	*t_order_new(int size);
-void	t_order_store(t_order *torder, int idx_cham, int idx_tproc);
-int		t_order_delete(t_order *torder, int idx_cham, int idx_tproc);
+t_order *t_order_new(int size);
+void    t_order_store(t_order *torder, int idx_cham, int idx_tproc);
+int     t_order_delete(t_order *torder, int idx_cham, int idx_tproc);
 
 #endif

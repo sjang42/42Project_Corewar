@@ -12,67 +12,67 @@
 
 #include <vm_corewar.h>
 
-static int		return_constant(int opcode)
+static int      return_constant(int opcode)
 {
-	if (opcode - 1 == OP_LIVE)
-		return (4);
-	else if (opcode - 1 == OP_ZJMP)
-		return (2);
-	else if (opcode - 1 == OP_FORK)
-		return (2);
-	else if (opcode - 1 == OP_LFORK)
-		return (2);
-	return (0);
+    if (opcode - 1 == OP_LIVE)
+        return (4);
+    else if (opcode - 1 == OP_ZJMP)
+        return (2);
+    else if (opcode - 1 == OP_FORK)
+        return (2);
+    else if (opcode - 1 == OP_LFORK)
+        return (2);
+    return (0);
 }
 
-static int		*devide_bytecode(t_map *tmap, int opcode, int pc_command)
+static int      *devide_bytecode(t_map *tmap, int opcode, int pc_command)
 {
-	int				*part;
-	unsigned char	bytecode;
+    int             *part;
+    unsigned char   bytecode;
 
-	bytecode = read_current_byte(tmap, pc_command + 1);
-	part = (int*)malloc(sizeof(int) * op_tab[opcode - 1].num_arg);
-	if (op_tab[opcode - 1].num_arg >= 1)
-		part[0] = bytecode / 0b1000000;
-	if (op_tab[opcode - 1].num_arg >= 2)
-		part[1] = bytecode % (0b1000000) / 0b10000;
-	if (op_tab[opcode - 1].num_arg >= 3)
-		part[2] = bytecode % (0b10000) / 0b100;
-	return (part);
+    bytecode = read_current_byte(tmap, pc_command + 1);
+    part = (int*)malloc(sizeof(int) * op_tab[opcode - 1].num_arg);
+    if (op_tab[opcode - 1].num_arg >= 1)
+        part[0] = bytecode / 0b1000000;
+    if (op_tab[opcode - 1].num_arg >= 2)
+        part[1] = bytecode % (0b1000000) / 0b10000;
+    if (op_tab[opcode - 1].num_arg >= 3)
+        part[2] = bytecode % (0b10000) / 0b100;
+    return (part);
 }
 
-static int		calculate_cycle(int opcode, int part[])
+static int      calculate_cycle(int opcode, int part[])
 {
-	int cycle;
-	int i;
+    int cycle;
+    int i;
 
-	i = 0;
-	cycle = 0;
-	while (i < op_tab[opcode - 1].num_arg)
-	{
-		if (part[i] == 0b01)
-			cycle += 1;
-		else if (part[i] == 0b10 && op_tab[opcode - 1].as_address)
-			cycle += 2;
-		else if (part[i] == 0b10)
-			cycle += 4;
-		else if (part[i] == 0b11)
-			cycle += 2;
-		i++;
-	}
-	return (cycle);
+    i = 0;
+    cycle = 0;
+    while (i < op_tab[opcode - 1].num_arg)
+    {
+        if (part[i] == 0b01)
+            cycle += 1;
+        else if (part[i] == 0b10 && op_tab[opcode - 1].as_address)
+            cycle += 2;
+        else if (part[i] == 0b10)
+            cycle += 4;
+        else if (part[i] == 0b11)
+            cycle += 2;
+        i++;
+    }
+    return (cycle);
 }
 
-int				count_bytecode_cycle(t_map *tmap, int opcode, int pc_command)
+int             count_bytecode_cycle(t_map *tmap, int opcode, int pc_command)
 {
-	int		cycle;
-	int		*part;
+    int     cycle;
+    int     *part;
 
-	if (opcode - 1 == OP_LIVE || opcode - 1 == OP_ZJMP ||
-		opcode - 1 == OP_FORK || opcode - 1 == OP_LFORK)
-		return (return_constant(opcode));
-	part = devide_bytecode(tmap, opcode, pc_command);
-	cycle = calculate_cycle(opcode, part);
-	free(part);
-	return (cycle);
+    if (opcode - 1 == OP_LIVE || opcode - 1 == OP_ZJMP ||
+        opcode - 1 == OP_FORK || opcode - 1 == OP_LFORK)
+        return (return_constant(opcode));
+    part = devide_bytecode(tmap, opcode, pc_command);
+    cycle = calculate_cycle(opcode, part);
+    free(part);
+    return (cycle);
 }

@@ -24,54 +24,54 @@
 # include <asm_t_label.h>
 # include <asm_t_inst.h>
 
-typedef struct	s_command
+typedef struct  s_command
 {
-	char	*command;
-	int		idx;
-}				t_command;
+    char    *command;
+    int     idx;
+}               t_command;
 
-typedef struct	s_process
+typedef struct  s_process
 {
-	header_t	*header;
-	t_inst		*tinst;
-	t_label		*tlabel;
-	t_strs		*tstrs;
-	int			zero;
-}				t_process;
+    header_t    *header;
+    t_inst      *tinst;
+    t_label     *tlabel;
+    t_strs      *tstrs;
+    int         zero;
+}               t_process;
 
-# define T_INST			16
+# define T_INST         16
 
-# define BYTECODE_REG	0B01
-# define BYTECODE_DIR	0B10
-# define BYTECODE_IND	0B11
+# define BYTECODE_REG   0B01
+# define BYTECODE_DIR   0B10
+# define BYTECODE_IND   0B11
 
-t_strs			*file_to_strs(int fd);
-header_t		*get_header(t_strs *strs);
-t_label			*get_label(t_strs *tstrs);
+t_strs          *file_to_strs(int fd);
+header_t        *get_header(t_strs *strs);
+t_label         *get_label(t_strs *tstrs);
 
-int				switch_inst(char *str);
-int				switch_type(char *str);
+int             switch_inst(char *str);
+int             switch_type(char *str);
 
-int				is_register(char *str);
-int				is_direct(char *str);
-int				is_indirect(char *str);
-int				is_label(char *str);
+int             is_register(char *str);
+int             is_direct(char *str);
+int             is_indirect(char *str);
+int             is_label(char *str);
 
-int				t_label_get_idx(t_label *tlabel, char const *name);
+int             t_label_get_idx(t_label *tlabel, char const *name);
 
-int				check_command(char *command, char **arg);
-int				decide_num_byte(char *command, char *arg);
-t_inst			*get_inst(t_strs *strs, t_label *tlabel);
+int             check_command(char *command, char **arg);
+int             decide_num_byte(char *command, char *arg);
+t_inst          *get_inst(t_strs *strs, t_label *tlabel);
 
-char			**asm_get_trim_arg(char *tmp);
-void			asm_get_destroy_exit(char **arg, t_strs *strs,
-										t_label *tlabel, t_inst	*tinst);
+char            **asm_get_trim_arg(char *tmp);
+void            asm_get_destroy_exit(char **arg, t_strs *strs,
+                                        t_label *tlabel, t_inst *tinst);
 
-void			show_usage_exit(char *filename);
-int				check_argv(int argc, char *argv[]);
-int				ft_asm(char *file);
+void            show_usage_exit(char *filename);
+int             check_argv(int argc, char *argv[]);
+int             ft_asm(char *file);
 
-int				put_one_arg(t_command tcommand, char *arg,
-							t_inst *tinst, t_label *tlabel);
+int             put_one_arg(t_command tcommand, char *arg,
+                            t_inst *tinst, t_label *tlabel);
 
 #endif

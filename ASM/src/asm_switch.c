@@ -12,16 +12,16 @@
 
 #include <asm.h>
 
-int		switch_inst(char *src)
+int     switch_inst(char *src)
 {
-	int		i;
+    int     i;
 
-	i = 0;
-	while (op_tab[i].mnemonic)
-	{
-		if (!ft_strcmp(op_tab[i].mnemonic, src))
-			return (i + 1);
-		i++;
-	}
-	return (0);
+    i = 0;
+    while (op_tab[i].mnemonic)
+    {
+        if (!ft_strcmp(op_tab[i].mnemonic, src))
+            return (i + 1);
+        i++;
+    }
+    return (0);
 }

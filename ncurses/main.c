@@ -21,33 +21,33 @@
                                                                             
 int main(void)
 {
-	WINDOW *win;
-	WINDOW *win2;
-	WINDOW *win3;
-	int i;
-	
-	win = initscr();
+    WINDOW *win;
+    WINDOW *win2;
+    WINDOW *win3;
+    int i;
+    
+    win = initscr();
 
-	win2 = newwin(50, 50, 0, 0);
-	win3 = newwin(50, 50, 0, 60);
-	wborder(win2, '*', '*','*','*','*','*','*', '*');
-	wborder(win3, '*', '*','*','*','*','*','*', '*');
-	wrefresh(win2);
-	wrefresh(win3);
+    win2 = newwin(50, 50, 0, 0);
+    win3 = newwin(50, 50, 0, 60);
+    wborder(win2, '*', '*','*','*','*','*','*', '*');
+    wborder(win3, '*', '*','*','*','*','*','*', '*');
+    wrefresh(win2);
+    wrefresh(win3);
 
-	mvwprintw(win2, 5, 5, "%d", can_change_color());
-	// init_color(1, 255, 255, 0);
+    mvwprintw(win2, 5, 5, "%d", can_change_color());
+    // init_color(1, 255, 255, 0);
 
-	init_pair(1, COLOR_YELLOW, COLOR_RED);
-	start_color();
-	attron(COLOR_PAIR(1));
-	mvwprintw(win, 5, 5, "hi");
-	refresh();
-	attroff(COLOR_PAIR(1));
+    init_pair(1, COLOR_YELLOW, COLOR_RED);
+    start_color();
+    attron(COLOR_PAIR(1));
+    mvwprintw(win, 5, 5, "hi");
+    refresh();
+    attroff(COLOR_PAIR(1));
 
-	wgetch(win2);
-	endwin();
-	return (0);
+    wgetch(win2);
+    endwin();
+    return (0);
 }
 
 

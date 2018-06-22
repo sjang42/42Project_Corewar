@@ -18,6 +18,6 @@
 # include <vm_structures.h>
 # include <vm_error.h>
 
-int		vm_read_header(header_t *theader, char *str, int size_str);
+int     vm_read_header(header_t *theader, char *str, int size_str);
 
 #endif

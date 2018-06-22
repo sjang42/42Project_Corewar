@@ -12,27 +12,27 @@
 
 #include <vm_error.h>
 
-char	*g_msg_error = NULL;
+char    *g_msg_error = NULL;
 
-char	*msg_error_get(void)
+char    *msg_error_get(void)
 {
-	if (g_msg_error == NULL)
-		return (NULL);
-	else
-		return (ft_strdup(g_msg_error));
+    if (g_msg_error == NULL)
+        return (NULL);
+    else
+        return (ft_strdup(g_msg_error));
 }
 
-void	msg_error_store(char *str)
+void    msg_error_store(char *str)
 {
-	if (g_msg_error)
-		free(g_msg_error);
-	g_msg_error = ft_strdup(str);
+    if (g_msg_error)
+        free(g_msg_error);
+    g_msg_error = ft_strdup(str);
 }
 
-void	msg_error_exit(void)
+void    msg_error_exit(void)
 {
-	if (g_msg_error)
-		ft_exit_error_free(g_msg_error);
-	else
-		ft_exit_error(NULL);
+    if (g_msg_error)
+        ft_exit_error_free(g_msg_error);
+    else
+        ft_exit_error(NULL);
 }

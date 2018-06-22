@@ -12,32 +12,32 @@
 
 #include <asm.h>
 
-void	show_usage(char *filename)
+void    show_usage(char *filename)
 {
-	ft_putstr("Usage : ");
-	ft_putstr(filename);
-	ft_putstr(" <sourcefile.s>\n");
+    ft_putstr("Usage : ");
+    ft_putstr(filename);
+    ft_putstr(" <sourcefile.s>\n");
 }
 
-void	show_usage_exit(char *filename)
+void    show_usage_exit(char *filename)
 {
-	show_usage(filename);
-	exit(-1);
+    show_usage(filename);
+    exit(-1);
 }
 
-int		check_argv(int argc, char *argv[])
+int     check_argv(int argc, char *argv[])
 {
-	char	*tmp;
+    char    *tmp;
 
-	if (argc != 2)
-	{
-		return (-1);
-	}
-	tmp = ft_strstr(argv[1], ".s");
-	if (!tmp ||
-		*(tmp + 2) != 0)
-	{
-		return (-1);
-	}
-	return (0);
+    if (argc != 2)
+    {
+        return (-1);
+    }
+    tmp = ft_strstr(argv[1], ".s");
+    if (!tmp ||
+        *(tmp + 2) != 0)
+    {
+        return (-1);
+    }
+    return (0);
 }
